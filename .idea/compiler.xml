@@ -6,7 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="xiechengfake" />
+        <module name="xiecheng-interface" />
+        <module name="xiecheng-web" />
+        <module name="xiecheng-service" />
       </profile>
     </annotationProcessing>
   </component>
