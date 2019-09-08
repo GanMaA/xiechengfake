@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/xiecheng-interface/xiecheng-interface.iml" filepath="$PROJECT_DIR$/xiecheng-interface/xiecheng-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/xiecheng-service/xiecheng-service.iml" filepath="$PROJECT_DIR$/xiecheng-service/xiecheng-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/xiecheng-web/xiecheng-web.iml" filepath="$PROJECT_DIR$/xiecheng-web/xiecheng-web.iml" />
     </modules>
   </component>
 </project>

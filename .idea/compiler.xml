@@ -6,8 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="xiechengfake" />
+        <module name="xiecheng-web" />
+        <module name="xiecheng-interface" />
+        <module name="xiecheng-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="xiecheng-interface" target="1.7" />
+      <module name="xiecheng-service" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
