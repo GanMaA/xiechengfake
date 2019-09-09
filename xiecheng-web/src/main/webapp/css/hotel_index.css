@@ -1,0 +1,97 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+ a{
+    /*list-style-type: none;*/
+     text-decoration:none;
+    color: #4c4c4c;
+    font: 12px Arial,Verdana;
+     line-height: 5px;
+     white-space: nowrap;
+}
+ p{
+     font: 12px Arial,Verdana;
+ }
+.nav_bar_cont{
+    width: 1150px;
+    height: 36px;
+    background-color: red;
+    font-size: 12px;
+    margin: auto;
+    /*float: left;*/
+}
+.cui_hd{
+    width: 1150px;
+    height: 80px;
+    background: yellow;
+    margin: auto;
+}
+.base_nav{
+    width: 100%;
+    height: 40px;
+    background-color: blue;
+    margin: 0px auto 54px;
+    float: left;
+}
+.cui_sub_nav{
+    width: 1150px;
+    height: 10px;
+    background-color: white;
+    padding: 0px 0px 30px 16px;
+    /*padding-bottom: 30px;*/
+    /*padding-top: 10px;*/
+    margin-top: 40px;
+    /*margin: auto;*/
+    margin-left: auto;
+    border: 1px solid blue;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    float: left;
+}
+li>a{
+    font-size: 15px;
+    /*line-height: 40px;*/
+    margin-left: 5px;
+}
+em{
+    /*border: solid;*/
+    margin: 10px 0px 0px 10px;
+    padding: 1px 1px 1px 1px;
+    background-color: #cccccc;
+}
+.cui_ico_order{
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.cui_ico_order>a{
+    font-size: 15px;
+}
+.base_bd{
+    width: 1150px;
+    height: 2759px;
+    /*margin: auto;*/
+    padding: 0px 10px;
+    margin-top: 100px;
+    background-color: chartreuse;
+}
+.index_side{
+    width: 380px;
+    height: 1180px;
+    margin-top: 15px;
+    background-color: red;
+}
+.base_ft{
+    width: 1150px;
+    height: 150px;
+    text-align: center;
+    /*margin: 0px -139px 20px 0px;*/
+    padding: 10px 0px 0px;
+    background-color: white;
+    margin: auto;
+}
+
