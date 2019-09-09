@@ -28,7 +28,12 @@
             //创建地图
             var map = new BMap.Map("little_map");
             //创建地图坐标点,一般首次创建的这个点为地图的中心坐标点
-            var point = new BMap.Point(116.404,39.915);
+            var point = new BMap.Point(120.024568,30.215855);
+            // 初始化地图，设置中心坐标点和地图级数
+            map.centerAndZoom(point,10);
+            var marker = new BMap.Marker(point);//创建标注
+            map.addOverlay(marker);//方法addOverlay() 向地图中添加覆盖物
+
             var mapPoints = [
                 {x:30.312903,y:120.382029,title:"A",con:"我是A",branch:"老大"},
                 {x:30.215855,y:120.024568,title:"B",con:"我是B",branch:"老二"},
@@ -36,21 +41,17 @@
                 {x:30.324994,y:120.164399,title:"D",con:"我是D",branch:"老四"},
                 {x:30.24884,y:120.305074,title:"E",con:"我是E",branch:"老五"}
             ];
-            // 初始化地图，设置中心坐标点和地图级数
-            map.centerAndZoom(point,9);
-            var marker = new BMap.Marker(point);//创建标注
-            var opts = {
+            var opt = {
 //                anchor: BMAP_ANCHOR_TOP_LEFT,
 //                offset: new BMap.Size(150,5)
             }
-            // map.addOverlay(marker);//方法addOverlay() 向地图中添加覆盖物
-            // map.setCurrentCity("北京");//在设置好地图中心点的前提下显示背景的整体图
+            map.setCurrentCity("北京");//在设置好地图中心点的前提下显示背景的整体图
             map.enableScrollWheelZoom(true);//在PC端可以通过滚轮放大缩小地图，移动端关闭该功能
-            map.addControl(new BMap.NavigationControl(opts));//addControl()向地图添加控件 平移和缩放控件 PC端默认左上角 移动端默认右下角且只有缩放功能
-            map.addControl(new BMap.ScaleControl(opts));//比例尺控件 默认左下角
-            map.addControl(new BMap.OverviewMapControl(opts));//缩略图控件 默认右下角且呈可折叠状态（点击隐藏和显示）
+            map.addControl(new BMap.NavigationControl(opt));//addControl()向地图添加控件 平移和缩放控件 PC端默认左上角 移动端默认右下角且只有缩放功能
+            map.addControl(new BMap.ScaleControl(opt));//比例尺控件 默认左下角
+            map.addControl(new BMap.OverviewMapControl(opt));//缩略图控件 默认右下角且呈可折叠状态（点击隐藏和显示）
             map.addControl(new BMap.MapTypeControl());//地图类型控件 默认右上角可切换地图/卫星/三维三种状态
-            map.addControl(new BMap.GeolocationControl(opts));//定位控件 默认左下角
+            map.addControl(new BMap.GeolocationControl(opt));//定位控件 默认左下角
             var i = 0;
             function markerFun (points,label,infoWindows) {
                 var markers = new BMap.Marker(points);
