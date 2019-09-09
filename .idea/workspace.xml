@@ -1,42 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="daff6d98-8178-4d5b-898d-2500f76a3aa6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/css/flightticket.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/css/hotel_index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/css/nav.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/hotel_index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/images/hotelPiC/chengxin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/images/hotelPiC/ga.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/images/hotelPiC/gongshang.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/images/hotelPiC/hulianwang.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/images/hotelPiC/jiudian.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/images/hotelPiC/phone_list20190617.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/images/hotelPiC/shehuixinyong.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/images/hotelPiC/shenfenyanzheng.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/images/hotelPiC/weifajubao.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/images/hotelPiC/xinyong.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/images/nav/c_logo2013.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/images/nav/sprite2019527.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/images/nav/un_header_language_1807.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/js/jquery-3.4.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/js/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/js/jquery.validate.regex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/js/nav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/nav.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xiechengfake.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="daff6d98-8178-4d5b-898d-2500f76a3aa6" name="Default Changelist" comment="尝试提交">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xiecheng-interface/xiecheng-interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xiecheng-interface/xiecheng-interface.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xiecheng-service/xiecheng-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xiecheng-service/xiecheng-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xiecheng-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xiecheng-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/HotelSearch.html" beforeDir="false" afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/HotelSearch.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xiecheng-web/xiecheng-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xiecheng-web/xiecheng-web.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/HotelSearch.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="82" column="36" lean-forward="true" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
+            <state relative-caret-position="294">
+              <caret line="17" column="65" lean-forward="true" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -91,17 +57,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/hotel_index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
+            <state relative-caret-position="420">
               <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/css/base.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="966">
+              <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -262,11 +228,18 @@
       <option name="project" value="LOCAL" />
       <updated>1568028742027</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="尝试提交">
+      <created>1568035897846</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568035897853</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1395000" />
+    <option name="totallyTimeSpent" value="2674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -286,12 +259,12 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3295082" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32943144" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" visible="true" weight="0.10702341" />
+      <window_info anchor="bottom" id="Version Control" order="12" visible="true" weight="0.22950819" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -306,9 +279,36 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="酒店首页" />
-    <option name="LAST_COMMIT_MESSAGE" value="酒店首页" />
+    <MESSAGE value="尝试提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="尝试提交" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/index.jsp">
@@ -331,25 +331,6 @@
     <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/css/flightticket.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/Hoteldetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-693" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/hotel_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/HotelSearch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="82" column="36" lean-forward="true" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/nav.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -369,8 +350,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="966">
+          <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/hotel_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/Hoteldetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-693" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/HotelSearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="17" column="65" lean-forward="true" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
         </state>
       </provider>
     </entry>
