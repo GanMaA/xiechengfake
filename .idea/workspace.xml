@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="daff6d98-8178-4d5b-898d-2500f76a3aa6" name="Default Changelist" comment="" />
+    <list default="true" id="daff6d98-8178-4d5b-898d-2500f76a3aa6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/css/nav.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/images/nav/c_logo2013.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/images/nav/sprite2019527.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/images/nav/un_header_language_1807.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/js/jquery-3.4.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/js/jquery-3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/js/jquery.validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/js/jquery.validate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/js/jquery.validate.regex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/js/nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiecheng-web/src/main/webapp/nav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiechengfake.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiecheng-interface/xiecheng-interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xiecheng-interface/xiecheng-interface.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiecheng-service/xiecheng-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xiecheng-service/xiecheng-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiecheng-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xiecheng-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiecheng-web/xiecheng-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xiecheng-web/xiecheng-web.iml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +35,47 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/nav.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/js/nav.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/css/nav.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/hotel_index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -72,6 +135,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="xiechengfake" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xiechengfake" type="462c0819:PsiDirectoryNode" />
+              <item name="xiecheng-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xiechengfake" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xiechengfake" type="462c0819:PsiDirectoryNode" />
+              <item name="xiecheng-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -113,15 +194,23 @@
       <updated>1567847900521</updated>
       <workItem from="1567847903226" duration="428000" />
     </task>
+    <task id="LOCAL-00001" summary="酒店首页">
+      <created>1568028742027</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568028742027</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94000" />
+    <option name="totallyTimeSpent" value="885000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.289313" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.289313" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -141,7 +230,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32943144" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="12" visible="true" weight="0.10702341" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -155,5 +244,42 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="酒店首页" />
+    <option name="LAST_COMMIT_MESSAGE" value="酒店首页" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/hotel_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/js/nav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/css/nav.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
