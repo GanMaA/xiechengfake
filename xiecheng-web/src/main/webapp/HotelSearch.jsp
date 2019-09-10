@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>酒店搜索</title>
-    <link href="css/base.css" rel="stylesheet">
+    <link href="css/HotelBase.css" rel="stylesheet">
     <link href="css/HotelSearch.css" rel="stylesheet">
 </head>
 <body>

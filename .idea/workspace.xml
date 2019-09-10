@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="daff6d98-8178-4d5b-898d-2500f76a3aa6" name="Default Changelist" comment="尝试提交">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="daff6d98-8178-4d5b-898d-2500f76a3aa6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/xiecheng-web/xiecheng-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xiecheng-web/xiecheng-web.iml" afterDir="false" />
+>>>>>>> remotes/origin/master
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +18,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -93,6 +99,8 @@
       </file>
     </leaf>
   </component>
+=======
+>>>>>>> remotes/origin/master
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -118,6 +126,7 @@
   </component>
   <component name="ProjectId" id="1QVFY3LcWiE97ICup9NE8A77JN3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+<<<<<<< HEAD
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -186,6 +195,8 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
+=======
+>>>>>>> remotes/origin/master
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -238,6 +249,7 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+<<<<<<< HEAD
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="2674000" />
   </component>
@@ -276,6 +288,8 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
   </component>
+=======
+>>>>>>> remotes/origin/master
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -284,6 +298,7 @@
       <map>
         <entry key="MAIN">
           <value>
+<<<<<<< HEAD
             <State>
               <option name="RECENTLY_FILTERED_USER_GROUPS">
                 <collection />
@@ -300,6 +315,9 @@
                 </list>
               </option>
             </State>
+=======
+            <State />
+>>>>>>> remotes/origin/master
           </value>
         </entry>
       </map>
@@ -310,6 +328,7 @@
     <MESSAGE value="尝试提交" />
     <option name="LAST_COMMIT_MESSAGE" value="尝试提交" />
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/xiecheng-web/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor" />
@@ -375,4 +394,6 @@
       </provider>
     </entry>
   </component>
+=======
+>>>>>>> remotes/origin/master
 </project>
