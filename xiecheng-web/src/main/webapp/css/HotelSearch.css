@@ -90,11 +90,31 @@
     float: left;
     /*margin-top: 1px;*/
 }
-.s_value ul{
-    width: 950px;
+.s_value{
+    width: 1190px;
+    /*height: 34px;*/
     float: left;
-    padding: 0px 10px 0px 10px;
+    background-color: white;
 }
+.s_value a{
+    margin: 10px 20px;
+    float: left;
+}
+.filItem_hd{
+    width: 1000px;
+    height: 100px;
+    float: left;
+}
+.optionList-item{
+    position: relative;
+    float: left;
+    padding: 7px 10px;
+    margin: 10px 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    text-align: center;
+}
+
 .s_category{
     width: 1300px;
     /*height: 34px;*/
@@ -109,24 +129,23 @@
 }
 .s_key{
     width: 110px;
-    height: 34px;
+    /*height: 100px;*/
     float: left;
     background-color: #f3f3f3;
 }
-.s_value{
-    width: 1190px;
-    height: 34px;
-    float: left;
-    background-color: white;
+.s_key_value{
+    width: 100px;
+    /*height: 100px;*/
+    line-height: 30px;
+    padding-left: 10px
 }
-.height64{
-    height: 64px;
-}
+
+
 .s_brand li{
     width: 116px;
     height: 48px;
     float: left;
-    margin: 5px 0px;
+    margin: 5px 10px;
     border: 1px solid #cccccc;
 }
 .s_brand li:hover{
@@ -160,9 +179,9 @@
     line-height: 0px;
 }
 .s_senior a{
-    margin-left: 10px;
-    line-height: 30px;
-    padding: 3px 8px;
+    margin: 5px 10px;
+    line-height: 20px;
+    padding: 3px 3px;
     border: 1px solid #cccccc;
 }
 .s_senior a i{
@@ -446,15 +465,22 @@
 }
 .buy_btn{
     text-align: center;
-    padding: 10px 0px;
+    padding: 5px 0px;
     border-radius: 5px;
     background-color: #ff9a14;
     color: white;
     font: 18px  SimSun,Tahoma,Verdana,Arial,sans-serif;
     width: 121px;
-    height: 20px;
+    height: 30px;
     float : right;
     margin-top: 140px;
+}
+.page_helper{
+    width: 800px;
+    height: 50px;
+    float: left;
+    margin-top: 10px;
+    background-color: #e5d790;
 }
 
 
@@ -483,4 +509,13 @@
 #little_map{
     width: 480px;
     height: 324px;
+}
+.base_ft{
+    width: 1150px;
+    height: 150px;
+    text-align: center;
+    /*margin: 0px -139px 20px 0px;*/
+    padding: 10px 0px 0px;
+    background-color: white;
+    margin: auto;
 }
