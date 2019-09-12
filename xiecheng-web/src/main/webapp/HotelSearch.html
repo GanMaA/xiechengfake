@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>酒店搜索</title>
+    <link href="css/HotelBase.css" rel="stylesheet">
+    <link href="css/HotelSearch.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var scrollTo = $(document).scrollTop();
+                if(scrollTo >= 300) {
+                    $(".map_mask").addClass('float_map_mask');
+                    $(".sortBox").addClass('float_sortBox');
+                }if(scrollTo < 300) {
+                    $(".map_mask").removeClass('float_map_mask');
+                    $(".sortBox").removeClass('float_sortBox');
+                }if(scrollTo >= 50){
+                    $(".search_part").addClass('float_search_part');
+                }if(scrollTo < 50){
+                    $(".search_part").removeClass('float_search_part');
+                }
+
+            })
+
+            //创建地图
+            var map = new BMap.Map("little_map");
+            //创建地图坐标点,一般首次创建的这个点为地图的中心坐标点
+            var point = new BMap.Point(120.024568,30.215855);
+            // 初始化地图，设置中心坐标点和地图级数
+            map.centerAndZoom(point,10);
+            var marker = new BMap.Marker(point);//创建标注
+            map.addOverlay(marker);//方法addOverlay() 向地图中添加覆盖物
+
+            var mapPoints = [
+                {x:30.312903,y:120.382029,title:"A",con:"浙江广电开元名都大酒店",branch:"浙江广电开元名都大酒店"},
+                {x:30.215855,y:120.024568,title:"B",con:"浙江广电开元名都大酒店",branch:"浙江广电开元名都大酒店"},
+                {x:30.18015,y:120.174968,title:"C",con:"浙江广电开元名都大酒店",branch:"浙江广电开元名都大酒店"},
+                {x:30.324994,y:120.164399,title:"D",con:"浙江广电开元名都大酒店",branch:"浙江广电开元名都大酒店"},
+                {x:30.24884,y:120.305074,title:"E",con:"浙江广电开元名都大酒店",branch:"浙江广电开元名都大酒店"}
+            ];
+            var opt = {
+//                anchor: BMAP_ANCHOR_TOP_LEFT,
+//                offset: new BMap.Size(150,5)
+            }
+            map.setCurrentCity("北京");//在设置好地图中心点的前提下显示背景的整体图
+            map.enableScrollWheelZoom(true);//在PC端可以通过滚轮放大缩小地图，移动端关闭该功能
+            map.addControl(new BMap.NavigationControl(opt));//addControl()向地图添加控件 平移和缩放控件 PC端默认左上角 移动端默认右下角且只有缩放功能
+            map.addControl(new BMap.ScaleControl(opt));//比例尺控件 默认左下角
+            map.addControl(new BMap.OverviewMapControl(opt));//缩略图控件 默认右下角且呈可折叠状态（点击隐藏和显示）
+            map.addControl(new BMap.MapTypeControl());//地图类型控件 默认右上角可切换地图/卫星/三维三种状态
+            map.addControl(new BMap.GeolocationControl(opt));//定位控件 默认左下角
+            var i = 0;
+            function markerFun (points,label,infoWindows) {
+                var markers = new BMap.Marker(points);
+                map.addOverlay(markers);
+                markers.setLabel(label);
+                markers.addEventListener("click",function (event) {
+                    console.log("0001");
+                    map.openInfoWindow(infoWindows,points);//参数：窗口、点  根据点击的点出现对应的窗口
+                });
+            }
+            for (;i<mapPoints.length;i++) {
+                var points = new BMap.Point(mapPoints[i].y,mapPoints[i].x);//创建坐标点
+                var opts = {
+                    width:250,
+                    height: 100,
+                    title:mapPoints[i].title
+                };
+                var label = new BMap.Label(mapPoints[i].branch,{
+                    offset:new BMap.Size(25,5)
+                });
+                var infoWindows = new BMap.InfoWindow(mapPoints[i].con,opts);
+                markerFun(points,label,infoWindows);
+            }
+        })
+    </script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZG8KAEU4ejvpL5WWZ3lM5RyWCiAfsUYb"></script>
+    <link rel="stylesheet" type="text/css" href="js/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="js/easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="js/easyui/demo.css">
+    <script type="text/javascript" src="js/easyui//jquery.min.js"></script>
+    <script type="text/javascript" src="js/easyui//jquery.easyui.min.js"></script>
+</head>
+<body>
+    <iframe class="navtop" frameborder="0" scrolling="no" src="nav.html"></iframe>
+    <div class="crumbsBar">
+        <div>
+            <a>酒店预订</a>
+            <strong><i>〉</i>杭州酒店</strong>
+        </div>
+    </div>
+    <div class="selector" style="background-color:#cccccc;">
+        <div class="search_part">
+            <div class="line_1px" style="height: 3px; background-color: royalblue"></div>
+            <ul >
+                <li class="txtCity">目的地 <input type="text"></li>
+                <li class="txtCheckIn">入住 <input type="date"></li>
+                <li class="txtCheckOut">退房 <input type="date"></li>
+                <li class="txtRoom">房间数
+                    <select>
+                        <option>1间</option>
+                        <option>2间</option>
+                        <option>3间</option>
+                    </select>
+                </li>
+                <li class="txtGuestNum">住客数
+                    <select>
+                        <option>1人</option>
+                        <option>2人</option>
+                        <option>3人</option>
+                    </select>
+                </li>
+                <li class="txtKeyWord">关键词 <input type="text"></li>
+                <li class="form_button"><i>搜索</i><button></button></li>
+            </ul>
+        </div>
+        <div class="line_1px"></div>
+        <div class="s_brand">
+            <div class="s_key" ><strong class="s_key_value">热门精选：</strong></div>
+            <div class="s_value">
+                <li><a ><img :src="brandInfo.brandLogoUrl"></a></li>
+                <a class="sl_e_more" >更多<i>∨</i></a>
+                <a class="sl_e_more" ><i style="font-size: 20px ; margin-left: -3px">+</i>多选</a>
+            </div>
+        </div>
+        <div class="line_1px"></div>
+        <div class="s_category" >
+            <div class="s_key"><strong class="s_key_value">位置区域:</strong></div>
+            <div class="s_value">
+                <a style="color: blue">不限</a>
+                <div class="filItem_hd">
+                    <div style="margin:20px 0;"></div>
+                    <div class="easyui-panel" style="padding:5px;">
+                        <a href="#" class="easyui-linkbutton" data-options="plain:true">商业区</a>
+                        <a href="#" class="easyui-menubutton" data-options="menu:'#mm1'">地铁线</a>
+                        <a href="#" class="easyui-menubutton" data-options="menu:'.mm2'">机场/火车站</a>
+                        <a href="#" class="easyui-menubutton" data-options="menu:'.mm2'">行政区/下辖市</a>
+                    </div>
+                    <div id="mm1" style="width:150px;">
+                        <div>
+                            <span>一号线</span>
+                            <div>
+                                <div>湘湖</div>
+                                <div>滨康路</div>
+                                <div>西兴</div>
+                                <div>滨和路</div>
+                                <div class="menu-sep"></div>
+                                <div>江陵路</div>
+                            </div>
+                        </div>
+                        <div>
+                            <span>二号线</span>
+                            <div>
+                                <div>Address</div>
+                                <div>Link</div>
+                                <div>Navigation Toolbar</div>
+                                <div>Bookmark Toolbar</div>
+                                <div class="menu-sep"></div>
+                                <div>New Toolbar...</div>
+                            </div>
+                        </div>
+                        <div>
+                            <span>三号线</span>
+                            <div>
+                                <div>Address</div>
+                                <div>Link</div>
+                                <div>Navigation Toolbar</div>
+                                <div>Bookmark Toolbar</div>
+                                <div class="menu-sep"></div>
+                                <div>New Toolbar...</div>
+                            </div>
+                        </div>
+                        <div>
+                            <span>四号线</span>
+                            <div>
+                                <div>Address</div>
+                                <div>Link</div>
+                                <div>Navigation Toolbar</div>
+                                <div>Bookmark Toolbar</div>
+                                <div class="menu-sep"></div>
+                                <div>New Toolbar...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mm2" style="width:100px;">
+                        <div>萧山国际机场</div>
+                        <div>杭州东站</div>
+                        <div>余杭站</div>
+                    </div>
+                    <div class="mm2" class="menu-content">
+                        <div>上城区</div>
+                        <div>西湖区</div>
+                        <div>拱墅区</div>
+                    </div>
+                </div>
+                <a class="sl_e_more" style="margin-top: 5px">更多<i>∨</i></a>
+                <a class="sl_e_more" style="margin-top: 5px"><i style="font-size: 20px ; margin-left: -3px">+</i>多选</a>
+            </div>
+            <div class="line_1px"></div>
+        </div>
+        <div class="s_category">
+            <div class="s_key"><strong class="s_key_value">星级评价:</strong></div>
+            <div class="s_value">
+                <a style="color: blue">不限</a></li>
+                <div class="optionList clearfix">
+                    <div class=" optionList-item" title="二星级及以下/经济">二星级及以下/经济</div>
+                    <div  class=" optionList-item" title="三星级/舒适">三星级/舒适</div>
+                    <div class=" optionList-item" title="四星级/高档">四星级/高档</div>
+                    <div class=" optionList-item" title="五星级/豪华">五星级/豪华</div>
+                </div>
+            </div>
+            <div class="line_1px"></div>
+        </div>
+        <div class="line_1px"></div>
+        <div class="s_senior">
+            <div class="s_key"><span style="line-height: 30px; padding-left: 10px">高级选项：</span></div>
+            <div class="s_value">
+                <a style="color: blue">不限</a>
+                <a>优惠促销<i>∨</i></a>
+                <a>酒店类型<i>∨</i></a>
+                <a>更多<i>∨</i></a>
+            </div>
+        </div>
+        <div class="line_1px"></div>
+    </div>
+
+    <div class="mainBox">
+        <div class="sortBox">
+            <div class="f_line" style="background-color: #f1f1f1;">
+                <div class="f_sort">
+                    <a href="#"><span>排序&nbsp;</span></a>
+                    <a href="#"><span>好评&nbsp;</span><i>↓</i></a>
+                    <a href="#"><span>星级&nbsp;</span><i>↓</i></a>
+                    <a href="#" class="s-price"><span class="sort-price">价格&nbsp;</span><i class="price-up">△</i><i class="price-down">▽</i></a>
+                </div>
+                <div class="f-datagrid">
+                    <a>
+                        <span style="height:15%;"></span>
+                    </a>
+                    <a><span style="height:85%;"></span></a>
+                    <a><span style="height:65%;"></span></a>
+                    <a><span style="height:15%;"></span></a>
+                    <a><span style="height:15%;"></span></a>
+                </div>
+                <div class="p_bet" >
+                    <input type="text" value="￥">
+                </div>
+                <i class="my-">-</i>
+                <div class="p_bet">
+                    <input  type="text" value="￥">
+                </div>
+            </div>
+        </div>
+        <div class="hotel_list">
+            <ul>
+                <li>
+                    <img class="search_img" src="//dimg13.c-ctrip.com/images/200f17000001130iz5510_R_200_200.jpg">
+                    <div class="hotel_name">
+                        <a class="hotel_item_name">
+                            <span class="hotel_num">1</span>
+                            <i class="icons" > 精选 </i>
+                            <strong style="margin: 0px 5px"> 浙江广电开元名都大酒店</strong>
+                            <span class="hotel_strategymedal" title="携程战略合作酒店，拥有优质服务、优良品质及优惠房价，供携程会员专享预订" data-role="title"></span>
+                        </a>
+                        <div title="高档型" class="hotel_diamond04"></div>
+                        <div class="hotel_address">
+                            【
+                            <a>火车城站杭州站</a><a>南宋御街及河坊街 </a>
+                            】佑圣观路74号。
+                            <a>地图</a>
+                        </div>
+                        <i class="icons icons1">休闲度假</i>
+                        <i class="icons icons1">亲子酒店</i>
+                        <div class="icon_list">
+                            <i class="icons-facility32" style="background-position: -30px -150px;" title="公共区域免费WIFI" data-fid="120" data-role="title"></i>
+                            <i class="icons-facility03" style="background-position: -60px 0;" title="停车场" data-fid="100" data-role="title"></i>
+                            <i class="icons-facility13" style="background-position: 0px -60px;" title="餐厅" data-fid="1" data-role="title"></i>
+                            <i class="icons-facility28" style="background-position: -90px -120px;" title="接机服务" data-fid="105" data-role="title"></i>
+                            <i class="icons-facility14" style="background-position: -30px -60px;" title="健身房" data-fid="42" data-role="title"></i>
+                            <i class="icons-facility16" style="background-position: -90px -60px;" title="会议室" data-fid="6" data-role="title"></i>
+                        </div>
+                        <p class="hotel_item_last_book">最新预订：8分钟前</p>
+                    </div>
+                    <div class="hotel_judge">
+                        <a>
+                            <span class="hotel_value">4.7</span>
+                            <span class="hotel_level">很好</span>
+                            <span class="total_judgement_score"><span style="color:#009933;">98%</span>用户推荐</span>
+                            <span class="hotel_judgement">源自<span style="color:#FF9900;">8771</span>位住客点评</span>
+                            <span class="recommend">“早餐丰富”<br>“服务周到”</span>
+                        </a>
+                    </div>
+                    <div class="hotel_last">
+                        <div class="hotel_price " data-id="396983"><dfn>¥</dfn><span class="J_price_lowList">438</span>起<br></div>
+                        <a class="buy_btn">查看详情</a>
+                    </div>
+                </li>
+                <li>
+                    <img class="search_img" src="//dimg13.c-ctrip.com/images/200f17000001130iz5510_R_200_200.jpg">
+                    <div class="hotel_name">
+                        <a class="hotel_item_name">
+                            <span class="hotel_num">1</span>
+                            <i class="icons" > 精选 </i>
+                            <strong style="margin: 0px 5px"> 浙江广电开元名都大酒店</strong>
+                            <span class="hotel_strategymedal" title="携程战略合作酒店，拥有优质服务、优良品质及优惠房价，供携程会员专享预订" data-role="title"></span>
+                        </a>
+                        <div title="高档型" class="hotel_diamond04"></div>
+                        <div class="hotel_address">
+                            【
+                            <a>火车城站杭州站</a><a>南宋御街及河坊街 </a>
+                            】佑圣观路74号。
+                            <a>地图</a>
+                        </div>
+                        <i class="icons icons1">休闲度假</i>
+                        <i class="icons icons1">亲子酒店</i>
+                        <div class="icon_list">
+                            <i class="icons-facility32" style="background-position: -30px -150px;" title="公共区域免费WIFI" data-fid="120" data-role="title"></i>
+                            <i class="icons-facility03" style="background-position: -60px 0;" title="停车场" data-fid="100" data-role="title"></i>
+                            <i class="icons-facility13" style="background-position: 0px -60px;" title="餐厅" data-fid="1" data-role="title"></i>
+                            <i class="icons-facility28" style="background-position: -90px -120px;" title="接机服务" data-fid="105" data-role="title"></i>
+                            <i class="icons-facility14" style="background-position: -30px -60px;" title="健身房" data-fid="42" data-role="title"></i>
+                            <i class="icons-facility16" style="background-position: -90px -60px;" title="会议室" data-fid="6" data-role="title"></i>
+                        </div>
+                        <p class="hotel_item_last_book">最新预订：8分钟前</p>
+                    </div>
+                    <div class="hotel_judge">
+                        <a>
+                            <span class="hotel_value">4.7</span>
+                            <span class="hotel_level">很好</span>
+                            <span class="total_judgement_score"><span style="color:#009933;">98%</span>用户推荐</span>
+                            <span class="hotel_judgement">源自<span style="color:#FF9900;">8771</span>位住客点评</span>
+                            <span class="recommend">“早餐丰富”<br>“服务周到”</span>
+                        </a>
+                    </div>
+                    <div class="hotel_last">
+                        <div class="hotel_price " data-id="396983"><dfn>¥</dfn><span class="J_price_lowList">438</span>起<br></div>
+                        <a class="buy_btn">查看详情</a>
+                    </div>
+                </li>
+                <li>
+                    <img class="search_img" src="//dimg13.c-ctrip.com/images/200f17000001130iz5510_R_200_200.jpg">
+                    <div class="hotel_name">
+                        <a class="hotel_item_name">
+                            <span class="hotel_num">1</span>
+                            <i class="icons" > 精选 </i>
+                            <strong style="margin: 0px 5px"> 浙江广电开元名都大酒店</strong>
+                            <span class="hotel_strategymedal" title="携程战略合作酒店，拥有优质服务、优良品质及优惠房价，供携程会员专享预订" data-role="title"></span>
+                        </a>
+                        <div title="高档型" class="hotel_diamond04"></div>
+                        <div class="hotel_address">
+                            【
+                            <a>火车城站杭州站</a><a>南宋御街及河坊街 </a>
+                            】佑圣观路74号。
+                            <a>地图</a>
+                        </div>
+                        <i class="icons icons1">休闲度假</i>
+                        <i class="icons icons1">亲子酒店</i>
+                        <div class="icon_list">
+                            <i class="icons-facility32" style="background-position: -30px -150px;" title="公共区域免费WIFI" data-fid="120" data-role="title"></i>
+                            <i class="icons-facility03" style="background-position: -60px 0;" title="停车场" data-fid="100" data-role="title"></i>
+                            <i class="icons-facility13" style="background-position: 0px -60px;" title="餐厅" data-fid="1" data-role="title"></i>
+                            <i class="icons-facility28" style="background-position: -90px -120px;" title="接机服务" data-fid="105" data-role="title"></i>
+                            <i class="icons-facility14" style="background-position: -30px -60px;" title="健身房" data-fid="42" data-role="title"></i>
+                            <i class="icons-facility16" style="background-position: -90px -60px;" title="会议室" data-fid="6" data-role="title"></i>
+                        </div>
+                        <p class="hotel_item_last_book">最新预订：8分钟前</p>
+                    </div>
+                    <div class="hotel_judge">
+                        <a>
+                            <span class="hotel_value">4.7</span>
+                            <span class="hotel_level">很好</span>
+                            <span class="total_judgement_score"><span style="color:#009933;">98%</span>用户推荐</span>
+                            <span class="hotel_judgement">源自<span style="color:#FF9900;">8771</span>位住客点评</span>
+                            <span class="recommend">“早餐丰富”<br>“服务周到”</span>
+                        </a>
+                    </div>
+                    <div class="hotel_last">
+                        <div class="hotel_price " data-id="396983"><dfn>¥</dfn><span class="J_price_lowList">438</span>起<br></div>
+                        <a class="buy_btn">查看详情</a>
+                    </div>
+                </li>
+                <li>
+                    <img class="search_img" src="//dimg13.c-ctrip.com/images/200f17000001130iz5510_R_200_200.jpg">
+                    <div class="hotel_name">
+                        <a class="hotel_item_name">
+                            <span class="hotel_num">1</span>
+                            <i class="icons" > 精选 </i>
+                            <strong style="margin: 0px 5px"> 浙江广电开元名都大酒店</strong>
+                            <span class="hotel_strategymedal" title="携程战略合作酒店，拥有优质服务、优良品质及优惠房价，供携程会员专享预订" data-role="title"></span>
+                        </a>
+                        <div title="高档型" class="hotel_diamond04"></div>
+                        <div class="hotel_address">
+                            【
+                            <a>火车城站杭州站</a><a>南宋御街及河坊街 </a>
+                            】佑圣观路74号。
+                            <a>地图</a>
+                        </div>
+                        <i class="icons icons1">休闲度假</i>
+                        <i class="icons icons1">亲子酒店</i>
+                        <div class="icon_list">
+                            <i class="icons-facility32" style="background-position: -30px -150px;" title="公共区域免费WIFI" data-fid="120" data-role="title"></i>
+                            <i class="icons-facility03" style="background-position: -60px 0;" title="停车场" data-fid="100" data-role="title"></i>
+                            <i class="icons-facility13" style="background-position: 0px -60px;" title="餐厅" data-fid="1" data-role="title"></i>
+                            <i class="icons-facility28" style="background-position: -90px -120px;" title="接机服务" data-fid="105" data-role="title"></i>
+                            <i class="icons-facility14" style="background-position: -30px -60px;" title="健身房" data-fid="42" data-role="title"></i>
+                            <i class="icons-facility16" style="background-position: -90px -60px;" title="会议室" data-fid="6" data-role="title"></i>
+                        </div>
+                        <p class="hotel_item_last_book">最新预订：8分钟前</p>
+                    </div>
+                    <div class="hotel_judge">
+                        <a>
+                            <span class="hotel_value">4.7</span>
+                            <span class="hotel_level">很好</span>
+                            <span class="total_judgement_score"><span style="color:#009933;">98%</span>用户推荐</span>
+                            <span class="hotel_judgement">源自<span style="color:#FF9900;">8771</span>位住客点评</span>
+                            <span class="recommend">“早餐丰富”<br>“服务周到”</span>
+                        </a>
+                    </div>
+                    <div class="hotel_last">
+                        <div class="hotel_price " data-id="396983"><dfn>¥</dfn><span class="J_price_lowList">438</span>起<br></div>
+                        <a class="buy_btn">查看详情</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="page_helper">分页</div>
+        </div>
+        <div class="map_mask">
+            <div class="tool_box">
+                <a class="map_link" target="_self" href="//hotels.ctrip.com/hotel/hangzhou17/map" data-dopost="T">看大地图</a>
+            </div>
+            <div id ="little_map"></div>
+        </div>
+    </div>
+    <div class="base_ft">
+        <p>
+            <a href="http://pages.ctrip.com/public/sitemap/sitemap.htm" target="_blank" title="网站导航">网站导航</a>&nbsp;|&nbsp;<a href="http://hotels.ctrip.com/jiudian/" target="_blank" title="宾馆索引">宾馆索引</a>&nbsp;|&nbsp;<a href="http://flights.ctrip.com/booking/hot-city-flights-sitemap.html " target="_blank" title="机票索引">机票索引</a>&nbsp;|&nbsp;<a href="http://pages.ctrip.com/public/sitemap/dj.html" title="旅游索引">旅游索引</a>&nbsp;|&nbsp;<a href="http://ct.ctrip.com/crptravel/sitemap.html" title="商旅索引">商旅索引</a>&nbsp;|&nbsp;<a title="攻略索引" href="http://you.ctrip.com/sitemap/">攻略索引</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/ctripab/abctrip.htm" target="_blank" title="关于携程">关于携程</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/commerce/promote/201201/other/qygm/index.html" title="企业公民">企业公民</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://job.ctrip.com/" title="诚聘英才">诚聘英才</a>&nbsp;|&nbsp;<a rel="nofollow" title="智慧旅游" href="http://you.ctrip.com/Intelligence.html">智慧旅游</a>&nbsp; |&nbsp;<a rel="nofollow" target="_blank" href="http://u.ctrip.com/" title="分销联盟">分销联盟</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/dlhz.htm" title="代理合作">代理合作</a>&nbsp;|&nbsp;<a target="_blank" href="http://ct.ctrip.com" title="企业商旅">企业商旅</a>&nbsp;|&nbsp;<a target="_blank" href="http://ct.ctrip.com/crptravel/default/landing" title="中小企业差旅">中小企业差旅</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/ctripad/adyw.htm" title="广告业务">广告业务</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/contact.htm" title="联系我们">联系我们</a>
+        </p>
+        <p>
+            <a rel="nofollow" href="http://pages.c-ctrip.com/cooperation/web/cooperation.html#ctm_ref=ctr_hp_btm_coop" target="_blank">加盟合作</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://join.easytrip.com/jiameng/#ctm_ref=ctr_def_btm_hsu_n_1" target="_blank" title="酒店加盟">酒店加盟</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://dst.ctrip.com/">目的地及景区合作</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/serve%20guideline.htm" target="_blank" title="用户协议">用户协议</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/serve%20guideline.htm" target="_blank" title="隐私政策">隐私政策</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/diploma/company.htm">营业执照</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://m.ctrip.com/webapp/vacations/tour/supplier" title="旅游度假资质">旅游度假资质</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="https://insurance.ctrip.com/portal/index.aspx">保险代理</a>&nbsp;|&nbsp;<a target="_blank" href="http://pages.ctrip.com/public/link/ctrip_link.html">友情链接</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/copyright.htm" id="copyright">Copyright©</a>1999-2019,&nbsp;<a href="http://www.ctrip.com/">ctrip.com</a>. All rights reserved.&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://www.miibeian.gov.cn/">ICP证：沪B2-20050130</a>
+        </p>
+        <p class="gns">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010502002731"><img src="images/hotelPiC/ga.png" style="width: 15px">&nbsp;&nbsp;沪公网备31010502002731号</a>
+        </p>
+        <div class="honour_wrap">
+            <a href="http://www.ca-sme.com/index.credit?action=certDetail&amp;id=40288084605466f1016057ea4cb20021" class="honour1" target="_blank" rel="nofollow"><img src="images/hotelPiC/xinyong.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110428175405415" title="工商亮照标识" class="honour2" target="_blank" rel="nofollow"><img src="images/hotelPiC/gongshang.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="http://credit.szfw.org/CX20111018000615000623.html" title="诚信认证示范企业" class="honour3" target="_blank" rel="nofollow"><img src="images/hotelPiC/chengxin.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="http://www.zx110.org/" class="honour4" target="_blank" rel="nofollow" title="征信网"><img src="images/hotelPiC/shehuixinyong.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="http://www.shjbzx.cn/" class="honour5" target="_blank" rel="nofollow" title="上海市互联网违法与违规信息举报中心"><img src="images/hotelPiC/weifajubao.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="https://ss.knet.cn/verifyseal.dll?sn=e12061531010025926306977" class="honour6" target="_blank" rel="nofollow" title="可信网站"><img src="images/hotelPiC/shenfenyanzheng.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="http://www.12377.cn/" class="honour8" title="违法和不良信息举报中心" target="_blank" rel="nofollow"><img src="images/hotelPiC/weifajubao.png" style="height: 35px"></a>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
