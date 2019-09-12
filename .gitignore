@@ -1,4 +1,4 @@
 /target/
 /src/test/
-.idea
-.settings
+*.idea
+*.settings
