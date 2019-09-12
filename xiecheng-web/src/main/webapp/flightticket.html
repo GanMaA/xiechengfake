@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/flightticket.css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/flightticket.js"></script>
+
+</head>
+<body>
+    <iframe src="nav.html" class="navtop" frameborder="0" scrolling="no"></iframe>
+    <div id="body">
+        <div id="main">
+            <div id="head">
+                <div class="search_form">
+                    <select>
+                        <option>单程</option>
+                        <option>往返</option>
+                        <option>多程</option>
+                    </select>
+                    <div class="ico ico1"><i></i><input placeholder="666"></div>
+                    <div class="ico ico2"><a></a></div>
+                    <div class="ico ico3"><i></i><input placeholder="666"></div>
+                    <div class="ico ico4"><i></i><input placeholder="出发日期"></div>
+                    <div class="ico ico5"><i></i><input placeholder="666" ></div>
+<!--                    <div class="flight_way">-->
+<!--                        <div class="search_form_select">-->
+<!--                            <div class="search_form_select ">-->
+<!--                                <a class="select_echo" data-ubt="c_search_Type">单程<b class="arr_gray_sm arr_down"></b></a>-->
+<!--                                <ul class="search_form_option" style="display: none;">-->
+<!--                                    <li class="option_item"><label>往返</label></li>-->
+<!--                                    <li class="option_item"><label>多程</label></li></ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+            </div>
+            <div id="base-bd">
+                <div id="left">
+                    <div id="bd-left-hd">
+                        筛选<span>(共X条航班信息)</span><button>清除全部</button>
+                    </div>
+                    <div id="bd-left-bar">
+                        <div class="bar">直飞/经停
+                            <div class="bar-filter-select">
+                                <li class="bar-filter-option" >
+                                    <label><input type="checkbox" name="ddateType" value="fly"><span>直飞</span>
+                                        <span class="base_price02"><dfn>¥</dfn>298.5</span></label>
+                                </li>
+                                <li class="bar-filter-option" >
+                                    <label><input type="checkbox" name="ddateType" value="stay"><span>经停</span>
+                                        <span class="base_price02"><dfn>¥</dfn>398</span></label>
+                                </li>
+                            </div>
+                        </div>
+                        <div></div>
+<!--                        <div class="bar"><ul class="bar-filter-echo"><li class="echo-item">直飞<a class="close">×</a></li></ul></div>-->
+                        <div class="bar">起飞时段
+                            <div class="bar-filter-select">
+                                <li class="bar-filter-option" >
+                                    <label><input type="checkbox" name="ddateType" value="MO"><span>上午(6-12点)</span>
+                                        <span class="base_price02"><dfn>¥</dfn>298.5</span></label>
+                                </li>
+                                <li class="bar-filter-option" >
+                                    <label><input type="checkbox" name="ddateType" value="AF"><span>下午(12-18点)</span>
+                                        <span class="base_price02"><dfn>¥</dfn>398</span></label>
+                                </li>
+                                <li class="bar-filter-option" >
+                                    <label><input type="checkbox" name="ddateType" value="EV"><span>晚上(18-24点)</span>
+                                        <span class="base_price02"><dfn>¥</dfn>349</span></label>
+                                </li>
+                            </div>
+                        </div>
+                        <div class="bar">舱位</div>
+                    </div>
+                </div>
+
+                <div id="right">
+                    <div class="bd-right-top">
+                        <div class="st"><div class="jiantou jiantou1"></div></div>
+                        <div class="other"><span class="date">9-8&nbsp;周日</span><br><dfn>¥</dfn><span class="price">600</span></div>
+                        <div class="current"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
+                        <div class="other">b</div>
+                        <div class="other">b</div>
+                        <div class="other">b</div>
+                        <div class="st"><div class="jiantou jiantou2"></div></div>
+                    </div>
+                    <div id="bd-right-msgtop">
+                        <ul class="sort-guideline">
+                            <li class="default-sort">航班信息</li>
+                            <li class="sort"><a>起飞时间<i class="ico "></i></a></li>
+                            <li class="sort"><a>到达时间<i class="ico ico-reverse"></i></a></li>
+                            <li class="sort"><a>准点率<i class="ico "></i></a></li>
+                            <li class="sort"><a></a></li>
+                            <li class="default-sort2"><a>价格<i class="ico "></i></a></li>
+                        </ul>
+                        <a class="government-btn" href="javascript:;" data-ubt="c_armydisabled_click">伤残军警通道</a>
+                    </div>
+                    <div class="bd-right-msg">
+                        <div class="msg-1">
+                            航班
+                        </div>
+                        <div class="msg-2">
+                            <span>出发时间</span>
+                        </div>
+                        <div class="msg-3">
+
+                        </div>
+                        <div class="msg-4">
+                            <span>到达时间</span>
+                        </div>
+                        <div class="msg-5">
+                            <span>准点率</span>
+                        </div>
+                        <div class="msg-6">
+                            <dfn>¥</dfn><span>价格</span>起
+                        </div>
+                        <div class="msg-7">
+                            <button>订票</button>
+                        </div>
+                    </div>
+                    <div class="bd-right-msg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="float_top">
+        <div class="float">
+            <div class="search_box">
+
+            </div>
+            <div class="bd-right-top">
+                <div class="st"><div class="jiantou jiantou1"></div></div>
+                <div class="other"><span class="date">9-8&nbsp;周日</span><br><dfn>¥</dfn><span class="price">600</span></div>
+                <div class="current"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
+                <div class="other">b</div>
+                <div class="other">b</div>
+                <div class="other">b</div>
+                <div class="st"><div class="jiantou jiantou2"></div></div>
+            </div>
+            <div class="bd-right-msgtop">
+                <ul class="sort-guideline">
+                    <li class="default-sort">航班信息</li>
+                    <li class="sort"><a>起飞时间<i class="ico "></i></a></li>
+                    <li class="sort"><a>到达时间<i class="ico ico-reverse"></i></a></li>
+                    <li class="sort"><a>准点率<i class="ico "></i></a></li>
+                    <li class="sort"><a></a></li>
+                    <li class="default-sort2"><a>价格<i class="ico "></i></a></li>
+                </ul>
+                <a class="government-btn" href="javascript:;" data-ubt="c_armydisabled_click">伤残军警通道</a>
+            </div>
+        </div>
+    </div>
+    <div class="bottom"></div>
+</body>
+</html>
