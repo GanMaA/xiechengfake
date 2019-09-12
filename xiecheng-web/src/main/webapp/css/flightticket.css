@@ -7,7 +7,7 @@ li{list-style:none}
 #head{height: 90px;background-color: white;clear: both;margin-top: 20px}
 #base-bd{zoom: 1;width: 1180px;margin: 0 auto;padding: 0;background-color: #0A56BB;clear: both;margin-top: 15px}
 #base-bd #left{width: 222px;height: 900px;float: left;margin-right: 12px}
-#base-bd #right{width: 945px;height: 5200px;float: left}
+#base-bd #right{width: 945px;;float: left}
 /*bd-head*/
 .search_form {
     border: 0 none;
@@ -33,8 +33,23 @@ li{list-style:none}
 .search_form .ico3 i{background-position: 0 -20px;}
 .search_form .ico4 i{background-position: 0 -40px;}
 .search_form .ico5 i{background-position: 0 -60px;}
-
+.search_form .btn_search {
+    float: left;
+    width: 92px;
+    height: 28px;
+    line-height: 28px;
+    margin: 2px 0 0 5px;
+    padding: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    background-color: #48a4ff;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: none;}
 .test ::-webkit-input-placeholder{color:#bbb }
+.search_text{position: relative;padding: 15px 15px 15px;min-height: 14px;font-size: 13px;color: #b4b4b4;clear: left}
 /*bd-left*/
 /*bd-left-1*/
 #bd-left-hd{padding: 0 0 4px;height: auto;border-bottom: 1px solid #5d9ffb;font: normal 16px/26px Hiragino Sans GB,microsoft yahei,sans-serif}
@@ -76,7 +91,7 @@ li{list-style:none}
 }
 /*bd-right*/
 /*bd-right-top*/
-.bd-right-top{height: 51px;background-color: white;margin-bottom: 5px;text-align: center}
+.bd-right-top{height: 51px;background-color: white;margin-bottom: 5px;text-align: center;padding-top: 2px;}
 .bd-right-top div{float: left;}
 .bd-right-top .st{border-width: 3px 1px 0;border-bottom:  #5d9ffb 1px solid;padding: 14px 0 0 14px;margin-top: -2px;width: 23px;height: 38px;}
 .bd-right-top .jiantou{background: url(//pic.c-ctrip.com/flight/searchlist/un_list.png) no-repeat;border: 0 none;width: 9px;height: 15px;}
@@ -97,7 +112,7 @@ li{list-style:none}
 .bd-right-top div .date{color: #666;font-weight: 700;padding-top: 4px;font-size: 12px}
 .bd-right-top div .price{font-size: 17px;color: #f60;line-height: 100%;padding-left: 5px}
 /*bd-right-msgtop*/
-.bd-right-msgtop{height: 28px;background-color: #FBFBFB;margin-bottom: 3px}
+.bd-right-msgtop{height: 28px;background-color: #FBFBFB;margin-bottom: 3px;}
 .bd-right-msgtop .sort-guideline{line-height: 28px;}
 .sort-guideline .default-sort{margin-left: 20px;width: 90px;}
 .sort-guideline .default-sort2{margin-left: 80px;width: 50px;}
@@ -151,12 +166,19 @@ li{list-style:none}
     display: none;
     overflow:hidden;zoom:1;
 }
+.search_boxbox{
+    height: 83px;
+    width: 215px;float: left;
+    background: #f1f1f1;padding-top: 2px;
+}
 .search_box{
-    position: relative;
-    height: 70px;
-    width: 200px;
+    position: absolute;
+    height: 74px;
+    width: 190px;
     background-color: #fff;
-    padding: 10px;
+    padding: 10px 10px 0 0;
     float: left;
 }
-.test{float: none;clear: both;width: 5px;height: 5px}
+.box_text{font-size: 13px;color: #b4b4b4;padding: 5px 0 0 5px}
+.search_box a{float: right}
+.search_box a:hover{color: #5d9ffb}
