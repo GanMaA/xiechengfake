@@ -1,0 +1,2027 @@
+body{
+    background: #F6F6F6;
+    font-size: 12px;
+}
+/*城市选择框*/
+#chinaHotelForm .city_select{
+    left: 66px;
+    top: 35px;
+}
+.flight_leave{
+    left:66px;
+    top:-96px;
+}
+.flight_leave .city_select_title,.flight_leave .city_select_content{
+    padding: 5px 10px;
+    top: 0;
+    left: 0;
+}
+.flight_leave ul li{
+    line-height: 30px;
+    height: 30px;
+}
+.flight_arrive{
+    left:66px;
+    top:-55px;
+}
+.flight_arrive .city_select_title,.flight_arrive .city_select_content{
+    padding: 5px 10px;
+    top: 0;
+    left: 0;
+}
+.flight_arrive ul li{
+    line-height: 30px;
+    height: 30px;
+}
+.city_select{
+    position: relative;
+    width: 405px;
+    border:1px solid #bbbbbb;
+    background-color: #fff;
+    z-index: 9999;
+}
+.city_select_title{
+    font-size: 12px;
+    color: gray;
+    position: relative;
+    top: -40px;
+    left: 20px;
+}
+.city_select_title_close{
+    float: right;
+    margin-right: 30px;
+    font-size: 14px;
+}
+.city_select_content{
+    position: relative;
+    top: -40px;
+    left: 20px;
+}
+.city_select_content_nav{
+    overflow: auto;
+    font-size: 12px;
+}
+.city_select_content_nav ul{
+    overflow: auto;
+    list-style: none;
+}
+.city_select_content_nav ul li{
+    width: 40px;
+    text-align: center;
+    display: inline;
+    float: left;
+    border-bottom: 2px solid #999999;
+}
+.city_select_content_nav ul .w_60{
+    width: 60px;
+}
+.city_select_content_nav ul .city_current{
+    color: blue;
+    border-bottom: 2px solid blue;
+    font-weight: bold;
+}
+.city_select_content_city{
+    margin-top: 5px;
+    overflow: auto;
+}
+.city_select_content_city ul{
+    width: 300px;
+    overflow: auto;
+    list-style: none;
+}
+.city_select_content_city ul li{
+    font-size: 12px;
+    width: 50px;
+    text-align: center;
+    display: inline;
+    float: left;
+}
+.city_select_content_city ul li:hover{
+    background-color: blueviolet;
+    color: #fff;
+}
+/*城市选择框结束*/
+#navIframe{
+    background: #fff;
+    width: 100%;
+    height: 198px;
+}
+#search{
+    width: 100%;
+    height: 340px;
+}
+#search img{
+    width: 100%;
+    height: 100%;
+}
+/*搜索盒子*/
+.searchbox {
+    position: absolute;
+    z-index: 13;
+    margin: 20px 0;
+    background-color: #fff;
+    width: 580px;
+    height: 300px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    left: 100px;
+    top: 200px;
+}
+/*左部导航*/
+.s_tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #2577e3;
+    width: 90px;
+    height: 300px;
+}
+:root .s_tab .s_tab_current {
+    border-left: 4px solid #ff9915;
+    background: #fff;
+    color: #2577e3;
+    border-bottom: none;
+}
+.s_tab .s_tab_current {
+    position: relative;
+    border-left: 4px solid #ff9915;
+    color: #2577e3;
+    background: #fff;
+    cursor: default;
+}
+.s_tab li {
+    float: left;
+    display: inline-block;
+    width: 60px;
+    height: 42px;
+    padding: 0 17px 0 13px;
+    margin: 0;
+    border-left: 4px solid #2577e3;
+    font: 16px/42px "Microsoft YaHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
+    text-align: left;
+    color: #fff;
+}
+.s_tab .s_tab_current b, .s_tab li:hover b {
+    border-bottom: none;
+}
+
+.s_tab li b {
+    position: relative;
+    display: block;
+    height: 42px;
+    border-bottom: 1px dashed #aac3f1;
+    font-weight: normal;
+}
+/*hotel*/
+.s_content {
+    background-color: #fff;
+    margin-left: 90px;
+    width: 451px;
+    height: 275px;
+    padding: 20px 20px 5px;
+    _overflow: hidden;
+    text-align: left;
+}
+.s_subtab_a {
+    position: relative;
+    font-family: "Microsoft YaHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
+    height: 27px;
+    line-height: 20px;
+    background-position: 0 -96px;
+    background-repeat: repeat-x;
+    margin-bottom: 8px;
+}
+.s_subtab_a, .s_subtab_a .current {
+    background-image: url(../images/xiechengIndexPic/searchbox_icon.png);
+}
+.s_subtab_a .current {
+    color: #06c;
+    background-position: 50% -10px;
+    cursor: default;
+    text-decoration: none;
+    padding-bottom: 2px;
+}
+.s_subtab_a a {
+    position: relative;
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    text-decoration: none;
+    height: 25px;
+    float: left;
+    margin-right: 20px;
+    outline: none medium;
+    cursor: pointer;
+    display: block;
+}
+.s_item_cont, .s_item_cont3 {
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: 42px;
+    line-height: 28px;
+}
+.s_content .s_item, .s_content .s_item2 {
+    float: left;
+    display: inline;
+    font-size: 14px;
+    font-family: "Microsoft YaHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
+    line-height: 26px;
+    text-align: left;
+    height: 35px;
+    padding-top: 5px;
+    text-align: right;
+    text-indent: -100px;
+}
+
+.s_content .w100 {
+    width: 100%;
+}
+.s_item {
+    width: 211px;
+}
+.s_content .w01 {
+    width: 380px;
+}
+.s_item input, .s_item2 input, .s_item3 input, .c_item input {
+    display: inline;
+    width: 140px;
+    padding-left: 3px;
+    margin-left: 10px;
+    border-color: #bbb #ddd #ddd #bbb;
+    border-style: solid;
+    border-width: 1px;
+    height: 28px;
+    font: 14px/28px "Microsoft YaHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
+    *vertical-align: middle;
+    outline: none;
+    color: #333;
+    box-shadow: 1px 1px 1px #ddd inset;
+}
+input[type="text"] {
+    border-radius: 0;
+}
+.s_item2 {
+    width: 240px;
+}
+
+.s_content select {
+    width: 145px;
+    height: 28px;
+    margin: 0 0 0 8px;
+    border-radius: none;
+    font-family: 'microsoft yahei', simsun;
+    font-size: 12px;
+}
+.n_gst38578 {
+    display: inline-block;
+    width: 170px;
+    margin-left: 6px;
+    position: relative;
+    z-index: 99;
+    cursor: default;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #333;
+    *display: inline;
+    *zoom: 1;
+}
+.s_content .w170 {
+    width: 160px;
+}
+.n_gst38578_tri {
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 6px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-width: 5px 5px 0;
+    border-color: #666 transparent transparent;
+    border-style: solid dashed dashed;
+}
+.n_gst38578_active .n_gst38578_p {
+    display: block;
+}
+.n_gst38578_p {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 5px;
+    top: 26px;
+    *top: 27px;
+    width: 248px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+.n_gst38578_list {
+    padding: 10px;
+    line-height: 24px;
+    overflow: hidden;
+    text-align: left;
+    text-indent: 0;
+}
+.n_gst38578_list_opt {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 6px;
+    overflow: hidden;
+}
+.n_gst38578_age {
+    margin-left: 14px;
+    color: #999;
+}
+.number_control {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    width: 70px;
+    height: 24px;
+}
+.number_disable, .number_disable:hover {
+    cursor: default;
+    background-color: #dedede;
+    border-color: #bbb;
+}
+.number_reduce {
+    left: 0;
+    border-radius: 2px 0 0 2px;
+}
+.number_plus, .number_reduce {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #bbb;
+    background-color: #fff;
+    transition: background-color .2s ease 0s;
+}
+.number_plus {
+    right: 0;
+    border-radius: 0 2px 2px 0;
+}
+.number_disable .icon_numreduce, .number_disable:hover .icon_numreduce {
+    background-color: #b6b6b6;
+}
+.number_control .icon_numreduce {
+    width: 10px;
+    height: 2px;
+    margin-top: 10px;
+    background-color: #333;
+}
+.icon_numplus, .icon_numreduce {
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.number_control .number_input {
+    position: absolute;
+    z-index: 1;
+    left: 23px;
+    top: 0;
+    width: 22px;
+    height: 16px;
+    line-height: 16px;
+    margin: 0;
+    padding: 3px 0;
+    border: 1px solid #bbb;
+    background: #fff;
+    text-align: center;
+}
+.icon_numplus {
+    width: 10px;
+    height: 10px;
+    margin-top: 6px;
+    background: url(../images/xiechengIndexPic/number-controller.png) 0 -14px no-repeat;
+}
+.n_gst38578_childs {
+    border-top: 1px dashed #ccc;
+    margin: 0 10px;
+    padding: 8px 0;
+    width: 228px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.n_gst38578_childs_dl {
+    position: relative;
+    z-index: 1;
+    width: 110%;
+    text-align: left;
+    text-indent: 0;
+}
+.n_gst38578_childs_dl dt {
+    margin-bottom: 6px;
+}
+.n_gst38578_ft {
+    padding: 10px 0;
+    text-align: center;
+    text-indent: 0;
+}
+.n_gst38578_ft a {
+    cursor: pointer;
+}
+.n_gst38578_btn {
+    display: inline-block;
+    *display: inline;
+    height: 28px;
+    width: 110px;
+    border: 1px solid #1b6bd3;
+    background: #2577e3;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.n_gst38578_btncancel {
+    display: inline-block;
+    *display: inline;
+    height: 30px;
+    padding: 0 10px;
+    border: none;
+    background: none;
+    color: #39f;
+    font-size: 12px;
+}
+
+/*历史记录*/
+.toogel-bar{
+    height: 20px;
+    text-align: center;
+}
+.toogel-btn{
+    width: 100%;
+    height: 20px;
+    display: block;
+    cursor: pointer;
+}
+.toogel-btn i{
+    width: 40px;
+    height: 20px;
+    vertical-align: center;
+    display: inline-block;
+    background-image: url("../images/xiechengIndexPic/icon.png") ;
+    background-position: -1px -48px;
+}
+.s_button_area {
+    position: absolute;
+    z-index: 10;
+    right: 20px;
+    bottom: 22px;
+    width: 200px;
+    text-align: right;
+}
+.s_btn {
+    text-shadow: 1px 1px 0 #cf7000;
+    background-color: #ffb000;
+    border: solid 1px #e77c00;
+}
+.s_btn, .s_btn_disabled {
+    position: relative;
+    width: 145px;
+    height: 33px;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Microsoft YaHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.4em;
+    text-indent: 0.4em;
+    box-shadow: 0 1px 0 rgba(95, 50, 0, 0.7);
+    border-radius: 3px;
+    overflow: visible;
+}
+/*酒店结束*/
+
+
+
+/*飞机开始*/
+.searchbox .label-en {
+    right: -10px;
+    top: -15px;
+    padding: 0;
+    padding: 0 4px\9;
+    padding: 0 2px\0;
+    font-weight: normal;
+}
+.label-cn, .label-en {
+    position: absolute;
+    z-index: 9;
+    right: 0px;
+    top: -6px;
+    display: inline-block;
+    padding: 0 2px;
+    height: 15px;
+    line-height: 15px;
+    background-color: #ff9913;
+    color: #fff;
+}
+:root .label-cn em, :root .label-en em {
+    font-size: 12px;
+    vertical-align: 2px;
+    -webkit-transform: scale(.75);
+    -ms-transform: scale(.75);
+    -o-transform: scale(.75);
+    transform: scale(.75);
+}
+
+.label-en em {
+    text-transform: uppercase;
+}
+.label-cn em, .label-en em {
+    display: inline-block;
+    font-size: 9px;
+    font-family: 'Tahoma', arial;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+.label-cn .triangle, .label-en .triangle {
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: 0;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #da620a transparent transparent #da620a;
+}
+.s_type {
+    height: 25px;
+    padding-left: 100px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei", SimSun;
+    text-indent: -100px;
+}
+.s_type .index_label {
+    margin-left: 10px;
+    text-indent: 0;
+}
+.index_label input {
+    vertical-align: middle;
+    margin-right: 3px;
+}
+.s_item_cont_ex {
+    position: relative;
+    z-index: 13;
+}
+.s_exchange {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 216px;
+    width: 10px;
+    height: 42px;
+    border: 1px solid #ddd;
+    border-left: none;
+    text-indent: 0;
+    font: 12px/1.5 simsun, sans-serif;
+}
+.s_exchange a {
+    position: absolute;
+    z-index: 1;
+    width: 18px;
+    left: 3px;
+    top: 12px;
+    background-color: #c9cacb;
+    color: #fff;
+    text-align: center;
+}
+#FD_ChinaFlightForm .adv_inlin_item {
+    margin-right: 34px;
+}
+#FD_ChinaFlightForm .class_type_selection {
+    float: right;
+}
+#FD_ChinaFlightForm .J_childBabyTip_2 {
+    display: inline-block;
+    position: relative;
+}
+.s_voyage_tip {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    overflow: hidden;
+    background-position: -71px -93px;
+    cursor: pointer;
+}
+.s_vca_dest, .s_voyage_tip, .icon_onec_pass, .icon_twoc_pass, .icon_multc_pass {
+    background-image: url(//pic.c-ctrip.com/index/un_index141218.png);
+    background-repeat: no-repeat;
+}
+#FD_ChinaFlightForm .J_childBabyTip_1, .J_childBabyTip_2 {
+    color: #06c;
+}
+.s_btn3, .s_btn_ing3 {
+    padding: 0;
+    width: 145px;
+    letter-spacing: 0;
+}
+/*飞机结束*/
+/*内容*/
+.history-contain{
+    display: none;
+    width: 1200px;
+    margin: 0 auto;
+}
+.history-title{
+    width: 100%;
+    height: 36px;
+    margin-bottom: 10px;
+}
+.history-title-left{
+    float: left;
+    height: 36px;
+    line-height: 30px;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    color: #0066cc;
+}
+.history-title-left b{
+    display: inline-block;
+    width: 21px;
+    height: 19px;
+    margin-right: 8px;
+    vertical-align: middle;
+    background-position: 0 -259px;
+    background-image: url("../images/xiechengIndexPic/icon2.png");
+}
+.history-title-right{
+    float: right;
+}
+.history-title-right a{
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    color: #3983e4;
+}
+.history-title-right span{
+    width: 10px;
+    height: 11px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+    background-image: url("../images/xiechengIndexPic/icon.png");
+    background-position: -77px -96px;
+}
+/*历史记录信息-item*/
+.history-item{
+    width: 100%;
+    height: 74px;
+}
+.history-item ul{
+    overflow: auto;
+}
+.history-item ul li{
+    float: left;
+    width: 228px;
+    height: 74px;
+    overflow: hidden;
+    margin-left: 10px;
+    background: #fff;
+}
+.history-item ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.history-item-left{
+    float: left;
+    width: 62px;
+    height: 62px;
+    padding-top:12px;
+    text-align: center;
+}
+.history-item-left i{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url("../images/xiechengIndexPic/icon2.png") no-repeat 0 0;
+}
+.history-item-right{
+    float: left;
+    width: 165px;
+    height: 100%;
+}
+.history-item-right-name{
+    padding: 8px 10px 0 0;
+    margin-right: 5px;
+    color: #666666;
+    font-size: 12px;
+}
+.history-item-right-info{
+    width: 100%;
+    color: #999999;
+    font-size: 12px;
+}
+/*主题内容*/
+.container{
+    padding-bottom: 40px;
+}
+/*旅游*/
+
+.mod{
+    width: 1200px;
+    margin: 20px auto 0;
+}
+.mod-hd{
+    width: 100%;
+    position: relative;
+    height: 36px;
+    border-bottom: 2px solid #3983e5;
+    text-align: left;
+    font: 16px/26px "Microsoft YaHei", "SimHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
+}
+.mod-hd .mod-current{
+    color: #06c;
+    cursor: default;
+}
+.mod-hd span{
+    position: relative;
+    bottom: -3px;
+    float: left;
+    height: 36px;
+    line-height: 30px;
+    color: #333;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.mod-hd .i-show{
+    display: inline-block;
+}
+.mod-hd i{
+    display: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -6px;
+    bottom: 3px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+    vertical-align: middle;
+    border-bottom: 6px solid #3983e5;
+    border-top: 0 none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+.mod-hd span b{
+    position: absolute;
+    z-index: 9;
+    right: -6px;
+    top: -11px;
+    display: inline-block;
+    padding: 0 2px;
+    height: 15px;
+    line-height: 15px;
+    background-color: #ff9913;
+    color: #fff;
+}
+.mod-hd span b em{
+    font-size: 12px;
+    vertical-align: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: 'Tahoma', arial;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+.mod-hd span b .triangle{
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: 0;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #da620a transparent transparent #da620a;
+}
+.product{
+    background-color: #fff;
+    height: 375px;
+    padding: 15px 19px 0;
+}
+.inner-tabs-nav {
+    height: 20px;
+    margin-bottom: 10px;
+}
+.inner-tabs-nav li {
+    font-size: 12px;
+    float: left;
+    display: inline-block;
+    line-height: 20px;
+    margin-right: 15px;
+    padding: 0 8px;
+}
+.inner-tabs-nav li.active{
+    background: #3983e5;
+    color: #fff;
+    border-radius: 3px;
+}
+.inner-tabs-nav li.active a{
+    color: #fff;
+}
+.inner-tabs-nav li a {
+    color: #3983e5;
+}
+.product-bd{
+    height: 330px;
+}
+.inner-tab-scroll-wrap {
+    float: left;
+    position: relative;
+    width: 910px;
+    height: 330px;
+    overflow: hidden;
+}
+.inner-tab-scroll-list {
+    position: absolute;
+    margin-left: -10px;
+}
+.product-item{
+    float: left;
+    height: 160px;
+    margin: 0 0 10px 10px;
+}
+.product-item a{
+    display: block;
+    position: relative;
+    width: 220px;
+    margin-bottom: 3px;
+    overflow: hidden;
+}
+.product-item a img{
+    width: 220px;
+    height: 160px;
+}
+.tag-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.4);
+    border-radius: 3px 0 10px 0.5px;
+}
+.tag_saleNum{
+    font-size: 12px;
+    display: inline-block;
+    background: #FF6913;
+    border-radius: 0 0 10px 0;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 11px 0 6px;
+    color: #fff;
+}
+.product-item_complex .item-msg {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    margin: -56px 0 0 -56px;
+    padding: 30px 5px;
+    width: 102px;
+    height: 52px;
+    overflow: hidden;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: all .3s;
+}
+.product-item_complex .item-name {
+    height: auto;
+    text-align: center;
+    font: 700 18px/1.2 "Microsoft yahei";
+    color: #fff;
+    margin-bottom: 3px;
+}
+.item-name {
+    font-size: 12px;
+    position: relative;
+    height: 20px;
+    line-height: 20px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 5px;
+}
+
+.product-item_complex .item-info {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    margin-top: 3px;
+    text-align: center;
+    padding: 0;
+}
+.item-info {
+    font-size: 12px;
+    position: relative;
+    height: 35px;
+    text-align: right;
+    padding: 0 5px;
+}
+.product-item_complex .price {
+    float: none;
+}
+.price {
+    position: relative;
+    float: right;
+    font: 22px/1.5 tahoma;
+    color: #f60;
+}
+.price dfn {
+    vertical-align: 7px;
+    font: 12px/1.5 arial;
+    color: #fff;
+}
+.price .price_info {
+    margin-left: 3px;
+    vertical-align: 2px;
+    font: 12px/1.5 "Microsoft yahei";
+    color: #fff;
+}
+
+.extra-item {
+    float: right;
+    position: relative;
+    width: 220px;
+    height: 330px;
+    right: 0;
+    top: -330px;
+    clear: both;
+    overflow: hidden;
+}
+.extra-item img{
+    width: 220px;
+    height: 330px;
+}
+/*旅馆*/
+.mod .entrance {
+    background-color: #fff;
+    position: relative;
+    float: left;
+    display: inline;
+    width: 187px;
+    height: 375px;
+    padding: 0 20px 15px;
+    overflow: hidden;
+}
+.entrance dl {
+    margin: 0 0 7px 0;
+    overflow: hidden;
+    position: relative;
+}
+.entrance dt {
+    padding: 4px 0 0 0;
+    font: 700 14px/34px "Microsoft yahei";
+}
+.entrance dd {
+    font-size: 12px;
+    margin-left: -10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    zoom: 1;
+}
+.entrance .entrance-item {
+    position: relative;
+    float: left;
+    display: block;
+    border-left: 1px solid #ececec;
+    padding: 0 10px;
+    line-height: 18px;
+    height: 18px;
+    margin: 7px 0;
+}
+
+.hotel-product{
+    position: relative;
+    *zoom: 1;
+    margin-left: 229px;
+    border-left: 1px dotted #a3a3a3;
+}
+
+.hotel .mod-bd .inner-tab-panel {
+    height: 345px;
+    position: relative;
+    padding-right: 220px;
+}
+.hotel-extra-item{
+    float: right;
+    position: relative;
+    width: 220px;
+    height: 330px;
+    right: 0;
+    top: -345px;
+    clear: both;
+    overflow: hidden;
+}
+.inner-tab-panel {
+    position: relative;
+    padding-right: 220px;
+    height: 353px;
+}
+.flightC .product-item {
+    margin: 0 10px 10px 0;
+    float: left;
+    position: relative;
+    width: 194px;
+    height: 74px;
+    padding: 15px 12px;
+    background: #f8f8f8;
+    border: 1px solid #f8f8f8;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+.flightC .item-name {
+    margin-bottom: 3px;
+    color: #333;
+}
+.flightC .product-item a {
+    width: 205px;
+}
+.icon-round {
+    margin: 0 5px;
+    width: 12px;
+    height: 7px;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    background: url(../images/xiechengIndexPic/icon.png) no-repeat -1px -116px;
+}
+.flightC .item-info {
+    height: 27px;
+}
+.flightC .item-info .date {
+    padding: 0;
+    color: #999;
+}
+.item-info .date {
+    float: left;
+}
+.flightC .item-info .price {
+    float: left;
+}
+.flightC .item-info .button-yellow {
+    width: auto;
+    height: 27px;
+    padding: 0 15px;
+    font: 14px/27px "Microsoft yahei";
+    margin: 3px 0 0 0;
+}
+.button-yellow {
+    background-color: #ffb000;
+    color: #fff;
+    border: none;
+}
+.button {
+    display: inline-block;
+    width: 98px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.flightC .item-info .price dfn,.flightC .item-info .price .price_info{
+    color: #666666;
+}
+.flightC .extra-item{
+    top: -350px;
+}
+/*car*/
+.car .entrance {
+    height: 245px;
+}
+.entrance .entrance-item .icon_hot {
+    position: absolute;
+    top: -6px;
+    right: 3px;
+}
+.icon_hot {
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    background: url(../images/xiechengIndexPic/icon.png) no-repeat -16px -32px;
+}
+.dropdown-li {
+    margin-top: -1px;
+}
+.inner-tabs-nav li .dropdown {
+    width: 40px;
+}
+.dropdown {
+    position: relative;
+    z-index: 10;
+}
+.inner-tabs-nav .dropdown-li .dropdown-toggle {
+     border: none;
+ }
+.inner-tabs-nav li a {
+    color: #3983e5;
+    z-index: 81;
+}
+.dropdown-toggle_border {
+    position: absolute;
+    z-index: 91;
+    right: 0;
+    width: 40px;
+}
+.dropdown-toggle {
+    height: 22px;
+    color: #3983e4;
+    padding: 1px 5px 0;
+    display: inline-block;
+    overflow: hidden;
+}
+.dropdown-toggle .caret {
+    margin-left: 5px;
+}
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+    vertical-align: middle;
+    border-top: 5px solid #3983e4;
+    border-bottom: 0 none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.inner-tabs-nav li .dropdown-cont {
+    z-index: 80;
+}
+.dropdown-li .dropdown-cont {
+    left: -10px;
+    right: auto;
+}
+.dropdown-cont {
+    display: none;
+    position: absolute;
+    z-index: 90;
+    top: 22px;
+    right: 0;
+    background: #fff;
+}
+.dropdown-menu-list {
+    width: 80px;
+    padding: 4px;
+    height: auto;
+    border: 1px solid #999;
+    max-height: 176px;
+    overflow: hidden;
+}
+.dropdown-menu-list a {
+    display: block;
+    padding: 0 10px;
+    height: 22px;
+    line-height: 22px;
+    color: #333 !important;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.car .inner-tab-panel{
+    padding-right: 0;
+    width: 100%;
+    position: relative;
+    height: 215px;
+}
+.car .product-item {
+    height: 200px;
+}
+.car .item-thumbnail {
+    height: 150px;
+}
+.item-thumbnail {
+    position: relative;
+    width: 220px;
+    margin-bottom: 3px;
+    overflow: hidden;
+}
+.item-type {
+    display: block;
+    color: #999;
+    line-height: 35px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: left;
+}
+.car .price dfn{
+    color: #666666;
+}
+.car .price .price_info{
+    color: #666666;
+}
+.car .product{
+    position: relative;
+    height: 375px;
+    margin-left: 229px;
+    border-left: 1px dotted #a3a3a3;
+}
+.car .product{
+    height: 245px;
+}
+.car .product-bd {
+    height: 245px;
+}
+/*玩乐*/
+.play .entrance{
+    height: 205px;
+    overflow: hidden;
+}
+.play-product{
+    background-color: #fff;
+    position: relative;
+    height: 205px;
+    overflow: hidden;
+    margin-left: 229px;
+    padding: 15px 19px 0;
+    border-left: 1px dotted #a3a3a3;
+}
+.play-product-bd{
+    margin-left: -10px;
+}
+.play-innnertab-pannel{
+    margin-left: 0;
+    padding-right: 0;
+    position: relative;
+}
+.play-product-item{
+    position: relative;
+    width: 220px;
+    height: 170px;
+    float: left;
+    margin: 0 0 0 10px;
+    overflow: hidden;
+    transition: all .2s linear;
+}
+.play-product-item a{
+    text-decoration: none;
+    color: #666;
+    display: block;
+}
+.item-thumbnail img {
+    transition: transform 0.3s ease 0s;
+    width: 220px;
+    height: 114px;
+    border: none;
+    vertical-align: middle;
+}
+/*全球购*/
+.shopping .shopping-panel .entrance{
+    height: 205px;
+    overflow: hidden;
+}
+.shopping-product{
+    background-color: #fff;
+    position: relative;
+    height: 205px;
+    overflow: hidden;
+    margin-left: 229px;
+    padding: 15px 19px 0;
+    border-left: 1px dotted #a3a3a3;
+}
+.shopping-product-bd{
+    margin-left: -10px;
+}
+.shopping-innnertab-pannel{
+    margin-left: 0;
+    padding-right: 0;
+    position: relative;
+}
+.shopping-product-item{
+    position: relative;
+    width: 220px;
+    height: 170px;
+    float: left;
+    margin: 0 0 0 10px;
+    overflow: hidden;
+    transition: all .2s linear;
+}
+.shopping-product-item a{
+    text-decoration: none;
+    color: #666;
+    display: block;
+}
+.shopping-product-item .item-thumbnail img{
+    height: 110px;
+}
+.item-label {
+    float: right;
+    overflow: hidden;
+    margin: 7px 0 0;
+}
+
+.tag_orange_empty{
+    border: 1px solid #f60;
+    color: #f60;
+    background: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1px 3px;
+    font: 12px/14px simsun;
+    text-align: center;
+}
+
+.tag_yellow_empty{
+    border: 1px solid #d18f00;
+    color: #d18f00;
+    background: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1px 3px;
+    font: 12px/14px simsun;
+    text-align: center;
+}
+/*旅游攻略*/
+.guid-panel .entrance{
+    height: 205px;
+    overflow: hidden;
+    color: #666666;
+}
+.guid-product{
+    background-color: #fff;
+    position: relative;
+    height: 205px;
+    overflow: hidden;
+    margin-left: 229px;
+    padding: 15px 19px 0;
+    border-left: 1px dotted #a3a3a3;
+}
+.guid-product-bd{
+    margin-left: -10px;
+}
+.guid-innnertab-pannel{
+    margin-left: 0;
+    padding-right: 0;
+    position: relative;
+}
+.guid-product-item{
+    position: relative;
+    width: 220px;
+    height: 155px;
+    float: left;
+    margin: 0 0 0 10px;
+    overflow: hidden;
+    transition: all .2s linear;
+}
+.guid-product-item a{
+    text-decoration: none;
+    color: #666;
+    display: block;
+}
+.guid-product-item a img{
+height: 160px;
+}
+
+.guid .item-thumbnail {
+    height: 155px;
+}
+.guid .item-overlay {
+    height: auto;
+    text-align: center;
+    padding: 5px 0;
+    overflow: visible;
+}
+.item-overlay {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 5px;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.guid .item-name{
+    text-align: center;
+    color: #fff;
+}
+/*旅行服务*/
+.mod-bd-travel {
+    margin: 10px 0 0 0px;
+    overflow: hidden;
+    width: 1200px;
+}
+.supply-box {
+    width: 384px;
+    float: left;
+    display: inline;
+    margin-left: 17px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+}
+.supply-hd {
+    height: 102px;
+    overflow: hidden;
+}
+.supply-img {
+    width: 110px;
+    float: left;
+    text-align: right;
+}
+.img-wifi{
+    background: #abcbf5;
+
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+.img-wifi i{
+    height: 34px;
+    margin: -17px 0 0 -23px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 46px;
+    display: inline-block;
+    background: url(../images/xiechengIndexPic/icon3.png) 0 0 no-repeat;
+}
+.supply-cont {
+    margin-left: 130px;
+    padding-top: 15px;
+    line-height: 1.5;
+}
+.supply-title {
+    font: 16px/1.5 "Microsoft yahei";
+    margin-bottom: 5px;
+}
+.supply-intro {
+    font-size: 12px;
+    padding-right: 5px;
+    color: #666;
+}
+.supply-bd {
+    height: 40px;
+    overflow: hidden;
+    border-top: 1px solid #e0e0e0;
+}
+.supply-list {
+    margin-left: -1px;
+    overflow: hidden;
+}
+.supply-list li {
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px 0;
+}
+.col-4 .supply-item{
+    width: 96px;
+}
+.col-3 .supply-item{
+    width: 124px;
+}
+.supply-item {
+    font-size: 12px;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    border-left: 1px dashed #a3a3a3;
+    text-align: center;
+    margin-left: -1px;
+    color: #333;
+}
+.supply-item .icon {
+    overflow: hidden;
+    margin-right: 5px;
+}
+.supply-item .icon img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.img-visa {
+    background: #cbe2b3;
+}
+.img-visa, .img-insurance, .img-dianzi, .img-shopping, .img-charts {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+.supply-img .img-visa i{
+    height: 46px;
+    margin: -23px 0 0 -23px;
+    background-position: 0 -39px;
+}
+.img-visa i, .img-insurance i, .img-dianzi i, .img-shopping i, .img-charts i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 46px;
+    display: inline-block;
+    background: url(//pic.c-ctrip.com/platform/online/home/un_index_supply.png) 0 0 no-repeat;
+}
+.img-insurance {
+    background: #f6dbb9;
+}
+.supply-img .img-insurance i {
+    height: 48px;
+    margin: -24px 0 0 -23px;
+    background-position: 0 -89px;
+}
+.img-shopping {
+    background: #F8c2b3;
+}
+.img-dianzi, .img-shopping, .img-charts {
+    width: 80px;
+    height: 80px;
+}
+.img-dianzi, .img-shopping, .img-charts {
+    margin-top: 19px;
+}
+.img-wifi, .img-visa, .img-insurance, .img-dianzi, .img-shopping, .img-charts {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+.supply-img .img-shopping i {
+    width: 50px;
+    height: 45px;
+    margin: -23px 0 0 -25px;
+    background-position: 0 -140px;
+}
+.img-wifi i, .img-visa i, .img-insurance i, .img-dianzi i, .img-shopping i, .img-charts i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 46px;
+    display: inline-block;
+    background: url(../images/xiechengIndexPic/icon3.png) 0 0 no-repeat;
+}
+.img-dianzi {
+    background: #FBE09F;
+}
+.supply-img .img-dianzi i {
+    width: 55px;
+    height: 37px;
+    margin: -19px 0 0 -28px;
+    background-position: 0 -190px;
+}
+.img-charts {
+    background: #C3CBFF;
+}
+.supply-img .img-charts i {
+    height: 48px;
+    margin: -24px 0 0 -23px;
+    background-position: 0 -232px;
+}
+/*住数据区域*/
+.indices .mod-hd {
+    height: 98px;
+    border: 1px solid #e0e0e0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+}
+.partInfo {
+    width: 189px;
+}
+.part {
+    float: left;
+    display: inline-block;
+    border-left: 1px solid #e0e0e0;
+    margin-left: -1px;
+    padding: 10px 10px 0 20px;
+}
+.part-hd {
+    position: relative;
+    font: 16px/26px "Microsoft YaHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
+    margin-bottom: 5px;
+}
+.indices a {
+    color: #b6b6b6;
+}
+.part-hd-right {
+    position: absolute;
+    right: 0;
+    font: 12px/26px 'SimSun';
+}
+.part-bd, .part-bd a {
+    font-size: 12px;
+    font-family: 'simsun';
+    color: #666;
+    line-height: 1.8;
+}
+.partInfo li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.part-bd, .part-bd a {
+    font-size: 12px;
+    font-family: 'simsun';
+    color: #666;
+    line-height: 1.8;
+}
+.partner {
+    height: 88px;
+    overflow: hidden;
+}
+.partner .part-bd {
+    overflow: hidden;
+}
+.partner .part-bd ul {
+    margin-left: -1px;
+    float: left;
+}
+.partner .part-bd li {
+    float: left;
+    display: inline-block;
+    width: 154px;
+    border-left: 1px dashed #e0e0e0;
+    text-align: center;
+}
+.partner a {
+    display: inline-block;
+    width: 76px;
+    height: 0;
+    padding-top: 28px;
+    overflow: hidden;
+    background-image: url(../images/xiechengIndexPic/ppic_partner.png);
+    background-repeat: no-repeat;
+}
+.partner_hh {
+    background-position: 0 0;
+}
+.partner_lp {
+    background-position: 0 -33px;
+}
+.partner_sg {
+    background-position: 0 -66px;
+}
+.partner_tj {
+    background-position: 0 -99px;
+}
+.partner_ya {
+    background-position: 0 -132px;
+}
+.partner_yy {
+    background-position: 0 -165px;
+}
+.indices .mod-bd {
+    padding: 10px 15px;
+    line-height: 2;
+}
+.mod-bd .indices-nav {
+    height: auto;
+}
+.indices-hot, .indices-nav {
+    margin-right: -5px;
+    padding-left: 80px;
+    display: block;
+    height: 24px;
+    overflow: hidden;
+}
+.indices-line {
+    height: 0;
+    overflow: hidden;
+    border-bottom: 1px dotted #ccc;
+    margin: 5px 0;
+}
+.indices-hot dt, .indices-nav dt {
+    float: left;
+    display: inline;
+    width: 80px;
+    margin-left: -80px;
+}
+
+.indices dt {
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
+}
+.indices-hot dd, .indices-nav dd {
+    font-size: 12px;
+    float: left;
+    width: 84px;
+    margin-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.indices a {
+    color: #b6b6b6;
+}
+.indices .mod-bd {
+    padding: 10px 15px;
+    line-height: 2;
+    background-color: #fff;
+}
+/*底部*/
+
+
+.bottom{
+    height: 420px;
+    background-color: #fff;
+}
+.mod.footer {
+    height: 180px;
+    background-color: #fff;
+    padding: 28px 0 30px 0;
+    color: #666;
+    margin-top: 0;
+}
+.mod.footer .advantage {
+    position: relative;
+    width: 235px;
+    padding-left: 0;
+    border-left: none;
+}
+.mod.footer .footer-item {
+    width: 210px;
+    height: 150px;
+    padding: 0 10px 0 40px;
+    float: left;
+    display: inline-block;
+    border-left: 1px solid #dedede;
+    margin-left: -1px;
+}
+.mod.footer .footer-item dt {
+    font: 16px/20px 'Microsoft yahei';
+    margin-bottom: 10px;
+    margin-top: -3px;
+    position: relative;
+}
+.mod.footer .advantage .advan-item {
+    margin-bottom: 15px;
+}
+.mod.footer .advan-img {
+    float: left;
+    overflow: hidden;
+}
+.mod.footer .advan-text {
+    margin-left: 45px;
+}
+.mod.footer .advan-img .icon-server {
+    background-position: -41px -250px;
+}
+
+.mod.footer .advan-img .icon {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-image: url(//pic.c-ctrip.com/platform/online/home/pic_partner.png);
+    background-repeat: no-repeat;
+}
+.mod.footer .advan-server .advan-title {
+    color: #2577e3;
+}
+.mod.footer .advantage .advan-title {
+    font: bold 16px "Microsoft Yahei";
+    color: #ff9913;
+}
+.mod.footer .advan-img .icon-price {
+    background-position: -41px -200px;
+}
+
+.mod.footer .ft-link-item {
+    float: left;
+    display: inline-block;
+    width: 105px;
+    line-height: 14px;
+    margin: 6px 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.mod.footer .ft-link-item a {
+    font-size: 12px;
+    color: #666;
+    position: relative;
+}
+.mod.footer .ft-link-item_drop {
+    overflow: inherit;
+    height: 14px;
+}
+.mod.footer .ft-link-item_drop .dropdown {
+    z-index: 10;
+}
+
+.dropdown {
+    position: relative;
+    z-index: 10;
+}
+.mod.footer .ft-link-item_drop .dropdown-toggle_border {
+    left: -5px;
+    top: -5px;
+    padding-top: 5px;
+    height: 17px;
+    width: 63px;
+    border: 1px solid #fff;
+    border-bottom: none;
+}
+.dropdown-toggle_border {
+    position: absolute;
+    z-index: 91;
+    right: 0;
+    width: 40px;
+}
+.dropdown-toggle {
+    height: 22px;
+    color: #3983e4;
+    padding: 1px 5px 0;
+    display: inline-block;
+    overflow: hidden;
+}
+.dropdown-toggle .caret {
+    margin-left: 5px;
+}
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+    vertical-align: middle;
+    border-top: 5px solid #3983e4;
+    border-bottom: 0 none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    _color: #ff3fff;
+    _filter: chroma(color=#ff3fff);
+}
+.mod.footer .ft-link-item_drop .dropdown-cont {
+    right: 37px;
+    top: 17px;
+}
+.dropdown-cont {
+    display: none;
+    position: absolute;
+    z-index: 90;
+    top: 22px;
+    right: 0;
+    background: #fff;
+}
+.mod.footer .dropdown-news {
+    width: 160px;
+    background: #fff;
+    padding: 5px 14px;
+    height: auto;
+    border: 1px solid #999;
+    max-height: 96px;
+    overflow: hidden;
+}
+.mod.footer .drop-news-item a {
+    line-height: 24px;
+    display: block;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mod.footer .wechat_code {
+    width: 130px;
+    padding-right: 0;
+    padding-left: 30px;
+    text-align: center;
+}
+.mod.footer .wechat_code dt {
+    margin-bottom: 1px;
+    font-size: 12px;
+}
+.mod.footer .wechat_code .ft-link-item {
+    width: 114px;
+    padding: 8px;
+    border: 1px solid #efefef;
+}
+.footer .code-wechat {
+    display: inline-block;
+    width: 112px;
+    height: 112px;
+}
+.mod.footer .wechat_code .wechat_text {
+    font-size: 12px;
+    margin-top: 10px;
+    line-height: 1.3;
+    color: #999;
+}
+.mod.copyright {
+    text-align: center;
+    color: #999;
+}
+.mod .gns {
+    margin-top: 8px;
+}
+#base_ft .gns, .mod .gns {
+    margin-top: 7px;
+}
+.supervision-call {
+    padding-top: 10px!important;
+}
+#base_ft .honour_wrap, .honour_wrap {
+    display: inline-block;
+    padding-top: 10px;
+    *display: inline;
+    *zoom: 1;
+    text-align: left;
+}
+.mod .honour_wrap a:hover, .mod.copyright a {
+    color: #999;
+}
+#base_ft .icon-gns, .mod .icon-gns {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    background-position: 0 -235px;
+    vertical-align: middle;
+}
+#base_ft .icon-gns, .mod .icon-gns, #base_ft .honour_wrap a, .honour_wrap a, .honour_wrap span, .footer .icon-code-wechat {
+    background-image: url(//pic.c-ctrip.com/platform/online/home/phone_list20190617.png);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+#base_ft .honour_wrap .honour10, .mod .honour_wrap .honour10 {
+    background-position: 0 -429px;
+    width: 102px;
+}
+.mod .honour_wrap .honour12 {
+    background-position: 0 -155px;
+    width: 114px;
+}
+.mod .honour_wrap .honour11 {
+    background-position: 0 -480px;
+    width: 50px;
+}
+.mod .honour_wrap .honour9 {
+    background-position: 0 -350px;
+    width: 130px;
+}
+#base_ft .honour_wrap .honour1, .mod .honour_wrap .honour1 {
+    background-position: -88px -50px;
+    text-indent: 36px;
+}
+#base_ft .honour_wrap .honour2, .mod .honour_wrap .honour2 {
+    background-position: -88px -85px;
+    text-indent: 36px;
+}
+#base_ft .honour_wrap .honour3, .mod .honour_wrap .honour3 {
+    background-position: 0 -50px;
+}
+#base_ft .honour_wrap .honour4, .mod .honour_wrap .honour4 {
+    background-position: -88px -118px;
+    text-indent: 0;
+    padding: 2px 0 2px 37px;
+    width: 51px;
+    height: 28px;
+    line-height: 1.2;
+}
+#base_ft .honour_wrap .honour5, .mod .honour_wrap .honour5 {
+    width: 95px;
+    background-position: 0 -387px;
+}
+#base_ft .honour_wrap .honour6, .mod .honour_wrap .honour6 {
+    background-position: 0 -118px;
+}
+#base_ft .honour_wrap .honour8, .mod .honour_wrap .honour8 {
+    background-position: 0 -193px;
+    width: 90px;
+}
+.mod .honour_wrap a, .mod .honour_wrap span {
+    float: left;
+    margin: 0 4px;
+    width: 88px;
+    height: 32px;
+    border: 1px solid #d1d1d1;
+    border-radius: 2px;
+    font: 12px/32px Simsun;
+    color: #666;
+    overflow: hidden;
+    text-indent: -99em;
+}

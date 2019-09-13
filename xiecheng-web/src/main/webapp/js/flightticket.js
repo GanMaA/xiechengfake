@@ -43,6 +43,9 @@ $(function () {
             $("#bd-left-bar").css("top", "308px");
         }
     });
+    $(".search_box a").click(function () {
+        $(document).scrollTop(150)
+    })
     //给搜索栏的孩子添加类
     $(".search_form").find("input").addClass("search")
     $(".search_form").find("select").addClass("search")
