@@ -90,53 +90,46 @@
                         <tr>
                             <td>目的地</td>
                             <td colspan="3">
-                                <input type="text" name="addressName" value="上海">
+                                <input type="text" name="addressName"  value="上海">
                                 <div  class="addressNmae1" >
                                     <span style="color: #666666;float: left">支持中文/拼音/简拼输入</span>&nbsp;&nbsp;
                                     <a href="###" class="a_close"style="font-size: 30px">×</a>&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                                   <div style="float: left;margin-top: 8px">
+                                   <div class="cityname" style="float: left;margin-top: 8px">
                                         <a style="color: #0066CC;font-weight: bold" href="#">热门</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">ABCD</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">EFGH</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">JKLM</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">NOPQRS</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">TUVWX</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">YZ</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+                                        <a href="##">ABCD</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">EFGH</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">JKLM</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">NOPQRS</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">TUVWX</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">YZ</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                                    </div>
                                     <hr/>
-                                    <div style="float: left;margin-top: 8px">
-                                        <a href="#">北京</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">上海</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">天津</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">重庆</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">大连</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">青岛</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+                                    <div class="cityName" style="float: left">
+                                        <a href="##">北京</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">上海</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">天津</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">重庆</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">大连</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">青岛</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+                                        <a href="##">西安</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">南京</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">苏州</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">杭州</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">厦门</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">成都</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+                                        <a href="##">深圳</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">广州</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">三亚</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">济南</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">台北</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">香港</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+                                        <a href="##">宁波</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">沈阳</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">武汉</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">郑州</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">贵阳</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="##">宁夏</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
                                     </div>
-                                    <div style="float: left;margin-top: 8px">
-                                        <a href="#">西安</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">南京</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">苏州</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">杭州</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">厦门</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">成都</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-                                    </div>
-                                    <div style="float: left;margin-top: 8px">
-                                        <a href="#">深圳</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">广州</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">三亚</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">济南</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">台北</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">香港</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-                                    </div>
-                                    <div style="float: left;margin-top: 8px">
-                                        <a href="#">宁波</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">沈阳</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">武汉</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">郑州</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">贵阳</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#">宁夏</a>&nbsp;&nbsp;&nbsp;&nbsp;<br/>
-                                    </div>
-
                                 </div>
                             </td>
                         </tr>
@@ -163,7 +156,19 @@
                             </td>
                             <td>住客数</td>
                             <td>
-                                <input style="height: 25px ;width: 80px" type="text" value="2成人1儿童">&nbsp;&nbsp;
+                                <input name="peopleNum" style="height: 25px ;width: 100px" readonly type="text" value="2成人1儿童"><b class="n_gst_tri"></b>&nbsp;&nbsp;
+                                <div class="n_gst_p">
+                                    <ul class="n_gst_list" style="margin-top: 10px">
+                                        <li style="padding-left: 20px;padding-right: 20px" >
+                                            成人&nbsp;&nbsp;<span style="font-size: 12px;color: #666666">18周岁及以上</span><span style="margin-left: 30px"><input type="button" name="sub" value="-" style="width: 20px"><input type="text" name="num1" readonly value="1" style="width: 30px;text-align: center"><input type="button" name="add" value="+" style="width: 20px"></span>
+                                        </li><br/>
+                                        <li style="padding: 20px 20px 20px 20px" >
+                                            儿童&nbsp;&nbsp;<span style="font-size: 12px;color: #666666">0-17周岁</span><span style="margin-left: 55px"><input type="button" name="sub" value="-" style="width: 20px"><input type="text" name="num2" readonly  value="1" style="width: 30px;text-align: center"><input type="button" name="add" value="+" style="width: 20px"></span>
+                                        </li>
+                                    </ul>
+                                    <hr/>
+                                    <div style="float: left;margin-bottom: 10px"><input name="determine" type="button" value="确定" style="width: 80px;margin-left: 30px;background-color: #0066cc;border-radius: 10px 10px 10px 10px"><input name="cancel" type="button" value="取消" style="width: 80px;margin-left: 30px;background-color: #0066cc;border-radius: 10px 10px 10px 10px"></div>
+                                </div>
                                 <div style="float: right;right: 5px">
                                     <div class="help"><img src="images/hotelPiC/help.jpg" ></div>
                                 </div>
@@ -320,51 +325,53 @@
                     </div>
                     <div class="hot_sold_box" >
                         <div  id="pop_box_city" class="pop_box_city" >
-                            <a href="#">长沙</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">重庆</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">大连</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">福州</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="###" class="c_close"style="font-size: 30px">×</a>
-                            <a href="#">贵阳</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">桂林</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">黄山</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">哈尔滨</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">海口</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">合肥</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">呼和浩特</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">济南</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">昆明</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">丽江</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">南昌</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">南京</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">南宁</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">宁波</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">青岛</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">三亚</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">厦门</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">沈阳</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">石家庄</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">苏州</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">台北</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">太原</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">天津</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">乌鲁木齐</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">无锡</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">武汉</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">西安</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">香港</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">阳朔</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">郑州</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">香格里拉</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">五台</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">佛山</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">龙岩</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">日照</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">拉萨</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">启东</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">绵阳</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">唐山</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#" >常州</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div style="float: right"><a href="###" class="c_close"style="font-size: 30px">×</a></div>
+                            <div class="pop_box_city1" >
+                                <a href="##">长沙</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">重庆</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">大连</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">福州</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">贵阳</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">桂林</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">黄山</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">哈尔滨</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">海口</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">合肥</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">呼和浩特</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">济南</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">昆明</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">丽江</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">南昌</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">南京</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">南宁</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">宁波</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">青岛</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">三亚</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">厦门</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">沈阳</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">石家庄</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">苏州</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">台北</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">太原</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">天津</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">乌鲁木齐</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">无锡</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">武汉</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">西安</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">香港</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">阳朔</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">郑州</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">香格里拉</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">五台</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">佛山</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">龙岩</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">日照</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">拉萨</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">启东</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">绵阳</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##">唐山</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="##" >常州</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
                         </div>
                         <div class="hot_sold_title">
                         <h2 style="color: #0066CC;float: left;font-weight: normal">热门酒店</h2>
