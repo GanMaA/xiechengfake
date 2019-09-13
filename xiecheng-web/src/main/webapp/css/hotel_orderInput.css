@@ -85,6 +85,8 @@
 #order_body_aside {
     float: left;
     width: 380px;
+    background-color: green;
+    height: 780px;
 }
 
 
