@@ -16,6 +16,7 @@ $(function () {
     $(".cityName").children().click(function () {
         // alert($(this).html());
         $("input[name='addressName']").val($(this).html());
+        // alert(1);
         $(".addressNmae1").hide();
     });
 
@@ -24,9 +25,9 @@ $(function () {
         $(".addressNmae1").show();
     });
     //当地址输入框或得焦点时显示地址选择框
-    $("input[name='addressName']").blur(function () {
-        $(".addressNmae1").hide();
-    });
+    // $("input[name='addressName']").blur(function () {
+    //     $(".addressNmae1").hide();
+    // });
     //点击地址输入框的X按钮隐藏地址选择框
     $(".a_close").click(function () {
         $(".addressNmae1").hide();
