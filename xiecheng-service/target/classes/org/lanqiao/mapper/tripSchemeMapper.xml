@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.lanqiao.mapper.tripSchemeMapper" >
+  <resultMap id="BaseResultMap" type="org.lanqiao.entity.tripScheme" >
+    <id column="journey_scheme_id" property="journeySchemeId" jdbcType="INTEGER" />
+    <result column="journey_route" property="journeyRoute" jdbcType="VARCHAR" />
+    <result column="budget" property="budget" jdbcType="INTEGER" />
+    <result column="journey_time" property="journeyTime" jdbcType="INTEGER" />
+    <result column="scheme_kind" property="schemeKind" jdbcType="VARCHAR" />
+    <result column="start" property="start" jdbcType="VARCHAR" />
+    <result column="destination" property="destination" jdbcType="VARCHAR" />
+    <result column="scheme_img" property="schemeImg" jdbcType="VARCHAR" />
+    <result column="supplier_id" property="supplierId" jdbcType="INTEGER" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    journey_scheme_id, journey_route, budget, journey_time, scheme_kind, start, destination, 
+    scheme_img, supplier_id, description
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from journey_scheme
+    where journey_scheme_id = #{journeySchemeId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from journey_scheme
+    where journey_scheme_id = #{journeySchemeId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.lanqiao.entity.tripScheme" >
+    insert into journey_scheme (journey_scheme_id, journey_route, budget, 
+      journey_time, scheme_kind, start, 
+      destination, scheme_img, supplier_id, 
+      description)
+    values (#{journeySchemeId,jdbcType=INTEGER}, #{journeyRoute,jdbcType=VARCHAR}, #{budget,jdbcType=INTEGER}, 
+      #{journeyTime,jdbcType=INTEGER}, #{schemeKind,jdbcType=VARCHAR}, #{start,jdbcType=VARCHAR}, 
+      #{destination,jdbcType=VARCHAR}, #{schemeImg,jdbcType=VARCHAR}, #{supplierId,jdbcType=INTEGER}, 
+      #{description,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.lanqiao.entity.tripScheme" >
+    insert into journey_scheme
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="journeySchemeId != null" >
+        journey_scheme_id,
+      </if>
+      <if test="journeyRoute != null" >
+        journey_route,
+      </if>
+      <if test="budget != null" >
+        budget,
+      </if>
+      <if test="journeyTime != null" >
+        journey_time,
+      </if>
+      <if test="schemeKind != null" >
+        scheme_kind,
+      </if>
+      <if test="start != null" >
+        start,
+      </if>
+      <if test="destination != null" >
+        destination,
+      </if>
+      <if test="schemeImg != null" >
+        scheme_img,
+      </if>
+      <if test="supplierId != null" >
+        supplier_id,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="journeySchemeId != null" >
+        #{journeySchemeId,jdbcType=INTEGER},
+      </if>
+      <if test="journeyRoute != null" >
+        #{journeyRoute,jdbcType=VARCHAR},
+      </if>
+      <if test="budget != null" >
+        #{budget,jdbcType=INTEGER},
+      </if>
+      <if test="journeyTime != null" >
+        #{journeyTime,jdbcType=INTEGER},
+      </if>
+      <if test="schemeKind != null" >
+        #{schemeKind,jdbcType=VARCHAR},
+      </if>
+      <if test="start != null" >
+        #{start,jdbcType=VARCHAR},
+      </if>
+      <if test="destination != null" >
+        #{destination,jdbcType=VARCHAR},
+      </if>
+      <if test="schemeImg != null" >
+        #{schemeImg,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierId != null" >
+        #{supplierId,jdbcType=INTEGER},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.lanqiao.entity.tripScheme" >
+    update journey_scheme
+    <set >
+      <if test="journeyRoute != null" >
+        journey_route = #{journeyRoute,jdbcType=VARCHAR},
+      </if>
+      <if test="budget != null" >
+        budget = #{budget,jdbcType=INTEGER},
+      </if>
+      <if test="journeyTime != null" >
+        journey_time = #{journeyTime,jdbcType=INTEGER},
+      </if>
+      <if test="schemeKind != null" >
+        scheme_kind = #{schemeKind,jdbcType=VARCHAR},
+      </if>
+      <if test="start != null" >
+        start = #{start,jdbcType=VARCHAR},
+      </if>
+      <if test="destination != null" >
+        destination = #{destination,jdbcType=VARCHAR},
+      </if>
+      <if test="schemeImg != null" >
+        scheme_img = #{schemeImg,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierId != null" >
+        supplier_id = #{supplierId,jdbcType=INTEGER},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where journey_scheme_id = #{journeySchemeId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.lanqiao.entity.tripScheme" >
+    update journey_scheme
+    set journey_route = #{journeyRoute,jdbcType=VARCHAR},
+      budget = #{budget,jdbcType=INTEGER},
+      journey_time = #{journeyTime,jdbcType=INTEGER},
+      scheme_kind = #{schemeKind,jdbcType=VARCHAR},
+      start = #{start,jdbcType=VARCHAR},
+      destination = #{destination,jdbcType=VARCHAR},
+      scheme_img = #{schemeImg,jdbcType=VARCHAR},
+      supplier_id = #{supplierId,jdbcType=INTEGER},
+      description = #{description,jdbcType=VARCHAR}
+    where journey_scheme_id = #{journeySchemeId,jdbcType=INTEGER}
+  </update>
+</mapper>

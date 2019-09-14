@@ -1,0 +1,1097 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box_size1 dt i,.box_size1 dt b,#air_choose i,.search_button i,.index_ico,.trip_title h2,.top_trip{
+    background-image: url(//pic.c-ctrip.com/VacationOnlinePic/vacation_v2/searchresult/un_index02.png);
+    background-repeat: no-repeat;
+}
+.icon{
+    background: url(//pic.c-ctrip.com/VacationOnlinePic/vacation_v2/searchresult/index_side02.png) no-repeat;
+    position: absolute;
+}
+.icon_theme,.in_hot,.in_new{
+    background: url(//pic.c-ctrip.com/vacation_v2/theme.png) no-repeat;
+}
+.icon_theme{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+.in_hot{
+    width: 22px;
+    height: 13px;
+    background-position: -39px 0;
+    position: absolute;
+    right: 160px;
+    top: 0px;
+    display: block;
+}
+.icon_1{
+    background-position: -150px -10px;
+    width: 9px;
+    height: 15px;
+    left: auto;
+    right: 0;
+    top: 50%;
+    margin-top: -4px;
+}
+.cur{
+    border-top-color: #bbb;
+    border-bottom-color: #bbb;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    z-index: 3;
+    box-shadow: 0 1px #ddd;
+}
+.cur .icon_1{
+    background-position: -150px -45px;
+}
+.side_jmp{
+    display: none;
+    top: 0;
+    height: 465px;
+    padding-bottom: 108px;
+    width: 710px;
+    position: absolute;
+    z-index: 2;
+    left: 341px;
+    border: 1px solid #bbb;
+    background: #fff;
+    box-shadow: -1px 1px 3px rgba(0,0,0,.3);
+    border-radius: 0 5px 5px 0;
+}
+.choose_them .side_jmp_dest{
+    padding: 20px 0 10px;
+    width: 680px;
+    position: relative;
+    z-index: 1;
+}
+.side_jmp_dest li {
+    zoom: 1;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.side_jmp_dest h4{
+    width: 100px;
+    text-align: right;
+    font-size: 14px;
+    float: left;
+    height: 28px;
+    overflow: hidden;
+    font-family: Tahoma,Simsun,sans-serif;
+    color: #333;
+    display: inline-block;
+    margin-right: 8px;
+}
+.link_wrap{
+    width: 680px;
+    margin-right: 40px;
+}
+.side_jmp_dest .link_wrap a{
+    display: inline-block;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 4px 0 4px -1px;
+    padding: 0 8px;
+    border-left: 1px solid #ccc;
+}
+body{
+    background-color: #fff;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: Tahoma,Simsun,sans-serif;
+    color: #333;
+}
+input{
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style-type: none;
+}
+.choose_them span{
+    font: normal 18px/24px microsoft yahei,simsun;
+}
+.menu1{
+
+    width: 1366px;
+    height: 36px;
+    background-color: #D9D9D9;
+}
+.top_logoe{
+    width: 1366px;
+    height: 80px;
+
+}
+.menu2{
+
+    width: 1366px;
+    height: 40px;
+    margin-bottom: 54px;
+    background-color: #1d67dd;
+
+}
+#base_area{
+    width: 1366px;
+    height: 4683px;
+    background-color: aliceblue;
+    padding-top: 5px;
+}
+.main_area{
+    width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+}
+.bg_maincolor{
+
+}
+.area_of_trip{
+    width: 1220px;
+    height: 40px;
+    margin: 0 0 20px 0;
+
+}
+.index_ico{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 128px;
+    margin: -4px 0 0 -4px;
+    width: 23px;
+    height: 16px;
+    background-position: -349px -317px;
+    display: block;
+}
+.start_air_search{
+
+}
+.start_air{
+    position: relative;
+    width: 350px;
+    height: 40px;
+    float: left;
+}
+.start_air .box_size1{
+    width: 175px;
+    background-color: #F4F4F4;
+    float: left;
+}
+.box_size1 dt{
+    position: relative;
+    height: 38px;
+    border: 1px solid #d6d6d6;
+    font: 16px/38px microsoft yahei,simsun,sans-serif;
+    color: #06c;
+    width: 90px;
+    cursor: pointer;
+    padding: 0 34px 0 40px;
+    background: #fafafa;
+    z-index: 22;
+    float: left;
+    white-space: nowrap;
+}
+.box_size1 dt i{
+    position: absolute;
+    width: 14px;
+    height: 17px;
+    background-position: -180px -152px;
+    left: 21px;
+    top: 11px;
+    overflow: hidden;
+}
+.box_size1 dt b{
+    position: absolute;
+    width: 8px;
+    height: 5px;
+    background-position: -183px -133px;
+    top: 17px;
+    right: 10px;
+    overflow: hidden;
+}
+#air_choose i{
+    float: left;
+    width: 44px;
+    height: 16px;
+    background-position: -117px -152px;
+    margin-right: 6px;
+    position: static;
+    margin-top: 11px;
+}
+
+.search{
+    position: relative;
+    width: 810px;
+    height: 40px;
+    float: right;
+}
+.search_area{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 34px;
+    border: 3px solid #fe9813;
+    padding-left: 120px;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 1px 1px 3px #ddd inset;
+}
+.allproduct{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #fff8d5;
+    width: 117px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fe9813;
+    border-right-width: 2px;
+}
+.allproduct dd{
+    display: none;
+}
+.allproduct dd a{
+    display: block;
+    font: 14px/28px microsoft yahei,simsun,sans-serif;
+    color: #666;
+    padding-left: 10px;
+}
+.product_font{
+
+    color: #333;
+    line-height: 32px;
+    height: 33px;
+    font-size: 15px;
+    padding-left: 10px;
+
+}
+.allproduct i{
+    border-style: solid dashed none dashed;
+    border-width: 4px 4px 0 4px;
+    border-color: #fa8a22 transparent transparent transparent;
+    top: 14px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    font-size: 0;
+    right: 10px;
+}
+.search_input{
+    position: relative;
+    width: 265px;
+    height: 34px;
+    overflow: hidden;
+}
+.search_input label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font: 16px/34px microsoft yahei,simsun;
+    text-indent: 1em;
+    z-index: 1;
+    color: grey;
+    cursor: text;
+}
+.search_input .search_txt{
+    font: 16px/27px microsoft yahei,simsun,sans-serif;
+    border: 0 none;
+    box-shadow: inherit;
+    width: 265px;
+    height: 34px;
+    position: relative;
+}
+.search_button{
+    position: relative;
+    float: left;
+    height: 38px;
+    width: 128px;
+    color: #fff;
+    text-align: center;
+    background-color: #fb9125;
+    -webkit-box-shadow: inset 0 1px 0 0 #fcad5c;
+    box-shadow: inset 0 1px 0 0 #fcad5c;
+    border: 1px solid #e08821;
+    cursor: pointer;
+    font: 18px/38px microsoft yahei,simsun,sans-serif;
+    margin-left: -3px;
+    text-indent: 27px;
+    border-radius: 0 5px 5px 0;
+    background-image: -webkit-linear-gradient(top,#fb9125,#fa8721);
+}
+.search_button i{
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-position: -394px -303px;
+    left: 27px;
+    top: 10px;
+    overflow: hidden;
+}
+.input_tip_box{
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    padding: 10px 20px;
+    width: 479px;
+    left: 0;
+    top: 40px;
+    z-index: 2;
+    display: none;
+}
+.input_tip_box h3{
+    font-size: 14px;
+    font-weight: 400;
+    color: #fc972c;
+    padding-top: 10px;
+}
+.index_hotsearch{
+    overflow: hidden;
+}
+.index_hotsearch dt{
+    float: left;
+    width: 100%;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #666;
+    padding: 0 5px;
+}
+.index_hotsearch dd{
+    float: left;
+    line-height: 24px;
+}
+.play_theme{
+    display: inline-block;
+    white-space: nowrap;
+    color: #666;
+    padding: 0 5px;
+}
+.close{
+    position: absolute;
+    font-size: 18px;
+    font-weight: 700;
+    color: #b2b2b2;
+    top: 5px;
+    right: 15px;
+}
+/*主题推荐*/
+.choose_center{
+    position: relative;
+    height: 591px;
+    margin-bottom: 10px;
+}
+.choose_them{
+    width: 350px;
+    height: 581px;
+    border: #2577e3 solid 4px;
+    border-radius: 5px;
+    float: left;
+}
+.choose_them ul{
+    display: block;
+    width: 342px;
+    height: 573px;
+}
+.choose_them ul li{
+    padding: 2px 20px;
+
+}
+.choose_them h3{
+
+}
+.them_div{
+    height: 40px;
+    padding: 8px 15px 8px 50px;
+    position: relative;
+    margin-bottom: -1px;
+    border-bottom: 1px solid #eee;
+}
+.choose_imgs{
+    position: relative;
+    width: 810px;
+    height: 581px;
+    background-color: #dddddd;
+    float: right;
+    padding-bottom: 10px;
+}
+.icon_side {
+    width: 35px;
+    height: 35px;
+    background: url(//pic.c-ctrip.com/VacationOnlinePic/vacation_v2/searchresult/index_side02.png) no-repeat;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+.icon_inland {
+    background-position: -35px 0;
+}
+.icon_hk {
+    background-position: -70px 0;
+}
+.icon_jp {
+    background-position: -105px 0;
+}
+.icon_asia {
+    background-position: 0 -35px;
+    height: 36px;
+}
+.icon_europe {
+    background-position: -35px -35px;
+    height: 36px;
+}
+.icon_america {
+    background-position: -70px -35px;
+    height: 40px;
+}
+.icon_other {
+    background-position: -105px -35px;
+    width: 40px;
+}
+
+/* */
+.roll_ad{
+    position: relative;
+    width: 810px;
+    height: 235px;
+    margin: 0 auto 15px;
+}
+.roll_around{
+    position: absolute;
+}
+.roll_img{
+    float: left;
+}
+.roll_box{
+    position: absolute;
+    width: 96px;
+    height: 18px;
+    left: 50%;
+    margin-left: -40px;
+    bottom: 0;
+}
+.box_node{
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: auto 4px;
+    border-radius: 5px;
+    background-color: #666666;
+    float: left;
+    opacity: 0.5;
+}
+.ad{
+    position: relative;
+    opacity: 0.25;
+    background: rgb(0, 0, 0);
+    width: 18px;
+    height: 11px;
+    border-radius: 0px 2px 2px 0px;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    bottom: 0px;
+}
+.ad span{
+    opacity: 0.95;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    width: 31px;
+    height: 19px;
+    letter-spacing: 0px;
+    line-height: 19px;
+    display: block;
+    text-align: center;
+    transform: scale(0.58);
+    transform-origin: 0px 0px 0px;
+}
+.ad_con{
+    width: 810px;
+    height: 254px;
+    position: relative;
+    background-color: #2577e3;
+    margin-bottom: 15px;
+}
+.ad_box{
+    width: 195px;
+    height: 254px;
+    float: left;
+    margin-right: 10px;
+}
+.new{
+    margin-right: 0;
+}
+.bottom_ad{
+
+}
+/*秒杀*/
+.second_time{
+    width: 1220px;
+    height: 304px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+}
+.count_down{
+    position: relative;
+    float: left;
+}
+.the_time{
+    position: absolute;
+    top: 10px;
+    width: 200px;
+}
+.ms{
+    display: block;
+    width: 50px;
+    height: 21px;
+    background: #fff;
+    text-align: center;
+    border-radius: 2px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #ff4646;
+    cursor: default;
+}
+.ssms{
+    display: block;
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    height: 47px;
+    line-height: 47px;
+}
+.kq{
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    height: 19px;
+    line-height: 19px;
+}
+.lightning{
+    width: 36px;
+    height: 66px;
+    text-align: center;
+    margin: 20px auto 9px auto;
+}
+.jjs{
+    font-size: 20px;
+    color: #fff;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+}
+.time_flow{
+    font-size: 28px;
+    color: #333;
+    line-height: 32px;
+    margin-top: 10px;
+    text-align: center;
+}
+.time_flow em{
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background: #222;
+    color: #fff;
+    font-size: 24px;
+    font-style: inherit;
+    line-height: 40px;
+    display: inline-block;
+}
+.time_flow i{
+    width: 16px;
+    height: 32px;
+    line-height: 26px;
+    text-align: center;
+    display: inline-block;
+}
+.seckill_area{
+    position: relative;
+}
+.seckill_box{
+    width: 980px;
+    height: 280px;
+    position: relative;
+    padding-bottom: 50px;
+    float: right;
+}
+.seckill_box ul{
+
+}
+.seckill_box ul li{
+
+}
+.seckill_box1{
+
+}
+.box_size2{
+    float: left;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+.img_of_box1 img{
+    width:280px;
+    height:156px;
+}
+.box_size2 h3{
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    padding: 5px 10px 0 10px;
+    width: 260px;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.button_size{
+    width: 30px;
+    height: 50px;
+    background-color: darkgray;
+    display: block;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+    top: 90px;
+    float: left;
+}
+.button_left{
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.button_right{
+    right: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.trip_type{
+    display: block;
+    float: left;
+    padding-right: 10px;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    overflow: hidden;
+    font-size: 15px;
+    color: white;
+}
+.hui {
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    background: #ff4646;
+    border-radius: 2px;
+    display: inline-block;
+    text-align: center;
+    line-height: 15px;
+    margin: 0 10px;
+    font-style: inherit;
+}
+.bg_hui{
+    position: relative;
+    bottom: 25px;
+}
+.bg_hui p{
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+}
+.onsale_date {
+    font-size: 12px;
+    color: #999;
+    padding: 0 10px;
+    width: 245px;
+    height: 24px;
+    text-decoration: none;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+}
+.type1{
+background-color: #2577e3;
+}
+.startof{
+    background-color: black;
+    opacity: 0.5;
+}
+.img_of_box1{
+
+}
+.float_top{
+    position: absolute;
+    top: 20px;
+}
+.gogogo{
+
+}
+.pricekill{
+    color: #ff4646;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    float: left;
+    margin-top: -1px;
+    margin-right: 4px;
+}
+.pricekill em{
+    font-size: 14px;
+    font-style: normal;
+}
+.pricekill dfn{
+    font-size: 14px;
+    font-style: italic;
+
+}
+.right_away{
+    display: block;
+    position: relative;
+    width: 64px;
+    height: 24px;
+    color: white;
+    float: right;
+    background-color: #ff4646;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 24px;
+}
+.bottom_line{
+    position: absolute;
+    width: 980px;
+    height: 0;
+    bottom: 0;
+    border-bottom: 1px solid darkgrey;
+}
+.bottom_line a{
+    position: relative;
+    display: block;
+    float: right;
+    background-color: darkgray;
+    width: 72px;
+    line-height: 30px;
+    color: black;
+    text-align: center;
+    font-style: unset;
+    opacity: 0.5;
+    height: 30px;
+    margin-top: -16px;
+    padding: 0 30px 0 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.bottom_line i{
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: right;
+    color: white;
+    border-radius: 5px;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    top: 9px;
+    line-height: 14px;
+}
+.index_product{
+    padding-top: 30px;
+    position: relative;
+    height: 610px;
+}
+.internationnal_pro{
+
+}
+.trip_title{
+    border-width: 0 0 3px;
+    border-style: solid;
+    width: 1180px;
+    height: 40px;
+    border-color: #63b7e3;
+}
+.trip_title ul{
+    float: left;
+    width: 970px;
+    height: 43px;
+    margin-bottom: -3px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+.trip_title li{
+    float: left;
+    padding: 13px 0;
+    margin-left: -1px;
+    cursor: pointer;
+    position: relative;
+
+}
+.trip_title span{
+    border-left: 1px solid #D9D9D9;
+    padding: 0 18px;
+}
+.trip_title h2{
+    background-position: -225px -84px;
+    float: left;
+    width: 185px;
+    height: 0;
+    overflow: hidden;
+    padding-top: 40px;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    padding-right: 25px;
+}
+.trip_title a{
+    color: #34a591;
+    display: block;
+    padding: 0 18px 0 32px;
+    line-height: 14px;
+    border-left: 1px solid #ccc;
+    float: left;
+}
+.trip_title b{
+    border-color: #63b7e3 transparent;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+    border-width: 0 7px 7px;
+    border-style: solid dashed;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -7px;
+}
+.trip_title i{
+    border-color: #fff transparent;
+    margin-bottom: -4px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+    border-width: 0 7px 7px;
+    border-style: solid dashed;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -7px;
+}
+.top_trip{
+    background-position: -380px -371px;
+}
+.product_wrap{
+
+}
+.jpg_of_tour{
+    float: left;
+}
+.jpg_of_tour a{
+    display: block;
+}
+.jpg_of_tour img{
+    vertical-align: top;
+}
+.product_list{
+    display: block;
+    width: 968px;
+    height: 573px;
+    padding: 6px 0 0 2px;
+    float: right;
+    position: relative;
+}
+.index_product .product_list .big_pic{
+    width: 452px;
+    padding: 6px 9px 0;
+}
+.product_list .big_pic img{
+    padding: 6px 9px 0;
+    display: block;
+    width: 450px;
+    height: 274px;
+    margin-top: 0;
+    margin-left: -8px;
+}
+.index_product .product_list .product_pic img {
+    display: block;
+    width: 210px;
+    height: 94px;
+    margin-top: 5px;
+}
+.product_list li{
+    padding: 6px 9px 4px;
+    border: 2px solid #fff;
+    width: 210px;
+    float: left;
+    margin: 4px 0 0 10px;
+}
+.index_product .product_list dfn{
+color: orange;
+}
+.index_product .product_list em{
+
+}
+.index_product .product_list h3 a{
+    display: block;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    height: 40px;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    -webkit-box-orient: vertical;
+}
+.price{
+    color: #f60;
+    font-size: 18px;
+    line-height: 20px;
+    height: 20px;
+    float: left;
+}
+.bottom_area{
+    margin: 20px auto;
+    width: 1220px;
+    padding-top: 40px;
+    padding-left: 25px;
+}
+.city_list_box{
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 320px;
+    height: 592px;
+    padding: 14px;
+    border: 1px solid #dddddd;
+    border-top: none;
+    overflow: hidden;
+    top: 39px;
+    left: 0;
+    z-index: 23;
+    margin-top: 1px;
+}
+.city_list_box dd{
+
+}
+.hot_top{
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 8px;
+}
+.hot_top h4{
+    font-weight: 400;
+    color: #999;
+    font-size: 12px;
+    line-height: 20px;
+}
+.hot_top p a{
+    display: inline-block;
+    line-height: 20px;
+    margin-right: 8px;
+    color: #666;
+}
+.hot_city{
+
+}
+.hot_city a{
+
+}
+.city_list{
+
+}
+.search_city{
+
+}
+.search_input2{
+    height: 28px;
+    border: 1px solid #d2d2d2;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px #ddd inset;
+    position: relative;
+    z-index: 3;
+}
+.search_input2 p{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #999;
+    text-indent: 10px;
+    z-index: -1;
+    line-height: 28px;
+}
+.search_input2 input{
+    border: 0!important;
+    padding: 0!important;
+    background-color: transparent;
+    box-shadow: none!important;
+    width: 96%;
+    height: 22px;
+    margin: 2px 2%;
+    outline: 0;
+}
+.city_F{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+}
+.city_F a{
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 22px;
+    height: 22px;
+    white-space: nowrap;
+    color: #000;
+    font-family: 'Microsoft yahei';
+}
+.city_F a.on{
+    color: #fff;
+    background-color: #1d74e6;
+    text-decoration: none;
+}
+.city_of_F{
+    display: block;
+    padding-right: 1px;
+    margin-top: -1px;
+    position: relative;
+    z-index: 1;
+    max-height: 442px;
+    overflow: auto;
+    scrollbar-face-color: #ddd;
+    scrollbar-highlight-color: #ddd;
+    scrollbar-shadow-color: #fff;
+    scrollbar-3dlight-color: #fff;
+    scrollbar-arrow-color: #fff;
+    scrollbar-track-color: #f8f8f8;
+    scrollbar-darkshadow-color: #f8f8f8;
+}
+.city_of_F li{
+    padding-left: 15px;
+    line-height: 30px;
+    border-top: 1px dotted #eaeaea;
+}
+.city_of_F li span{
+    margin-left: -15px;
+    font-size: 14px;
+    color: #1d74e6;
+    font-weight: 700;
+    float: left;
+    margin-top: 1px;
+}
+.city_of_F li a{
+    display: inline-block;
+    margin-left: 15px;
+    color: #000;
+}
