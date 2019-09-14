@@ -1,0 +1,23 @@
+* {margin: 0;padding: 0;}
+.navtop{width:100%;height:100%;border:0;padding:0;margin-bottom:-5px;}
+.base_ft{
+    width: 1150px;
+    height: 150px;
+    text-align: center;
+    /*margin: 0px -139px 20px 0px;*/
+    padding: 10px 0px 0px;
+    background-color: white;
+    margin: auto;
+}
+.base_ft a{
+    /*list-style-type: none;*/
+    text-decoration:none;
+    color: #4c4c4c;
+    font: 12px Arial,Verdana;
+    line-height: 5px;
+    white-space: nowrap;
+}
+.base_ft p{
+    font: 12px Arial,Verdana;
+    margin: 12px 0 12px 0;
+}
