@@ -1,4 +1,6 @@
 /target/
 /src/test/
-.idea
-.settings
+*.idea
+*.settings
+mybatis.properties
+*.iml
