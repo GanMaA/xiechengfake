@@ -17,7 +17,7 @@ $(function () {
     //全部产品
     $(".allproduct").hover(
         function () {
-            $(this).find("dd").toggle();
+            $(this).find("dd").stop().toggle();
         }
     )
     $(".search_txt").focus(
