@@ -83,7 +83,7 @@ form {
     background-position: -8px -8px;
 }
 .cui-nav-bar .ico-global, .cui-nav-bar b.n-arrow, .cui_hd b.n-arrow, .cui-nav-bar .set-list.set-infor .infor-notice, .cui-nav-bar .set-list.set-phone .person-text span .ico_app, .cui-nav-bar .set-list.set-phone .phone-drowndrop .ctrip-app .arrow-right, .cui-nav-bar .set-list.set-wechat .person-text span .ico_wechat, .cui-nav-bar .set-list.set-business-travel-list .ico-business-travel, .cui-nav-bar .set-list.set-business-travel-list.my_current .ico-business-travel, .cui-nav-bar .set-list.set-business-travel-list.my_current b.n-arrow, .cui-nav-bar .set-list.set-business-travel-list .nav-myctrip:hover .n-arrow {
-    background-image: url(//pic.c-ctrip.com/platform/online/home/sprite2019527.png);
+    background-image: url("../images/userinfo/sprite2019527.png");
     background-repeat: no-repeat;
 }
 .cui-nav-bar .set-list.set-infor .infor-num {
@@ -222,7 +222,7 @@ b {
     *padding-top: 14px;
 }
 .cui_search button {
-    background-image: url(//pic.c-ctrip.com/platform/online/home/un_header_footer20160610.png);
+    background-image: url("../images/userinfo/un_header_footer20160610.png");
     background-repeat: no-repeat;
 }
 .cui-nav-bar .set-list.set-wechat .person-text .set-text {
@@ -262,7 +262,7 @@ b {
     display: block;
     width: 126px;
     height: 43px;
-    background: url(//pic.c-ctrip.com/common/c_logo2013.png) no-repeat;
+    background: url("../images/userinfo/c_logo2013.png") no-repeat;
     text-indent: -999px;
     overflow: hidden;
 }
@@ -650,7 +650,7 @@ ul, li {
 .member-box {
     position: relative;
     height: 104px;
-    background: #4baaec url(//pic.c-ctrip.com/platform/online/my/home/bg-member-info.png) 0 0 no-repeat;
+    background: #4baaec url("../images/userinfo/bg-member-info.png") 0 0 no-repeat;
     background-size: 100% 100%;
     overflow: hidden;
 }
@@ -696,7 +696,7 @@ ul, li {
 
 .i-mail {
     display: inline-block;
-    background: url(//pic.c-ctrip.com/h5/rwd_myctrip/pc/un_home_member.png) 0 -24px no-repeat;
+    background: url("../images/userinfo/un_home_member.png") 0 -24px no-repeat;
     vertical-align: middle;
 }
 
@@ -722,7 +722,7 @@ ul, li {
     display: inline-block;
     width: 78px;
     height: 78px;
-    background: url(//pic.c-ctrip.com/platform/online/my/home/border-head.png) no-repeat left top;
+    background: url("../images/userinfo/border-head.png") no-repeat left top;
     -webkit-animation: rotateIn 1s both 1s;
     animation: rotateIn 1s both 1s;
 }
@@ -872,7 +872,7 @@ a {
     display: inline-block;
     width: 112px;
     height: 108px;
-    background: url(//pic.c-ctrip.com/platform/online/my/home/un_home_none.png) 0 -110px no-repeat;
+    background: url("../images/userinfo/un_home_none.png") 0 -110px no-repeat;
     vertical-align: middle;
 }
 
@@ -923,7 +923,7 @@ a {
     width: 26px;
     height: 26px;
     border-radius: 2px;
-    background: #78cff3 url(//pic.c-ctrip.com/platform/online/my/home/un_order@20180321.png) no-repeat;
+    background: #78cff3 url("../images/userinfo/un_order@20180321.png") no-repeat;
 }
 
 .home-order-list .order-cont {
@@ -1045,7 +1045,7 @@ dfn {
     display: inline-block;
     width: 112px;
     height: 108px;
-    background: url(//pic.c-ctrip.com/platform/online/my/home/un_home_none.png) 0 -110px no-repeat;
+    background: url("../images/userinfo/un_home_none.png") 0 -110px no-repeat;
     vertical-align: middle;
 }
 
@@ -1176,7 +1176,7 @@ img, fieldset {
     width: 44px;
     height: 44px;
     vertical-align: middle;
-    background: url(//pic.c-ctrip.com/platform/online/my/home/un_history.png);
+    background: url("../images/userinfo/un_history.png");
 }
 
 .item-info p {
@@ -1231,7 +1231,7 @@ img, fieldset {
     display: inline-block;
     width: 36px;
     height: 32px;
-    background: url(//pic.c-ctrip.com/platform/online/my/home/un_apply_160829.png) 0 0 no-repeat;
+    background: url("../images/userinfo/un_apply_160829.png") 0 0 no-repeat;
     vertical-align: middle;
     overflow: hidden;
 }
@@ -1430,7 +1430,7 @@ li {
 .i_mbwx_richscan {
     width: 36px;
     height: 28px;
-    background: url(//pic.c-ctrip.com/platform/online/my/home/un_qcode_mbweixin.png) -84px -150px no-repeat;
+    background: url("../images/userinfo/un_qcode_mbweixin.png") -84px -150px no-repeat;
 }
 
 .widget_bind_weixin .i_mbwx_mobile {
@@ -1442,7 +1442,7 @@ li {
 .i_mbwx_mobile {
     width: 84px;
     height: 174px;
-    background: url(//pic.c-ctrip.com/platform/online/my/home/un_qcode_mbweixin.png) 0 -84px no-repeat;
+    background: url("../images/userinfo/un_qcode_mbweixin.png") 0 -84px no-repeat;
 }
 
 .widget_bind_weixin .i_mbwx_qcode {
@@ -1454,7 +1454,7 @@ li {
 .i_mbwx_qcode {
     width: 68px;
     height: 66px;
-    background: url(//pic.c-ctrip.com/platform/online/my/home/un_qcode_mbweixin.png) -84px -84px no-repeat;
+    background: url("../images/userinfo/un_qcode_mbweixin.png") -84px -84px no-repeat;
 }
 
 .box_widget_tit {
@@ -1500,11 +1500,11 @@ em {
     width: 20px;
     height: 20px;
     margin-right: 3px;
-    background: url(//pic.c-ctrip.com/platform/online/home/phone_list20190617.png) 0 -235px;
+    background: url("../images/userinfo/phone_list20190617.png") 0 -235px;
     vertical-align: middle;
 }
 .mod .icon-gns, #base_ft .honour_wrap a, .honour_wrap a, .honour_wrap span, .footer .icon-code-wechat {
-    background-image: url(//pic.c-ctrip.com/platform/online/home/phone_list20190617.png);
+    background-image: url("../images/userinfo/phone_list20190617.png");
     background-color: #fff;
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -1521,7 +1521,7 @@ em {
     text-indent: 36px;
 }
 #base_ft .honour_wrap a, .honour_wrap a {
-    background-image: url(//pic.c-ctrip.com/platform/online/home/phone_list20190617.png);
+    background-image: url("../images/userinfo/phone_list20190617.png");
     background-color: #fff;
     background-repeat: no-repeat;
     background-position: 0 0;

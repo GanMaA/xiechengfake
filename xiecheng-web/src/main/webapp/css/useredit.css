@@ -137,7 +137,7 @@ a {
     background-position: right -814px;
 }
 .mc_service .row32, .hd03, .ico_success, .ico_item, .ico_up, .ico_edit, .ico_hotel, .ico_warn2, .newsafe_ways, .ico_success_small, .ico_error {
-    background-image: url(//pic.c-ctrip.com/myctripv2/un_32x32.png?120831.png);
+    background-image: url("../images/userinfo/un_32x32.png");
     background-repeat: no-repeat;
 }
 .btn_l3 span, .btn4_l1 span, .l_btn05 {
@@ -150,7 +150,7 @@ a {
 }
 #button_edit span{
     display: inline-block;
-    background-image: url(//pic.c-ctrip.com/platform/online/my/user/btn_myctrip.png);
+    background-image: url("../images/userinfo/btn_myctrip.png");
     background-position: 0 -183px;
     background-repeat: no-repeat;
     height: 27px;
@@ -233,7 +233,7 @@ input[type="radio" i] {
     background-position: right -736px;
     cursor: pointer;
     display: inline-block;
-    background-image: url(//pic.c-ctrip.com/myctripv2/un_16x16.png?1012.png);
+    background-image: url("../images/userinfo/un_16x16.png");
     background-repeat: no-repeat;
 }
 .account_form button {
@@ -246,7 +246,7 @@ input[type="radio" i] {
     background-position: right -183px;
     white-space: nowrap;
     display: inline-block;
-    background-image: url(//pic.c-ctrip.com/platform/online/my/user/btn_myctrip.png);
+    background-image: url("../images/userinfo/btn_myctrip.png");
     background-repeat: no-repeat;
 }
 .account_form li .check_tips {
@@ -269,7 +269,7 @@ input[type="radio" i] {
     vertical-align: middle;
     font-size: 0;
     line-height: 99em;
-    background: url(//pic.c-ctrip.com/myctripv2/un_16x16.png?20160824.png) 0 -654px no-repeat;
+    background: url("../images/userinfo/un_16x16.png") 0 -654px no-repeat;
     *display: inline;
     *zoom: 1;
 }
