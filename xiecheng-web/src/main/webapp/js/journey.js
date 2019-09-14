@@ -9,6 +9,11 @@ $(function () {
             $(this).find("dd").toggle();
         }
     )
+    $("#start_choose").hover(function () {
+        $(this).find("dt").css("background","white");
+    },function () {
+        $(this).find("dt").css("background","#fafafa");
+    })
     //全部产品
     $(".allproduct").hover(
         function () {
@@ -58,6 +63,14 @@ $(function () {
             $(this).find("li").eq(0).attr("class","");
         }
     )
+    //慧动画
+    $(".box_size2").hover(function () {
+            $(".bg_hui").stop().animate({bottom:"30px"},300)
+        },
+        function () {
+            $(".bg_hui").stop().animate({bottom:"25px"},300)
+        }
+    )
 })
 function changePic() {
     if(index===picArray.length) index=0;
@@ -66,4 +79,29 @@ function changePic() {
     $(".roll_img img").attr("src",picArray[index]);
     index++;
     setTimeout(changePic,3000);
+}
+//秒杀倒计时
+var sec=parseInt(60*60*24);
+var h=0;
+var m=0;
+var s=0;
+var timeout=null;
+$(function () {
+    setTimeout(timedown,1000);
+    // $(".time_flow")
+})
+function timedown() {
+
+    if (sec>0){
+        h= Math.floor(sec / (60 * 60));
+        m=Math.floor(sec/60)-h*60;
+        s=sec-m*60-h*60*60;
+        if (h<9) h='0'+h;
+        if (m<9) m='0'+m;
+        $(".time_flow").children().eq(0).html(h);
+        $(".time_flow").children().eq(2).html(m);
+        $(".time_flow").children().eq(4).html(s);
+        sec--;
+        setTimeout(timedown,1000);
+    }
 }
