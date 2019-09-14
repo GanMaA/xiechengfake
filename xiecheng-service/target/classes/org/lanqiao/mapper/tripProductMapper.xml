@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.lanqiao.mapper.tripProductMapper" >
+  <resultMap id="BaseResultMap" type="org.lanqiao.entity.tripProduct" >
+    <id column="journey_product_id" property="journeyProductId" jdbcType="INTEGER" />
+    <result column="product_name" property="productName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    journey_product_id, product_name
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from journey_product
+    where journey_product_id = #{journeyProductId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from journey_product
+    where journey_product_id = #{journeyProductId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.lanqiao.entity.tripProduct" >
+    insert into journey_product (journey_product_id, product_name)
+    values (#{journeyProductId,jdbcType=INTEGER}, #{productName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.lanqiao.entity.tripProduct" >
+    insert into journey_product
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="journeyProductId != null" >
+        journey_product_id,
+      </if>
+      <if test="productName != null" >
+        product_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="journeyProductId != null" >
+        #{journeyProductId,jdbcType=INTEGER},
+      </if>
+      <if test="productName != null" >
+        #{productName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.lanqiao.entity.tripProduct" >
+    update journey_product
+    <set >
+      <if test="productName != null" >
+        product_name = #{productName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where journey_product_id = #{journeyProductId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.lanqiao.entity.tripProduct" >
+    update journey_product
+    set product_name = #{productName,jdbcType=VARCHAR}
+    where journey_product_id = #{journeyProductId,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -54,16 +54,36 @@
 			<!--enableSelectByExample="false" enableUpdateByExample="false">-->
 			<!--<property name="useActualColumnNames" value="true" />-->
 		<!--</table>-->
-		<table tableName="hotel_info" domainObjectName="HotelInfo"
+		<table tableName="journey_product" domainObjectName="tripProduct"
 			enableCountByExample="false" enableDeleteByExample="false"
 			enableSelectByExample="false" enableUpdateByExample="false">
 			<property name="useActualColumnNames" value="false" />
 		</table>
-<!--		<table tableName="orderitem" domainObjectName="OrderItem"-->
-<!--			enableCountByExample="false" enableDeleteByExample="false"-->
-<!--			enableSelectByExample="false" enableUpdateByExample="false">-->
-<!--			<property name="useActualColumnNames" value="false" />-->
-<!--		</table>-->
+		<table tableName="journey_scheme" domainObjectName="tripScheme"
+			enableCountByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" enableUpdateByExample="false">
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table tableName="journey_spplier" domainObjectName="tripSpplier"
+			   enableCountByExample="false" enableDeleteByExample="false"
+			   enableSelectByExample="false" enableUpdateByExample="false">
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table tableName="journey_theme" domainObjectName="tripTheme"
+			   enableCountByExample="false" enableDeleteByExample="false"
+			   enableSelectByExample="false" enableUpdateByExample="false">
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table tableName="journey_type" domainObjectName="tripType"
+			   enableCountByExample="false" enableDeleteByExample="false"
+			   enableSelectByExample="false" enableUpdateByExample="false">
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table tableName="journey_way" domainObjectName="tripWay"
+			   enableCountByExample="false" enableDeleteByExample="false"
+			   enableSelectByExample="false" enableUpdateByExample="false">
+			<property name="useActualColumnNames" value="false" />
+		</table>
 		<!--<table tableName="classes" domainObjectName="Classes"-->
 			<!--enableCountByExample="false" enableDeleteByExample="false"-->
 			<!--enableSelectByExample="false" enableUpdateByExample="false">-->
