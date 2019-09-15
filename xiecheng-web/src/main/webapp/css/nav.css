@@ -1,5 +1,5 @@
 /*全局样式控制*/
-* {margin: 0;padding: 0;}
+/** {margin: 0;padding: 0;}*/
 a{text-decoration: none;color: #333}
 i, em {font-style: normal;}
 li {list-style: none;float: left}

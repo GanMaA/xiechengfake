@@ -1,0 +1,63 @@
+body,
+div {
+	margin: 0;
+	padding: 0;
+}
+
+.ui-slider-wrap {
+	background: #e8e8e8;
+	position: relative;
+	font: 12px/1.5 "Microsoft YaHei",SimSun,Tahoma,Verdana,Arial,sans-serif;
+	font-weight: bold;
+}
+
+.ui-slider-wrap .ui-slider-bg {
+	width: 0;
+}
+
+.ui-slider-wrap .ui-slider-btn {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 4px;
+	width: 36px;
+	height: 36px;
+	border: 2px solid #EBEBEB;
+	cursor: move;
+	text-align: center;
+	background: #fff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: 11px;
+	padding-top: 11px;
+}
+
+.ui-slider-wrap .ui-slider-btn {
+	background: #FFFFFF  url(../images/login/init.png) ;
+}
+.ui-slider-wrap .ui-slider-btn.success {
+	background: #FFFFFF url(../images/login/success.png) ;
+}
+
+.ui-slider-wrap .ui-slider-text {
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑";
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #666;
+}
+
+.ui-slider-wrap .ui-slider-no-select {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	position: absolute;
+}
