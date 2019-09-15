@@ -139,13 +139,13 @@
                     <overwrite>true</overwrite>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <fork>true</fork><!-- 这个需要为 true 热部署才有效 -->
-                </configuration>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <fork>true</fork>&lt;!&ndash; 这个需要为 true 热部署才有效 &ndash;&gt;-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 

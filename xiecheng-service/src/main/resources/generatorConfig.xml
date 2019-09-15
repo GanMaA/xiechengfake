@@ -54,11 +54,16 @@
 			<!--enableSelectByExample="false" enableUpdateByExample="false">-->
 			<!--<property name="useActualColumnNames" value="true" />-->
 		<!--</table>-->
-		<table tableName="hotel_info" domainObjectName="HotelInfo"
-			enableCountByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" enableUpdateByExample="false">
-			<property name="useActualColumnNames" value="false" />
-		</table>
+<!--		<table tableName="hotel_info" domainObjectName="HotelInfo"-->
+<!--			enableCountByExample="false" enableDeleteByExample="false"-->
+<!--			enableSelectByExample="false" enableUpdateByExample="false">-->
+<!--			<property name="useActualColumnNames" value="false" />-->
+<!--		</table>-->
+        <table tableName="vovage" domainObjectName="Vovage"
+               enableCountByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false">
+            <property name="useActualColumnNames" value="false" />
+        </table>
 <!--		<table tableName="orderitem" domainObjectName="OrderItem"-->
 <!--			enableCountByExample="false" enableDeleteByExample="false"-->
 <!--			enableSelectByExample="false" enableUpdateByExample="false">-->
