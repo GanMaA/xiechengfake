@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/flightticket.css">
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/flightticket.js"></script>
-
+    <script src="layui/layui.js"></script>
 </head>
 <body>
     <iframe src="nav.html" class="navtop" frameborder="0" scrolling="no"></iframe>
@@ -23,8 +23,8 @@
                     <div class="ico ico1"><i></i><input placeholder="666"></div>
                     <div class="ico ico2"><a></a></div>
                     <div class="ico ico3"><i></i><input placeholder="666"></div>
-                    <div class="ico ico4"><i></i><input placeholder="出发日期"></div>
-                    <div class="ico ico5"><i></i><input placeholder="666" ></div>
+                    <div class="ico ico4"><i></i><input class="test-item" id="start_date" placeholder="2019-9-2"></div>
+                    <div class="ico ico5"><i></i><input class="test-item" placeholder="666" ></div>
                     <a class="btn_search">重新搜索</a>
                     <a class="btn_search">没有高级搜索</a>
                 </div>
@@ -33,7 +33,7 @@
             <div id="base-bd">
                 <div id="left">
                     <div id="bd-left-hd">
-                        筛选<span>(共X条航班信息)</span><button>清除全部</button>
+                        筛选<span>(共X条航班信息)</span><button id="delete">清除全部</button>
                     </div>
                     <div id="bd-left-bar">
                         <div class="bar">直飞/经停
@@ -160,5 +160,6 @@
             <a href="http://www.ca-sme.com/index.credit?action=certDetail&amp;id=40288084605466f1016057ea4cb20021" class="honour1" target="_blank" rel="nofollow"><img src="images/hotelPiC/xinyong.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110428175405415" title="工商亮照标识" class="honour2" target="_blank" rel="nofollow"><img src="images/hotelPiC/gongshang.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="http://credit.szfw.org/CX20111018000615000623.html" title="诚信认证示范企业" class="honour3" target="_blank" rel="nofollow"><img src="images/hotelPiC/chengxin.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="http://www.zx110.org/" class="honour4" target="_blank" rel="nofollow" title="征信网"><img src="images/hotelPiC/shehuixinyong.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="http://www.shjbzx.cn/" class="honour5" target="_blank" rel="nofollow" title="上海市互联网违法与违规信息举报中心"><img src="images/hotelPiC/weifajubao.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="https://ss.knet.cn/verifyseal.dll?sn=e12061531010025926306977" class="honour6" target="_blank" rel="nofollow" title="可信网站"><img src="images/hotelPiC/shenfenyanzheng.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="http://www.12377.cn/" class="honour8" title="违法和不良信息举报中心" target="_blank" rel="nofollow"><img src="images/hotelPiC/weifajubao.png" style="height: 35px"></a>
         </div>
     </div>
+    <div class="to_topbox"><a class="to_top">a</a></div>
 </body>
 </html>

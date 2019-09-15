@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.lanqiao.mapper.VovageMapper" >
+  <resultMap id="BaseResultMap" type="org.lanqiao.entity.Vovage" >
+    <id column="vovage_id" property="vovageId" jdbcType="INTEGER" />
+    <result column="flight_id" property="flightId" jdbcType="INTEGER" />
+    <result column="ticket_date" property="ticketDate" jdbcType="DATE" />
+    <result column="fly_time" property="flyTime" jdbcType="TIMESTAMP" />
+    <result column="arrived_time" property="arrivedTime" jdbcType="TIMESTAMP" />
+    <result column="fly_city" property="flyCity" jdbcType="VARCHAR" />
+    <result column="arrived_city" property="arrivedCity" jdbcType="VARCHAR" />
+  </resultMap>
+  <select id="getAll" resultMap="BaseResultMap">
+    select * from vovage order by vovage_id desc
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select *
+    from vovage
+    where vovage_id = #{vovageId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from vovage
+    where vovage_id = #{vovageId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.lanqiao.entity.Vovage" >
+    insert into vovage (vovage_id, flight_id, ticket_date, 
+      fly_time, arrived_time, fly_city, 
+      arrived_city)
+    values (#{vovageId,jdbcType=INTEGER}, #{flightId,jdbcType=INTEGER}, #{ticketDate,jdbcType=DATE}, 
+      #{flyTime,jdbcType=TIMESTAMP}, #{arrivedTime,jdbcType=TIMESTAMP}, #{flyCity,jdbcType=VARCHAR}, 
+      #{arrivedCity,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.lanqiao.entity.Vovage" >
+    insert into vovage
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="vovageId != null" >
+        vovage_id,
+      </if>
+      <if test="flightId != null" >
+        flight_id,
+      </if>
+      <if test="ticketDate != null" >
+        ticket_date,
+      </if>
+      <if test="flyTime != null" >
+        fly_time,
+      </if>
+      <if test="arrivedTime != null" >
+        arrived_time,
+      </if>
+      <if test="flyCity != null" >
+        fly_city,
+      </if>
+      <if test="arrivedCity != null" >
+        arrived_city,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="vovageId != null" >
+        #{vovageId,jdbcType=INTEGER},
+      </if>
+      <if test="flightId != null" >
+        #{flightId,jdbcType=INTEGER},
+      </if>
+      <if test="ticketDate != null" >
+        #{ticketDate,jdbcType=DATE},
+      </if>
+      <if test="flyTime != null" >
+        #{flyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="arrivedTime != null" >
+        #{arrivedTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flyCity != null" >
+        #{flyCity,jdbcType=VARCHAR},
+      </if>
+      <if test="arrivedCity != null" >
+        #{arrivedCity,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.lanqiao.entity.Vovage" >
+    update vovage
+    <set >
+      <if test="flightId != null" >
+        flight_id = #{flightId,jdbcType=INTEGER},
+      </if>
+      <if test="ticketDate != null" >
+        ticket_date = #{ticketDate,jdbcType=DATE},
+      </if>
+      <if test="flyTime != null" >
+        fly_time = #{flyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="arrivedTime != null" >
+        arrived_time = #{arrivedTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flyCity != null" >
+        fly_city = #{flyCity,jdbcType=VARCHAR},
+      </if>
+      <if test="arrivedCity != null" >
+        arrived_city = #{arrivedCity,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where vovage_id = #{vovageId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.lanqiao.entity.Vovage" >
+    update vovage
+    set flight_id = #{flightId,jdbcType=INTEGER},
+      ticket_date = #{ticketDate,jdbcType=DATE},
+      fly_time = #{flyTime,jdbcType=TIMESTAMP},
+      arrived_time = #{arrivedTime,jdbcType=TIMESTAMP},
+      fly_city = #{flyCity,jdbcType=VARCHAR},
+      arrived_city = #{arrivedCity,jdbcType=VARCHAR}
+    where vovage_id = #{vovageId,jdbcType=INTEGER}
+  </update>
+</mapper>
