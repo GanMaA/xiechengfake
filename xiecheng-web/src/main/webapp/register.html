@@ -10,7 +10,6 @@
         $(function () {
             $("#agreement").show();
             $("#cover").css("display","block");
-
             $("#slider2").slider({
                 width: 320, // width
                 height: 40, // height
@@ -32,6 +31,11 @@
             $("#agreement").click(function () {
                 $("#agr_pop").css("display","none");
                 $("#cover").css("display","none");
+            });
+            $("#regBtn").click(function () {
+                $.ajax({
+                    url:"http://localhost:8080/register.html"
+                })
             });
         })
     </script>

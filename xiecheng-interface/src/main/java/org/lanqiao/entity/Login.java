@@ -13,6 +13,8 @@ public class Login {
 
     private Integer userId;
 
+    private Integer codeId;
+
     public Integer getLoginId() {
         return loginId;
     }
@@ -59,5 +61,13 @@ public class Login {
 
     public void setUserId(Integer userId) {
         this.userId = userId;
+    }
+
+    public Integer getCodeId() {
+        return codeId;
+    }
+
+    public void setCodeId(Integer codeId) {
+        this.codeId = codeId;
     }
 }
