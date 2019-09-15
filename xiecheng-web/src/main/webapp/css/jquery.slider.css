@@ -36,10 +36,10 @@ div {
 }
 
 .ui-slider-wrap .ui-slider-btn {
-	background: #FFFFFF  url(../images/login/init.png) ;
+	background: #FFFFFF  url(../../images/login/init.png) ;
 }
 .ui-slider-wrap .ui-slider-btn.success {
-	background: #FFFFFF url(../images/login/success.png) ;
+	background: #FFFFFF url(../../images/login/success.png) ;
 }
 
 .ui-slider-wrap .ui-slider-text {

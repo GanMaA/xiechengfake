@@ -33,7 +33,7 @@ a{
     top: 17px;
     right: 10px;
     overflow: hidden;
-    background-image: url("../images/journeypic/zongtu.png");
+    background-image: url("../../images/journeypic/zongtu.png");
 }
 .start_city_station dt {
     position: relative;

@@ -191,7 +191,7 @@ body{
     margin-bottom: 8px;
 }
 .s_subtab_a, .s_subtab_a .current {
-    background-image: url(../images/xiechengIndexPic/searchbox_icon.png);
+    background-image: url(../../images/xiechengIndexPic/searchbox_icon.png);
 }
 .s_subtab_a .current {
     color: #06c;
@@ -395,7 +395,7 @@ input[type="text"] {
     width: 10px;
     height: 10px;
     margin-top: 6px;
-    background: url(../images/xiechengIndexPic/number-controller.png) 0 -14px no-repeat;
+    background: url(../../images/xiechengIndexPic/number-controller.png) 0 -14px no-repeat;
 }
 .n_gst38578_childs {
     border-top: 1px dashed #ccc;
@@ -463,7 +463,7 @@ input[type="text"] {
     height: 20px;
     vertical-align: center;
     display: inline-block;
-    background-image: url("../images/xiechengIndexPic/icon.png") ;
+    background-image: url("../../images/xiechengIndexPic/icon.png") ;
     background-position: -1px -48px;
 }
 .s_button_area {
@@ -654,7 +654,7 @@ input[type="text"] {
     margin-right: 8px;
     vertical-align: middle;
     background-position: 0 -259px;
-    background-image: url("../images/xiechengIndexPic/icon2.png");
+    background-image: url("../../images/xiechengIndexPic/icon2.png");
 }
 .history-title-right{
     float: right;
@@ -670,7 +670,7 @@ input[type="text"] {
     margin-left: 5px;
     vertical-align: middle;
     display: inline-block;
-    background-image: url("../images/xiechengIndexPic/icon.png");
+    background-image: url("../../images/xiechengIndexPic/icon.png");
     background-position: -77px -96px;
 }
 /*历史记录信息-item*/
@@ -705,7 +705,7 @@ input[type="text"] {
     display: inline-block;
     width: 32px;
     height: 32px;
-    background: url("../images/xiechengIndexPic/icon2.png") no-repeat 0 0;
+    background: url("../../images/xiechengIndexPic/icon2.png") no-repeat 0 0;
 }
 .history-item-right{
     float: left;
@@ -1059,7 +1059,7 @@ input[type="text"] {
     display: inline-block;
     overflow: hidden;
     vertical-align: middle;
-    background: url(../images/xiechengIndexPic/icon.png) no-repeat -1px -116px;
+    background: url(../../images/xiechengIndexPic/icon.png) no-repeat -1px -116px;
 }
 .flightC .item-info {
     height: 27px;
@@ -1118,7 +1118,7 @@ input[type="text"] {
     display: inline-block;
     overflow: hidden;
     vertical-align: middle;
-    background: url(../images/xiechengIndexPic/icon.png) no-repeat -16px -32px;
+    background: url(../../images/xiechengIndexPic/icon.png) no-repeat -16px -32px;
 }
 .dropdown-li {
     margin-top: -1px;
@@ -1460,7 +1460,7 @@ height: 160px;
     left: 50%;
     width: 46px;
     display: inline-block;
-    background: url(../images/xiechengIndexPic/icon3.png) 0 0 no-repeat;
+    background: url(../../images/xiechengIndexPic/icon3.png) 0 0 no-repeat;
 }
 .supply-cont {
     margin-left: 130px;
@@ -1581,7 +1581,7 @@ height: 160px;
     left: 50%;
     width: 46px;
     display: inline-block;
-    background: url(../images/xiechengIndexPic/icon3.png) 0 0 no-repeat;
+    background: url(../../images/xiechengIndexPic/icon3.png) 0 0 no-repeat;
 }
 .img-dianzi {
     background: #FBE09F;
@@ -1672,7 +1672,7 @@ height: 160px;
     height: 0;
     padding-top: 28px;
     overflow: hidden;
-    background-image: url(../images/xiechengIndexPic/ppic_partner.png);
+    background-image: url(../../images/xiechengIndexPic/ppic_partner.png);
     background-repeat: no-repeat;
 }
 .partner_hh {

@@ -23,7 +23,7 @@ public class TicketController {
         List<Vovage> vovageList=ticketService.selectAll();
         return vovageList;
     }
-    @ResponseBody
+
     @RequestMapping("/showTicket")
     public String showTicket(Vovage vovage, HttpServletRequest request){
         return "flightticket";
