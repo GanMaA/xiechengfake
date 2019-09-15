@@ -1,0 +1,275 @@
+.mainuser {
+    max-width: 1010px;
+    min-width: 810px;
+    _width: 810px;
+    min-height: 504px;
+    _height: 500px;
+    margin-bottom: 20px;
+    _overflow: visible;
+    background: #fff;
+    font-family: Simsun, sans-serif;
+    font-size: 12px;
+}
+h3,input{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.layoutfixuser {
+    display: block;
+    overflow: hidden;
+}
+.box01_c {
+    padding: 0;
+    border: 0 none;
+}
+.box01 {
+    padding: 1px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+.hd02 {
+    background-image: none;
+    background-color: #eaf5ff;
+    border: 0;
+    border-top: 2px solid #155ebd;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom: 1px solid #c5ddf4;
+    line-height: 35px;
+}
+.box_hd {
+    position: relative;
+    padding-left: 10px;
+    background-repeat: repeat-x;
+    height: 33px;
+    line-height: 33px;
+    cursor: pointer;
+}
+.hd01 h3, .hd02 h3 {
+    font-size: 14px;
+}
+.hd_rt {
+    position: absolute;
+    right: 8px;
+    top: 0;
+    padding-right: 28px;
+    color: #0066cc;
+}
+.ico_up {
+    background-position: right -846px;
+}
+.box_bd {
+    display: none;
+    padding: 20px 10px;
+    border: 1px solid #ccc;
+    border-top: 0;
+    zoom: 1;
+}
+.account_form li {
+    padding-left: 6%;
+    margin-bottom: 5px;
+    _padding-left: 20px;
+}
+.account_form .tit {
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    padding-right: 20px;
+    vertical-align: middle;
+    line-height: 32px;
+    text-align: right;
+}
+label {
+    cursor: default;
+}
+.ml10 {
+    margin-left: 10px;
+}
+a {
+    color: #0066cc;
+}
+.view_model .val {
+    display: inline-block;
+    line-height: 32px;
+    vertical-align: middle;
+}
+.account_form button {
+    margin-right: 10px;
+}
+.btn_l3, .btn_l4, .btn4_l1 {
+    height: 27px;
+    font-size: 14px;
+}
+.btn_l3, .btn_l4, .btn4_l1, .btn2_l1, .btn2_l1_disable {
+    display: inline-block;
+    border: 0;
+    background: none;
+    vertical-align: middle;
+    overflow: visible;
+    cursor: pointer;
+    _padding-right: 2px;
+}
+.btn_l3 span, .btn4_l1 span, .l_btn05 {
+    height: 27px;
+    padding-left: 18px;
+    background-position: 0 -183px;
+}
+.btn_l3, .btn_l4, .btn4_l1 {
+    height: 27px;
+    font-size: 14px;
+}
+.btn_l3 em, .btn4_l1 em, .l_btn05 span {
+    height: 27px;
+    padding-right: 18px;
+    line-height: 27px;
+    background-position: right -183px;
+    white-space: nowrap;
+}
+.hd01 {
+    background-position: 0 -697px;
+}
+.ico_edit {
+    background-position: right -814px;
+}
+.mc_service .row32, .hd03, .ico_success, .ico_item, .ico_up, .ico_edit, .ico_hotel, .ico_warn2, .newsafe_ways, .ico_success_small, .ico_error {
+    background-image: url("../../images/userinfo/un_32x32.png");
+    background-repeat: no-repeat;
+}
+.btn_l3 span, .btn4_l1 span, .l_btn05 {
+    height: 27px;
+    padding-left: 18px;
+    background-position: 0 -183px;
+}
+#avapicture_id{
+    background: #CCCCCC;
+}
+#button_edit span{
+    display: inline-block;
+    background-image: url("../../images/userinfo/btn_myctrip.png");
+    background-position: 0 -183px;
+    background-repeat: no-repeat;
+    height: 27px;
+}
+em {
+    font-style: normal;
+}
+.m_input {
+    height: 25px;
+    padding-left: 3px;
+    margin-right: 10px;
+    line-height: 25px;
+    border: 1px solid #b4b4b4;
+    box-shadow: 1px 1px 3px #ddd inset;
+    vertical-align: middle;
+    font-family: Arial;
+}
+.w01 {
+    width: 191px;
+}
+.account_form .tit em {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: #d81921;
+}
+
+element.style {
+}
+.tip_status.color {
+    color: #f60;
+}
+.tip_status {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #666;
+}
+input[type="radio" i] {
+    background-color: initial;
+    cursor: default;
+    -webkit-appearance: radio;
+    box-sizing: border-box;
+    margin: 3px 0.5ex;
+    padding: initial;
+    border: initial;
+}
+.account_form .base_label {
+    margin-right: 10px;
+}
+.base_label {
+    _padding-bottom: 1px;
+    *display: inline-block;
+    border-bottom: 1px solid transparent;
+    _border-bottom: none;
+    _font-family: Simsun;
+    cursor: pointer;
+}
+.account_form input.sex {
+    margin-right: 2px;
+}
+.base_label input {
+    margin: -4px 3px 0 0;
+    *margin-top: -2px;
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+    border: none;
+    font-family: Arial;
+    vertical-align: middle;
+}
+.inputSel {
+    color: grey;
+}
+.ico_drop {
+    padding-right: 15px;
+    margin-right: 5px;
+    background-position: right -736px;
+    cursor: pointer;
+    display: inline-block;
+    background-image: url("../../images/userinfo/un_16x16.png");
+    background-repeat: no-repeat;
+}
+.account_form button {
+    margin-right: 10px;
+}
+.btn_l3 span{
+    height: 27px;
+    /*padding-right: 18px;*/
+    line-height: 27px;
+    background-position: right -183px;
+    white-space: nowrap;
+    display: inline-block;
+    background-image: url("../../images/userinfo/btn_myctrip.png");
+    background-repeat: no-repeat;
+}
+.account_form li .check_tips {
+    display: inline-block;
+    color: #999;
+    *display: inline;
+    *zoom: 1;
+}
+#btnSave span {
+    height: 27px;
+    width: 46px;
+}
+.account_form li .check_tips i {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    margin-right: 5px;
+    margin-left: 5px;
+    vertical-align: middle;
+    font-size: 0;
+    line-height: 99em;
+    background: url("../../images/userinfo/un_16x16.png") 0 -654px no-repeat;
+    *display: inline;
+    *zoom: 1;
+}
