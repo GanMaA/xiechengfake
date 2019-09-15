@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 iframe,body{margin: 0;padding: 0;}
+=======
+.body{
+    margin: 0;
+    padding: 0;
+}
+iframe{margin: 0;padding: 0;}
+>>>>>>> 4682e8769209bda4a4674c133b6765217113afa7
 .navtop{width:100%;height:100%;border:0;padding:0;margin-bottom:-5px;}
 .base_ft{
     width: 1150px;
