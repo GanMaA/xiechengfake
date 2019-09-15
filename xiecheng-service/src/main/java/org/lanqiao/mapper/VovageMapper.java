@@ -17,5 +17,5 @@ public interface VovageMapper {
 
     int updateByPrimaryKey(Vovage record);
 
-    List<Vovage> getAll();
+    List<Vovage> getAll(Vovage vovage);
 }

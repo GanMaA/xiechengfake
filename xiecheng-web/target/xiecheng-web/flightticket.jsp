@@ -1,13 +1,14 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>机票详情页</title>
-    <link rel="stylesheet" href="static/css/base.css">
-    
-    <link rel="stylesheet" href="static/css/flightticket.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/flightticket.css">
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/flightticket.js"></script>
     <script src="layui/layui.js"></script>
@@ -83,7 +84,7 @@
                     <div class="other">b</div>
                     <div class="st"><div class="jiantou jiantou2"></div></div>
                 </div>
-                <div class="bd-right-msgtop">
+                <div class="bd-right-msgtop" id="tag">
                     <ul class="sort-guideline">
                         <li class="default-sort">航班信息</li>
                         <li class="sort"><a>起飞时间<i class="ico "></i></a></li>
@@ -94,6 +95,32 @@
                     </ul>
                     <a class="government-btn" href="javascript:;" data-ubt="c_armydisabled_click">伤残军警通道</a>
                 </div>
+                <c:forEach var="voage" items="${vovageList}">
+                    <div class="bd-right-msg">
+                        <div class="msg-1">
+                            航班
+                        </div>
+                        <div class="msg-2">
+                            <span><fmt:formatDate value="${voage.flyTime}" pattern="HH:mm"/></span>
+                        </div>
+                        <div class="msg-3">
+
+                        </div>
+                        <div class="msg-4">
+                            <span><fmt:formatDate value="${voage.arrivedTime}" pattern="HH:mm"/></span>
+                        </div>
+                        <div class="msg-5">
+                            <span>准点率</span>
+                        </div>
+                        <div class="msg-6">
+                            <dfn>¥</dfn><span>${voage.price}</span>起
+                        </div>
+                        <div class="msg-7">
+                            <button>订票</button>
+                        </div>
+                    </div>
+                </c:forEach>
+
                 <div class="bd-right-msg">
                     <div class="msg-1">
                         航班

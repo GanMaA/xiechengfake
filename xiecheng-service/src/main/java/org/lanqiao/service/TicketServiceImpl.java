@@ -13,8 +13,8 @@ public class TicketServiceImpl implements TicketService{
     VovageMapper vovageMapper;
 
     @Override
-    public List<Vovage> selectAll() {
-        List<Vovage> vovageList=vovageMapper.getAll();
+    public List<Vovage> selectAll(Vovage vovage) {
+        List<Vovage> vovageList=vovageMapper.getAll(vovage);
         return vovageList;
     }
 }
