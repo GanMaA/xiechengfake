@@ -1,9 +1,40 @@
 <!DOCTYPE html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="css/register1.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/jquery.slider.css">
     <title>携程旅行网-会员注册</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="js/jquery.slider.min.js"></script>
+    <script>
+        $(function () {
+            $("#agreement").show();
+            $("#cover").css("display","block");
+
+            $("#slider2").slider({
+                width: 320, // width
+                height: 40, // height
+                sliderBg: "rgb(235,235,235)", // 滑块背景颜色
+                color: "#555", // 文字颜色
+                fontSize: 12, // 文字大小
+                bgColor: "#7ac23c", // 背景颜色
+                textMsg: "请按住滑块，拖动到最右", // 提示文字
+                successMsg: "检验成功，通过", // 验证成功提示文字
+                successColor: "white", // 滑块验证成功提示文字颜色
+                time: 400, // 返回时间
+                callback: function (result) { // 回调函数，true(成功),false(失败)
+                    $("#result2").text(result);
+                }
+            });
+            $("#reset2").click(function () {
+                $("#slider2").slider("restore");
+            });
+            $("#agreement").click(function () {
+                $("#agr_pop").css("display","none");
+                $("#cover").css("display","none");
+            });
+        })
+    </script>
 </head>
 <body>
 <div class="reg_logo_hd">
@@ -28,23 +59,8 @@
             <div class="base_error" style="display: none" id="errphone"></div>
             <dl id="dlslideCode">
                 <dt class="label1">滑块验证</dt>
-                <dd>
-                    <div id="slideCode">
-                        <div class="cpt-drop-btn">
-                            <div class="cpt-img-double-right-outer">
-                                <i class="cpt-logo cpt-img-double-right"></i>
-<!--                                <i class="cpt-logo cpt-img-check-right"></i>-->
-<!--                                <i class="cpt-logo cpt-img-check-error"></i>-->
-<!--                                <i class="cpt-logo cpt-img-check-refresh"></i>-->
-<!--                                <img class="cpt-img-check-loading" src="https://webresource.c-ctrip.com/ares/infosec/captcha/2.5.31/default/img/loading.gif">-->
-                            </div>
-                        </div>
-                        <div class="cpt-bg-bar">
-                            <span class="cpt-info-board">请按住滑块，拖动到最右</span>
-                        </div>
-                    </div>
-                    <input type="hidden" id="slidetoken" value="">
-                    <input type="hidden" id="slideversion" value="">
+                <dd style="display: block">
+                    <div id="slider2" class="slider"></div>
                 </dd>
             </dl>
             <div class="base_error" style="display: none" id="errslider"></div>
@@ -75,6 +91,82 @@
     <!--弹注册协议使用-->
     <div id="hidregister" style="display:none"></div>
 </div>
-</body>
+<div class="base_pop register_pop" id="agr_pop">
+    <div class="pop_hd">
+        <a class="pop_close agree_disable" href="javascript:void(0);">×</a>
+        <h3>携程用户注册协议和隐私政策</h3>
+    </div>
+    <div class="pop_bd" style="overflow:hidden;">
+        <div class="clause_wrap"> <div class="clause_box">
+            <p class="sc_con">
+                <b>亲爱的用户，在您注册为携程用户的过程中，您需要完成我们的注册流程并通过点击同意的形式在线签署以下协议，请您务必仔细阅读、充分理解协议中的条款内容后再点击同意，尤其是加粗字体。</b>
+            </p>
+            <dl class="register_list">
+                <dt>
+                    <a href="http://pages.ctrip.com/public/serve%20guideline.htm?1" target="_blank">服务协议</a>
+                </dt>
+                <dd>
+                    <ul class="register_item">
+                        <li>1.	总则	</li>
+                        <li>2.	服务简介</li>
+                        <li>3.	服务条款的修改	</li>
+                        <li>4.	服务变更、中断、终止</li>
+                        <li>5.	使用规则	</li>
+                        <li>6.	版权声明</li>
+                        <li>7.	用户隐私制度	</li>
+                        <li>8.	用户的账号、密码和安全性</li>
+                        <li>9.	拒绝提供担保	</li>
+                        <li>10.	有限责任</li>
+                        <li>11.	携程网络会员服务信息的存储及限制	</li>
+                        <li>12.	用户管理</li>
+                        <li>13.	用户的违约责任	</li>
+                        <li>14.	保障	</li>
+                        <li>15.	结束服务</li>
+                        <li>16.	通告	</li>
+                        <li>17.	参与广告策划</li>
+                        <li>18.	邮件内容的所有权	</li>
+                        <li>19.	法律</li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="register_list">
+                <dt>
+                    <a href="#">隐私政策</a>
+                </dt>
+                <dd>
+                    <p><b>隐私政策明确了我们产品与/或服务所收集、使用及共享个人信息的类型和方式及用途；明确了用户查询、更正和删除个人信息的方式，</b>具体提纲如下：</p>
+                    <ul class="register_item">
+                        <li>1.隐私政策的确认和接纳	</li>
+                        <li>2.信息收集</li>
+                        <li>3.信息使用	</li>
+                        <li>4.信息共享、转让和披露</li>
+                        <li>5.信息保存及跨境传输	</li>
+                        <li>6.Cookie的使用</li>
+                        <li>7.个人敏感信息提示	</li>
+                        <li>8.信息安全与保护</li>
+                        <li>9.信息安全事件处置	</li>
+                        <li>10.未成年人信息保护</li>
+                        <li>11.用户个人信息管理	</li>
+                        <li>12.从中国大陆地区以外访问我们的网站</li>
+                        <li>13.隐私政策的适用范围	</li>
+                        <li>14.隐私政策的修改</li>
+                        <li>15.如何联系我们	</li>
+                        <li>16.法律</li>
+                    </ul>
+                </dd>
+            </dl>
+            <p class="sc_con">【审慎阅读】您在申请注册流程中点击同意前，请您务必审慎阅读、充分理解协议中相关条款内容，尤其是与您约定免除或限制责任的条款，以及字体加粗标识的重要条款。</p>
+            <p class="sc_con"><b>【请您注意】如果您不同意上述协议或其中任何条款约定，请您停止注册。如果您按照注册流程提示填写信息、阅读并点击同意上述协议且完成全部注册流程后，即表示您已充分阅读、理解并接受协议的全部内容。</b>如果您对以上内容有疑问，请联系：<a href="#">privacy@ctrip.com</a>。</p>
+            <p class="sc_con">点击同意即代表您已阅读并同意携程《服务协议》和《隐私政策》，并同意我们将您的订单信息共享给为完成此订单所必须的第三方合作方。</p>
+        </div>
+        </div>
+    </div>
+    <div class="pop_footer">
+        <a href="#" class="reg_btn_disabled agree_disable">不同意</a>
+        <a href="#" class="reg_btn reg_agree" id="agreement">同意并继续</a>
+    </div>
 
+</div>
+<div id="cover" style="background: #000; position: absolute; left: 0px; top: 0px; width: 1440px;height: 1000px; filter: alpha(opacity=30); opacity: 0.3; display: none; z-index: 2;"></div>
+</body>
 </html>

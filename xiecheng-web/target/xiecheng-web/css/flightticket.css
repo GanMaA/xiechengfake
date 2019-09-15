@@ -182,3 +182,26 @@ li{list-style:none}
 .box_text{font-size: 13px;color: #b4b4b4;padding: 5px 0 0 5px}
 .search_box a{float: right}
 .search_box a:hover{color: #5d9ffb}
+
+.to_topbox{
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    z-index: 9999;
+    width: 35px;
+}
+.to_top {
+    position: absolute;
+    text-align: left;
+    width: 35px;
+    height: 0;
+    margin-bottom: 2px;
+    padding-top: 35px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 2;
+    visibility: hidden;
+    /*visibility: visible;*/
+    background-position: 0 0;
+    background: url("../images/flightticket/un_sidebar.png") no-repeat;
+}

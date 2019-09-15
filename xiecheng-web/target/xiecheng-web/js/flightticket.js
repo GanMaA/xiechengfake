@@ -1,4 +1,5 @@
 $(function () {
+
     $(".bar").mouseover(function () {
         $(this).find(".bar-filter-select").css("display","block");
     }).mouseout(function(){
@@ -23,6 +24,21 @@ $(function () {
 
         }
     })
+    //清楚全部筛选项
+    $("button[id='delete']").click(function () {
+        // var current=$("#start_date").val()
+        // alert(current)
+        // $(".current").children().eq(0).text(current)
+
+        $(".bar-filter-echo").parent().remove();
+        // $("input[type='checkbox']").css("checked","true")
+        var check  =document.getElementsByTagName("input");
+        for(var i  =0;i<check.length;i++) {
+            var h = check[i];
+            h.checked = false;
+        }
+        })
+    //浮动选项
     $(".other").mouseover(function () {
         $(this).css("background-color","#5d9ffb")
         $(this).children().css("color","white")
@@ -34,6 +50,12 @@ $(function () {
     //滚动浮动
     $(document).scroll(function () {
         var scroH=$(this).scrollTop();
+        if(scroH>=350){
+            $(".to_top").css("visibility","visible")
+        }
+        else {
+            $(".to_top").css("visibility","hidden")
+        }
         if(scroH>=250){
             $(".float_top").fadeIn(500);
             $("#bd-left-bar").css("top", scroH +89+ "px");
@@ -46,8 +68,32 @@ $(function () {
     $(".search_box a").click(function () {
         $(document).scrollTop(150)
     })
+    $(".to_top").click(function () {
+        $(document).scrollTop(0)
+    })
     //给搜索栏的孩子添加类
     $(".search_form").find("input").addClass("search")
     $(".search_form").find("select").addClass("search")
     $(".search_form .ico2").next().css("margin-left","15px")
+    //日期
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        $('.test-item').each(function() {
+            var value=document.getElementById("start_date").placeholder
+            laydate.render({
+                elem: this, //指定元素
+                value:value,
+                trigger: 'click',
+                mark: {
+                    '2019-9-13': '中秋',
+                    '2019-10-1': '国庆'
+                }
+            });
+        })
+    });
+
+    //右边顶部当前日期
+    var current=document.getElementById("start_date").placeholder
+    $(".current").children().eq(0).text(current)
 })
