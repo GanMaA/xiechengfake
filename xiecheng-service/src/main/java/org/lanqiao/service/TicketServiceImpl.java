@@ -10,8 +10,12 @@ import java.util.List;
 public class TicketServiceImpl implements TicketService {
     @Autowired
     VovageMapper vovageMapper;
+
     @Override
     public List<Vovage> selectAll() {
-        return vovageMapper.getAll();
+        List<Vovage> vovageList = vovageMapper.getAll();
+        return vovageList;
     }
 }
+
+

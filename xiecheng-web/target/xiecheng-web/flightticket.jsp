@@ -7,8 +7,9 @@
 <head>
     <meta charset="UTF-8">
     <title>机票详情页</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/flightticket.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    
+    <link rel="stylesheet" href="static/css/flightticket.css">
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/flightticket.js"></script>
     <script src="layui/layui.js"></script>

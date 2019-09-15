@@ -26,10 +26,6 @@ $(function () {
     })
     //清楚全部筛选项
     $("button[id='delete']").click(function () {
-        // var current=$("#start_date").val()
-        // alert(current)
-        // $(".current").children().eq(0).text(current)
-
         $(".bar-filter-echo").parent().remove();
         // $("input[type='checkbox']").css("checked","true")
         var check  =document.getElementsByTagName("input");

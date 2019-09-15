@@ -85,7 +85,7 @@ input[type=text] {
 
 #label, .alert_box i, .base_error i, .base_success i, .base_tip i, .link_code, .reg_card_more .ico_down, .reg_card_more .ico_up, .reg_step li, .reg_success i, .remark_box dd, .to_card i, .to_mail i, .to_member i, .to_phone i {
     display: inline-block;
-    background: url("../images/register/register.png") 0 -9999em no-repeat;
+    background: url("../../images/register/register.png") 0 -9999em no-repeat;
     vertical-align: middle
 }
 
@@ -1361,7 +1361,7 @@ input.btn02, input.btn03 {
     height: 43px;
     overflow: hidden;
     text-indent: -999em;
-    background: url("../images/register/c_logo2013.png") no-repeat
+    background: url("../../images/register/c_logo2013.png") no-repeat
 }
 
 #dlslideCode {
@@ -1473,7 +1473,7 @@ input.btn02, input.btn03 {
     width: 14px;
     height: 14px;
     _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop, src="https://webresource.c-ctrip.com/ares/infosec/captcha/2.5.31/default/img/captcha2.png");
-    background: url("../images/register/cap.png") no-repeat;
+    background: url("../../images/register/cap.png") no-repeat;
 }
 
 .cpt-img-double-right {
