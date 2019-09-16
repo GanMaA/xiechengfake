@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>携程旅行网</title>
     <link href="css/head_order_pay.css" rel="stylesheet">
 </head>
+<script src="js/jquery-3.4.1.js"></script>
 <body>
 <!--head-start-->
 <div id="head">
@@ -26,7 +27,39 @@
     </div>
     <div id="main_pay">
         <!--方式切换-->
-        <div id="tab_tit1"><ul><li>微信支付</li><li>储蓄卡</li><li>信用卡</li><li>支付宝</li></ul></div>
+        <div id="tab_tit1">
+            <script>
+                function showDiv(str) {
+                    var items = [];
+                    for (var i = 0; i < 4; i++){
+                        items[i] = document.getElementById("item" + i);
+                        items[i].style.display = "none";
+                    }
+                    document.getElementById(str).style.display = "block";
+                }
+            </script>
+            <ul>
+                <li class="curr" onclick="showDiv('item0');">微信支付</li>
+                <li onclick="showDiv('item1');">储蓄卡</li>
+                <li onclick="showDiv('item2');">信用卡</li>
+                <li onclick="showDiv('item3');">支付宝</li>
+            </ul>
+        </div>
+        <div id="tab_con">
+            <!--微信支付-->
+            <div id="item0" class="tab_item" style="text-align: center;"><img src="images/nav/wechat——pay.png" style="margin-top: 20px"><p style="font-size: 14px">点击“去支付”后，请打开手机微信的“扫一扫”，扫描二维码支付</p></div>
+            <!--储蓄卡支付-->
+            <div id="item1" class="hidden"></div>
+            <!--信用卡支付-->
+            <div id="item2" class="hidden"></div>
+            <!--支付宝支付-->
+            <div id="item3" class="tab_item hidden" style="text-align: center;"><img src="images/nav/ZFB.png" style="margin-top: 20px"><p style="font-size: 14px">点击“去支付”后，将跳转到支付宝页面进行付款</p></div>
+        </div>
+        <div class="btn_area" style="text-align: center; "><a><button style="width: 360px; height: 48px; background-color: #ff9c2a; border: 0; border-radius: 4px"><span style="font-size: 12px; color: white">¥</span>&nbsp;<span style="font-size: 20px; color: white">49.00，去支付</span></button></a></div>
+
+    </div>
+    <div class="back_area">
+        <a style="color: #3f92f7">< &nbsp; 返回修改订单</a>
     </div>
 </div>
 <!--main-end-->
