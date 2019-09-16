@@ -1,5 +1,5 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
@@ -8,139 +8,9 @@
     <link rel="stylesheet" href="layui/css/layui.css" media="all">
     <script src="layui/layui.js"></script>
     <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/xiecheng_index.js"></script>
 </head>
-<!--jQuery-->
-<script>
-    $(function () {
-        //切换搜索内容
-        $("#searchBoxUl li").click(function () {
-            $(this).parent().children().removeClass("s_tab_current");
-            $(this).addClass("s_tab_current");
-            var n = $(this).parent().children().index(this);
-            $("#searchbox").children().css("display","none");
-            $("#searchbox").children().eq(0).css("display","block");
-            $("#searchbox").children().eq(n+1).css("display","block");
-        });
-        //酒店人员填写
-        $("#J_RoomGuestInfoTxt").click(function () {
-            $("#J_cildNumSelectorBox").css("display","block");
-        });
-        $("#J_RoomGuestInfoBtnOK").click(function () {
-            var adult_count = $("#J_AdultCount").children().eq(1).val();
-            var child_count = $("#J_ChildCount").children().eq(1).val();
-            var text = adult_count+"成人";
-            if(child_count>0) text+= " "+child_count+"儿童";
-            $("#J_RoomGuestInfoTxt").val(text);
-            $("#J_cildNumSelectorBox").css("display","none");
-        });
-        $("#J_RoomGuestInfoBtnCancel").click(function () {
-            $("#J_cildNumSelectorBox").css("display","none");
-        });
-        $("#J_AdultCount").children().eq(0).click(function () {
-            var adultCount = $(this).next().val();
-            if(adultCount>1){
-                adultCount--;
-            }
-            if(adultCount===1) $(this).addClass("number_disable");
-            $(this).next().val(adultCount);
-        });
-        $("#J_AdultCount").children().eq(2).click(function () {
-            $(this).prev().prev().removeClass("number_disable");
-            var adultCount = $(this).prev().val();
-            adultCount++;
-            $(this).prev().val(adultCount);
-        });
-        $("#J_ChildCount").children().eq(0).click(function () {
-            var adultCount = $(this).next().val();
-            if(adultCount>0){
-                adultCount--;
-            }
-            if(adultCount===0) $(this).addClass("number_disable");
-            $(this).next().val(adultCount);
-        });
-        $("#J_ChildCount").children().eq(2).click(function () {
-            $(this).prev().prev().removeClass("number_disable");
-            var adultCount = $(this).prev().val();
-            adultCount++;
-            $(this).prev().val(adultCount);
-        });
 
-        //城市选择
-        $(document).click(function () {
-            $(".city_select").hide();
-        });
-        $(".city_select").click(function (e) {
-            e.stopPropagation();
-        });
-        $(".city_select_title_close").click(function () {
-            $(".city_select").hide();
-        })
-        //酒店城市选择
-        $("#HD_CityName").click(function (e) {
-            $(this).parent().next().css("display","block");
-            e.stopPropagation();
-        });
-        $("#chinaHotelForm").find(".city_select").find("ul li").click(function () {
-            $("#HD_CityName").val($(this).html());
-            $(".city_select").hide();
-        })
-        //酒店城市选择结束
-
-        //飞机离开城市选择
-        $("#FD_StartCity").click(function (e) {
-            $(".flight_leave").css("display","block");
-            e.stopPropagation();
-        })
-        $(".flight_leave").find("ul li").click(function () {
-            $("#FD_StartCity").val($(this).html());
-            $(".city_select").hide();
-        });
-        //飞机离开城市选择结束
-        //飞机到达
-        $("#FD_DestCity").click(function (e) {
-            $(".flight_arrive").css("display","block");
-            e.stopPropagation();
-        })
-        $(".flight_arrive").find("ul li").click(function () {
-            $("#FD_DestCity").val($(this).html());
-            $(".city_select").hide();
-        })
-
-
-    });
-
-</script>
-<!--轮播-->
-<script>
-    layui.use('carousel', function(){
-        var carousel = layui.carousel;
-        //建造实例
-        carousel.render({
-            elem: '#search'
-            ,width: '100%' //设置容器宽度
-            ,height:"340px"
-            ,arrow: 'none' //始终显示箭头
-            //,anim: 'updown' //切换动画方式
-        });
-    });
-</script>
-<!--日期-->
-<script>
-        layui.use('laydate', function(){
-            var laydate = layui.laydate;
-            //执行一个laydate实例
-            $('.test-item').each(function() {
-                laydate.render({
-                    elem: this, //指定元素
-                    trigger: 'click',
-                    mark: {
-                    '2019-9-13': '中秋',
-                    '2019-10-1': '国庆'
-                }
-                });
-            })
-        });
-</script>
 <body>
 <!--导航栏-->
 <iframe id="navIframe" name="navIframe" src="nav.html" frameborder="0" scrolling="no" ></iframe>
@@ -302,7 +172,7 @@
             <a class="">国际•港澳台机票</a>
             <a class="">发现低价<span class="label-en"><em>NEW</em><i class="triangle"></i></span></a>
         </p>
-        <form id="FD_ChinaFlightForm" method="post">
+        <form id="FD_ChinaFlightForm" method="post" autocomplete="off" action="/showTicket">
             <div id="FD_ChinaFlightForm_content">
                 <div class="s_type" id="FD_flightSubSwitch">
                     航程类型
@@ -313,11 +183,11 @@
             <div style="width: 1000px;">
                 <div class="s_item_cont s_item_cont_1 s_item_cont_ex">
                     <div class="s_exchange"><a href="#">换</a></div>
-                    <div class="s_item">出发城市<input type="text" name="DCityName1" id="FD_StartCity" class="inputSel" style="color: gray" placeholder="中文/拼音"></div>
-                    <div class="s_item2"><span id="FD_StartDateSpan">出发日期</span><input type="text" id="FD_StartDate" name="DDate1" class="inputSel layui-input test-item" placeholder="yyyy-MM-dd"></div>
+                    <div class="s_item">出发城市<input type="text" name="flyCity" id="FD_StartCity" class="inputSel" style="color: gray" placeholder="中文/拼音"></div>
+                    <div class="s_item2"><span id="FD_StartDateSpan">出发日期</span><input type="text" id="FD_StartDate" name="ticketDate" class="inputSel layui-input test-item" placeholder="yyyy-MM-dd"></div>
                 </div>
                 <div class="s_item_cont s_item_cont_1">
-                    <div class="s_item">到达城市<input type="text" name="ACityName1" id="FD_DestCity" placeholder="中文/拼音" class="inputSel"></div>
+                    <div class="s_item">到达城市<input type="text" name="arrivedCity" id="FD_DestCity" placeholder="中文/拼音" class="inputSel"></div>
                     <div class="s_item2 s_disable" id="FD_ReturnDateDiv">返回日期<input type="text" id="FD_ReturnDate" class="inputSel layui-input test-item" placeholder="yyyy-MM-dd"></div>
                 </div>
             </div>

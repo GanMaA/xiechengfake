@@ -17,13 +17,7 @@
 	<mvc:annotation-driven />
 	<!-- 对静态资源文件的访问 支持访问WEB-INF目录 -->
 	<mvc:default-servlet-handler />
-<<<<<<< HEAD
 <!--	<mvc:resources mapping="/css/" location="css/" />-->
-=======
-	<mvc:resources location="../webapp/js/" mapping="/js/**" />
-	<mvc:resources location="../webapp/static/css/" mapping="/css/**" />
-	<mvc:resources location="../webapp/static/images/" mapping="/images/**" />
->>>>>>> remotes/origin/master
 	<!-- 对转向页面的路径解析。prefix:前缀,suffix:后缀 --> 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"

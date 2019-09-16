@@ -9,6 +9,17 @@
     <result column="mark" property="mark" jdbcType="DECIMAL" />
     <result column="hotel_pic" property="hotelPic" jdbcType="VARCHAR" />
     <result column="hotel_group_id" property="hotelGroupId" jdbcType="INTEGER" />
+    <association property="hotelArea" resultMap="HotelArea"></association>
+  </resultMap>
+
+  <!--酒店地区-->
+  <resultMap id="HotelArea" type="org.lanqiao.entity.HotelArea" >
+    <id column="hotel_area_id" property="hotelAreaId" jdbcType="INTEGER" />
+    <result column="hotel_id" property="hotelId" jdbcType="INTEGER" />
+    <result column="area_id" property="areaId" jdbcType="INTEGER" />
+    <result column="longitude" property="longitude" jdbcType="DECIMAL" />
+    <result column="latitude" property="latitude" jdbcType="DECIMAL" />
+    <result column="area_detail" property="areaDetail" jdbcType="VARCHAR" />
   </resultMap>
 
   <select id="selectByPrimaryKey" resultMap="HotelInfoResultMap" parameterType="java.lang.Integer" >
@@ -16,6 +27,13 @@
     *
     from hotel_info
     where hotel_id = #{hotelId,jdbcType=INTEGER}
+  </select>
+<!--  获取酒店信息-->
+  <select id="selectByPrimaryKeyHotelInfo" resultMap="HotelInfoResultMap" parameterType="java.lang.Integer" >
+    select
+    *
+    from hotel_info hi,hotel_area ha
+    where hi.hotel_id = #{hotelId,jdbcType=INTEGER} and hi.hotel_id = ha.hotel_id
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from hotel_info

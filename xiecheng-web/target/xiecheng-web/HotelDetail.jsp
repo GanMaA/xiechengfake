@@ -1,5 +1,7 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html lang="en">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <head>
     <meta charset="UTF-8">
     <title>酒店详情</title>
@@ -9,7 +11,7 @@
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="js/easyui/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="js/easyui/themes/icon.css">
-    <link rel="stylesheet" type="text/css" href="js/easyui/demo.css">
+    <link rel="stylesheet" type="text/css" href="js/easyui/demo/demo.css">
     <script type="text/javascript" src="js/easyui//jquery.min.js"></script>
     <script type="text/javascript" src="js/easyui//jquery.easyui.min.js"></script>
 
@@ -53,13 +55,13 @@
                 <div class="hotel_name">
                     <a class="hotel_item_name">
                         <i class="icons" > 精选 </i>
-                        <strong style="margin: 0px 5px; font-size: 22px"> 浙江广电开元名都大酒店</strong>
+                        <strong style="margin: 0px 5px; font-size: 22px"> ${hotelInfo.hotelName}</strong>
                         <span class="hotel_strategymedal" title="携程战略合作酒店，拥有优质服务、优良品质及优惠房价，供携程会员专享预订" data-role="title"></span>
                     </a>
                     <div title="高档型" class="hotel_diamond04"></div>
                     <div class="hotel_address">
                         【
-                        <a>火车城站杭州站</a><a>南宋御街及河坊街 </a>
+                        <a>火车城站杭州站</a><a>${hotelInfo.hotelArea.areaDetail} </a>
                         】佑圣观路74号。
                         <a>地图</a>
                     </div>
@@ -134,6 +136,7 @@
                 </div>
             </div>
             <div class="sort_type">
+                <div class="sort_group">
                 <span class="sort_tittle">床型</span>
                 <a class="sort_item">大床</a>
                 <a class="sort_item">双床</a>
@@ -145,6 +148,8 @@
                 <span class="sort_tittle">宽带</span>
                 <a class="sort_item">免费WIFI上网</a>
                 <a class="sort_item" style="margin-right: 100px">免费有线宽带</a>
+                </div>
+                <div class="sort_group">
                 <span class="sort_tittle">支付方式</span>
                 <a class="sort_item">在线付款</a>
                 <a class="sort_item">到店付款</a>
@@ -157,6 +162,7 @@
                 <a class="sort_item">可加床</a>
                 <a class="sort_item">钟点房</a>
                 <a class="sort_item">亲子主题房</a>
+                </div>
             </div>
             <div class="room_all">
                 <ul class="room_index">
@@ -170,77 +176,54 @@
                     <li class="index_col8">房价（含服务费）</li>
                 </ul>
                 <div class="room_detail">
-                    <ul>
+                    <c:forEach var="hotelRoomsOne" items="${HotelRoomsOne}">
+                    <ul class="hotel_${hotelRoomsOne.bedKind.bedId}">
                         <li class="index_col1 room_detail_col1">
                             <img src="//dimg10.c-ctrip.com/images/280j10000000o3lrz0973_R_130_130.jpg">
-                            <a>高级大床房<br><span>查看详情</span></a>
+                            <a>${hotelRoomsOne.roomName}<br><span>查看详情</span></a>
                         </li>
                         <li class="index_col2 room_detail_col2">标准价</li>
-                        <li class="index_col3 room_detail_col3">双床</li>
+                        <li class="index_col3 room_detail_col3">${hotelRoomsOne.bedKind.bedCat}</li>
                         <li class="index_col4 room_detail_col4">2份早餐</li>
                         <li class="index_col5 room_detail_col5"><span class="WIFI_free">免费</span><br><span>禁烟</span></li>
                         <li class="index_col6 room_detail_col6">2人</li>
                         <li class="index_col7 room_detail_col7"><span>免费取消</span><br><span>立即确认</span></li>
-                        <li class="index_col8">￥<span class="room_price">343</span></li>
+                        <li class="index_col8">￥<span class="room_price">${hotelRoomsOne.roomPrice}</span></li>
                         <li class="book_type"><a><span class="book_type_main">预定</span><span class="book_type_skin">在线支付</span></a></li>
                     </ul>
-                    <ul>
+                    </c:forEach>
+                    <c:forEach var="hotelRoomsTwo" items="${HotelRoomsTwo}">
+                    <ul class="hotel_${hotelRoomsTwo.bedKind.bedId}">
                         <li class="index_col1 room_detail_col1">
                             <img src="//dimg10.c-ctrip.com/images/280j10000000o3lrz0973_R_130_130.jpg">
-                            <a>高级大床房<br><span>查看详情</span></a>
+                            <a>${hotelRoomsTwo.roomName}<br><span>查看详情</span></a>
                         </li>
                         <li class="index_col2 room_detail_col2">标准价</li>
-                        <li class="index_col3 room_detail_col3">双床</li>
+                        <li class="index_col3 room_detail_col3">${hotelRoomsTwo.bedKind.bedCat}</li>
                         <li class="index_col4 room_detail_col4">2份早餐</li>
                         <li class="index_col5 room_detail_col5"><span class="WIFI_free">免费</span><br><span>禁烟</span></li>
                         <li class="index_col6 room_detail_col6">2人</li>
                         <li class="index_col7 room_detail_col7"><span>免费取消</span><br><span>立即确认</span></li>
-                        <li class="index_col8">￥<span class="room_price">343</span></li>
+                        <li class="index_col8">￥<span class="room_price">${hotelRoomsTwo.roomPrice}</span></li>
                         <li class="book_type"><a><span class="book_type_main">预定</span><span class="book_type_skin">在线支付</span></a></li>
                     </ul>
-                    <ul>
+                    </c:forEach>
+                    <c:forEach var="hotelRoomsThree" items="${HotelRoomsThree}">
+                    <ul class="hotel_${hotelRoomsThree.bedKind.bedId}">
                         <li class="index_col1 room_detail_col1">
                             <img src="//dimg10.c-ctrip.com/images/280j10000000o3lrz0973_R_130_130.jpg">
-                            <a>高级大床房<br><span>查看详情</span></a>
+                            <a>${hotelRoomsThree.roomName}<br><span>查看详情</span></a>
                         </li>
                         <li class="index_col2 room_detail_col2">标准价</li>
-                        <li class="index_col3 room_detail_col3">双床</li>
+                        <li class="index_col3 room_detail_col3">${hotelRoomsThree.bedKind.bedCat}</li>
                         <li class="index_col4 room_detail_col4">2份早餐</li>
                         <li class="index_col5 room_detail_col5"><span class="WIFI_free">免费</span><br><span>禁烟</span></li>
                         <li class="index_col6 room_detail_col6">2人</li>
                         <li class="index_col7 room_detail_col7"><span>免费取消</span><br><span>立即确认</span></li>
-                        <li class="index_col8">￥<span class="room_price">343</span></li>
+                        <li class="index_col8">￥<span class="room_price">${hotelRoomsThree.roomPrice}</span></li>
                         <li class="book_type"><a><span class="book_type_main">预定</span><span class="book_type_skin">在线支付</span></a></li>
                     </ul>
-                    <ul>
-                        <li class="index_col1 room_detail_col1">
-                            <img src="//dimg10.c-ctrip.com/images/280j10000000o3lrz0973_R_130_130.jpg">
-                            <a>高级大床房<br><span>查看详情</span></a>
-                        </li>
-                        <li class="index_col2 room_detail_col2">标准价</li>
-                        <li class="index_col3 room_detail_col3">双床</li>
-                        <li class="index_col4 room_detail_col4">2份早餐</li>
-                        <li class="index_col5 room_detail_col5"><span class="WIFI_free">免费</span><br><span>禁烟</span></li>
-                        <li class="index_col6 room_detail_col6">2人</li>
-                        <li class="index_col7 room_detail_col7"><span>免费取消</span><br><span>立即确认</span></li>
-                        <li class="index_col8">￥<span class="room_price">343</span></li>
-                        <li class="book_type"><a><span class="book_type_main">预定</span><span class="book_type_skin">在线支付</span></a></li>
-                    </ul>
-                    <ul>
-                        <li class="index_col1 room_detail_col1">
-                            <img src="//dimg10.c-ctrip.com/images/280j10000000o3lrz0973_R_130_130.jpg">
-                            <a>高级大床房<br><span>查看详情</span></a>
-                        </li>
-                        <li class="index_col2 room_detail_col2">标准价</li>
-                        <li class="index_col3 room_detail_col3">双床</li>
-                        <li class="index_col4 room_detail_col4">2份早餐</li>
-                        <li class="index_col5 room_detail_col5"><span class="WIFI_free">免费</span><br><span>禁烟</span></li>
-                        <li class="index_col6 room_detail_col6">2人</li>
-                        <li class="index_col7 room_detail_col7"><span>免费取消</span><br><span>立即确认</span></li>
-                        <li class="index_col8">￥<span class="room_price">343</span></li>
-                        <li class="book_type"><a><span class="book_type_main">预定</span><span class="book_type_skin">在线支付</span></a></li>
-                    </ul>
-
+                    </c:forEach>
                 </div>
 
             </div>
