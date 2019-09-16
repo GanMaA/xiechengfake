@@ -2,3 +2,5 @@
 /src/test/
 *.idea
 *.settings
+mybatis.properties
+*.iml
