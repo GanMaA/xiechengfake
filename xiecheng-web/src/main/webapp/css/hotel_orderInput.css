@@ -72,7 +72,6 @@
 
 .mod_book_bd {
     width: 780px;
-    height: 299px;
 }
 
 .mod_book_item {
@@ -80,14 +79,98 @@
     padding: 16px 10px 16px 130px;
     line-height: 24px;
     min-height: 24px;
+    font-size: 14px;
+}
+
+.mod_book_item_tit {
+    position: relative;
+    left: -90px;
+    color: #999;
+    float: left;
+}
+
+.mod_book_item_cont {
+    font-size: 16px;
+    float: left;
+}
+
+
+
+.mod_book_box {
+    padding-bottom: 10px;
+    background: #fff;
+    border-radius: 0 0 3px 3px;
+}
+
+.mod_room_tit {
+    color: #999;
+    font-size: 14px;
+    float: left;
+    padding-top: 16px;
+}
+
+#btm_tips {
+    width: 780px;
+    border: 1px solid #d5dde0;
+    padding: 20px;
+    margin-top: 30px;
+    color: #666;
+}
+
+.btm_tips_item {
+    padding: 5px 0;
+}
+
+.book_next {
+    padding-top: 20px;
+}
+
+.btn_main {
+    width: 100%;
+    border: none;
+    height: 60px;
+    color: #fff;
+    background: #f60;
+    font-size: 20px;
+    font-family: Tahoma,Arial,"Microsoft YaHei",sans-serif;
+    border-radius: 3px;
 }
 
 #order_body_aside {
     float: left;
     width: 380px;
+    background-color: white;
 }
 
+.Info_box {
+    padding: 15px 20px;
+}
 
+.info_addr {
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 12px;
+}
+
+.info_roomname {
+    margin-top: 10px;
+    color: #666;
+}
+
+.info_t th {
+    width: 50px;
+    padding: 5px 0;
+    font-weight: normal;
+    text-align: left;
+    color: #999;
+    vertical-align: top;
+}
+
+.info_t td {
+    padding: 5px 0;
+    color: #666;
+}
 /*主体结束*/
 * {
     padding: 0; /*取消边界留白*/
@@ -101,4 +184,20 @@ body {
 
 i {
     font-style: italic;
+}
+
+div {
+    display: block;
+}
+
+table {
+    border-bottom: none;
+}
+
+th {
+    background-color: #F5F7F8;
+}
+
+tr {
+    vertical-align: middle;
 }

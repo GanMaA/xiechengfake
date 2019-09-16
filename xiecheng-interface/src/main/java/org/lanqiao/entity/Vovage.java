@@ -8,16 +8,19 @@ public class Vovage {
     private Integer vovageId;
 
     private Integer flightId;
+
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date ticketDate;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date flyTime;
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @DateTimeFormat(pattern = "HH:mm")
     private Date arrivedTime;
 
     private String flyCity;
 
     private String arrivedCity;
+
+    private Integer price;
 
     public Integer getVovageId() {
         return vovageId;
@@ -75,17 +78,11 @@ public class Vovage {
         this.arrivedCity = arrivedCity == null ? null : arrivedCity.trim();
     }
 
-    @Override
-    public String toString() {
-        return "Vovage{" +
-                "vovageId=" + vovageId +
-                ", flightId=" + flightId +
-                ", ticketDate=" + ticketDate +
-                ", flyTime=" + flyTime +
-                ", arrivedTime=" + arrivedTime +
-                ", flyCity='" + flyCity + '\'' +
-                ", arrivedCity='" + arrivedCity + '\'' +
-                '}';
+    public Integer getPrice() {
+        return price;
     }
 
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
 }

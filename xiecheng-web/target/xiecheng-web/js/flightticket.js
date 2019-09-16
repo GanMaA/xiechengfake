@@ -88,8 +88,9 @@ $(function () {
             });
         })
     });
-
     //右边顶部当前日期
     var current=document.getElementById("start_date").placeholder
     $(".current").children().eq(0).text(current)
+    //查询表格信息
+
 })
