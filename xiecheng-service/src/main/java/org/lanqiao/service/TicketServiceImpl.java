@@ -6,16 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
-public class TicketServiceImpl implements TicketService {
+public class TicketServiceImpl implements TicketService{
     @Autowired
     VovageMapper vovageMapper;
 
     @Override
-    public List<Vovage> selectAll() {
-        List<Vovage> vovageList = vovageMapper.getAll();
+    public List<Vovage> selectAll(Vovage vovage) {
+        List<Vovage> vovageList=vovageMapper.getAll(vovage);
         return vovageList;
     }
 }
-
-

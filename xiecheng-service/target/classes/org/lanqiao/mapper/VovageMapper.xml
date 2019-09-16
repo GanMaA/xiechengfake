@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.lanqiao.mapper.VovageMapper" >
-  <resultMap id="BaseResultMap" type="org.lanqiao.entity.Vovage" >
+  <resultMap id="VovageResultMap" type="org.lanqiao.entity.Vovage" >
     <id column="vovage_id" property="vovageId" jdbcType="INTEGER" />
     <result column="flight_id" property="flightId" jdbcType="INTEGER" />
     <result column="ticket_date" property="ticketDate" jdbcType="DATE" />
@@ -9,11 +9,13 @@
     <result column="arrived_time" property="arrivedTime" jdbcType="TIMESTAMP" />
     <result column="fly_city" property="flyCity" jdbcType="VARCHAR" />
     <result column="arrived_city" property="arrivedCity" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="INTEGER" />
   </resultMap>
-  <select id="getAll" resultMap="BaseResultMap">
-    select * from vovage order by vovage_id desc
+  <select id="getAll" resultMap="VovageResultMap" parameterType="org.lanqiao.entity.Vovage">
+    select * from vovage where ticket_date = #{ticket_date}
+    order by vovage_id desc
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  <select id="selectByPrimaryKey" resultMap="VovageResultMap" parameterType="java.lang.Integer" >
     select *
     from vovage
     where vovage_id = #{vovageId,jdbcType=INTEGER}
@@ -25,10 +27,10 @@
   <insert id="insert" parameterType="org.lanqiao.entity.Vovage" >
     insert into vovage (vovage_id, flight_id, ticket_date, 
       fly_time, arrived_time, fly_city, 
-      arrived_city)
+      arrived_city, price)
     values (#{vovageId,jdbcType=INTEGER}, #{flightId,jdbcType=INTEGER}, #{ticketDate,jdbcType=DATE}, 
       #{flyTime,jdbcType=TIMESTAMP}, #{arrivedTime,jdbcType=TIMESTAMP}, #{flyCity,jdbcType=VARCHAR}, 
-      #{arrivedCity,jdbcType=VARCHAR})
+      #{arrivedCity,jdbcType=VARCHAR}, #{price,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="org.lanqiao.entity.Vovage" >
     insert into vovage
@@ -54,6 +56,9 @@
       <if test="arrivedCity != null" >
         arrived_city,
       </if>
+      <if test="price != null" >
+        price,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="vovageId != null" >
@@ -76,6 +81,9 @@
       </if>
       <if test="arrivedCity != null" >
         #{arrivedCity,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -100,6 +108,9 @@
       <if test="arrivedCity != null" >
         arrived_city = #{arrivedCity,jdbcType=VARCHAR},
       </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=INTEGER},
+      </if>
     </set>
     where vovage_id = #{vovageId,jdbcType=INTEGER}
   </update>
@@ -110,7 +121,8 @@
       fly_time = #{flyTime,jdbcType=TIMESTAMP},
       arrived_time = #{arrivedTime,jdbcType=TIMESTAMP},
       fly_city = #{flyCity,jdbcType=VARCHAR},
-      arrived_city = #{arrivedCity,jdbcType=VARCHAR}
+      arrived_city = #{arrivedCity,jdbcType=VARCHAR},
+      price = #{price,jdbcType=INTEGER}
     where vovage_id = #{vovageId,jdbcType=INTEGER}
   </update>
 </mapper>
