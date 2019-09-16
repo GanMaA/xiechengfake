@@ -3,9 +3,7 @@ package org.lanqiao.controller;
 import org.lanqiao.entity.Login;
 import org.lanqiao.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class LoginController {
@@ -13,10 +11,10 @@ public class LoginController {
     LoginService loginService;
 
     @ResponseBody
-    @RequestMapping("/insert")
+    @RequestMapping(value = "insert" ,produces = "application/json;charset=UTF-8",method = RequestMethod.POST)
     public boolean insertUser(Login login){
-        boolean status=loginService.insertUser(login);
-        System.out.println(status);
-        return status;
+        boolean s=loginService.insertUser(login);
+        System.out.println(s);
+        return s;
     }
 }
