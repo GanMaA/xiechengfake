@@ -12,7 +12,7 @@ $(function () {
             closeBtn:0,
             success: function(){
                 $("#but").click(function () {
-                    location.href="xiecheng_index.html"
+                    location.href="xiecheng_index.jsp"
                 });
                 var fn = function() {
                     $("#time").text(i+"S");
@@ -22,7 +22,7 @@ $(function () {
                     fn();
                     if(i === -1){
                         clearInterval(interval);
-                        location.href="xiecheng_index.html"
+                        location.href="xiecheng_index.jsp"
                     }
                 }, 1000);
             }

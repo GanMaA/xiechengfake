@@ -18,6 +18,8 @@ public class HotelInfo implements Serializable {
 
     private Integer hotelGroupId;
 
+    private HotelArea hotelArea;
+
     public Integer getHotelId() {
         return hotelId;
     }
@@ -72,5 +74,13 @@ public class HotelInfo implements Serializable {
 
     public void setHotelGroupId(Integer hotelGroupId) {
         this.hotelGroupId = hotelGroupId;
+    }
+
+    public HotelArea getHotelArea() {
+        return hotelArea;
+    }
+
+    public void setHotelArea(HotelArea hotelArea) {
+        this.hotelArea = hotelArea;
     }
 }

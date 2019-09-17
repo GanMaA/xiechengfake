@@ -16,4 +16,7 @@ public interface HotelInfoMapper {
     int updateByPrimaryKeySelective(HotelInfo record);
 
     int updateByPrimaryKey(HotelInfo record);
+
+    HotelInfo selectByPrimaryKeyHotelInfo(Integer hotelId);
+
 }

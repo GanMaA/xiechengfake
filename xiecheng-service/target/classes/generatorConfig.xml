@@ -49,35 +49,22 @@
 			指定列的java数据类型
 			<columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" />
 		</table> -->
-<<<<<<< HEAD
-<!--		<table tableName="login" domainObjectName="Login"-->
-=======
 		<!--<table tableName="users" domainObjectName="User"-->
 			<!--enableCountByExample="false" enableDeleteByExample="false"-->
 			<!--enableSelectByExample="false" enableUpdateByExample="false">-->
 			<!--<property name="useActualColumnNames" value="true" />-->
 		<!--</table>-->
 <!--		<table tableName="hotel_info" domainObjectName="HotelInfo"-->
->>>>>>> 6e16291ffded62d4e55fb029726077c19743aa8e
 <!--			enableCountByExample="false" enableDeleteByExample="false"-->
 <!--			enableSelectByExample="false" enableUpdateByExample="false">-->
 <!--			<property name="useActualColumnNames" value="false" />-->
 <!--		</table>-->
-<<<<<<< HEAD
-<!--		<table tableName="user_info" domainObjectName="UserInfo"-->
-<!--			enableCountByExample="false" enableDeleteByExample="false"-->
-<!--			enableSelectByExample="false" enableUpdateByExample="false">-->
-<!--			<property name="useActualColumnNames" value="false" />-->
-<!--		</table>-->
-<!--		<table tableName="verify_code" domainObjectName="VerifyCode"-->
-=======
-        <table tableName="vovage" domainObjectName="Vovage"
-               enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false">
-            <property name="useActualColumnNames" value="false" />
-        </table>
+<!--        <table tableName="vovage" domainObjectName="Vovage"-->
+<!--               enableCountByExample="false" enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false" enableUpdateByExample="false">-->
+<!--            <property name="useActualColumnNames" value="false" />-->
+<!--        </table>-->
 <!--		<table tableName="orderitem" domainObjectName="OrderItem"-->
->>>>>>> 6e16291ffded62d4e55fb029726077c19743aa8e
 <!--			enableCountByExample="false" enableDeleteByExample="false"-->
 <!--			enableSelectByExample="false" enableUpdateByExample="false">-->
 <!--			<property name="useActualColumnNames" value="false" />-->
@@ -87,5 +74,22 @@
 			<!--enableSelectByExample="false" enableUpdateByExample="false">-->
 			<!--<property name="useActualColumnNames" value="true" />-->
 		<!--</table>-->
+		<!--酒店地区表-->
+<!--		<table tableName="hotel_area" domainObjectName="HotelArea"-->
+<!--		    enableCountByExample="false" enableDeleteByExample="false"-->
+<!--		    enableSelectByExample="false" enableUpdateByExample="false">-->
+<!--			<property name="useActualColumnNames" value="false" />-->
+<!--		</table>-->
+			<!--酒店床型-->
+<!--		<table tableName="hotel_room" domainObjectName="HotelRoom"-->
+<!--			   enableCountByExample="false" enableDeleteByExample="false"-->
+<!--			   enableSelectByExample="false" enableUpdateByExample="false">-->
+<!--			<property name="useActualColumnNames" value="false" />-->
+<!--		</table>-->
+<!--		<table tableName="bed_kind" domainObjectName="BedKind"-->
+<!--			   enableCountByExample="false" enableDeleteByExample="false"-->
+<!--			   enableSelectByExample="false" enableUpdateByExample="false">-->
+<!--			<property name="useActualColumnNames" value="false" />-->
+<!--		</table>-->
 	</context>
 </generatorConfiguration>
