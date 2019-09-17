@@ -1,9 +1,9 @@
 package org.lanqiao.mapper;
 
 import org.lanqiao.entity.HotelInfo;
-import org.springframework.stereotype.Repository;
 
-@Repository
+import java.util.List;
+
 public interface HotelInfoMapper {
     int deleteByPrimaryKey(Integer hotelId);
 
@@ -16,6 +16,11 @@ public interface HotelInfoMapper {
     int updateByPrimaryKeySelective(HotelInfo record);
 
     int updateByPrimaryKey(HotelInfo record);
+
+
+    //根据地址表中的地址名称和酒店信息表中的地址表id查询该城市的所有酒店
+    List<HotelInfo> selectHotelInfo(String areaName);
+
 
     HotelInfo selectByPrimaryKeyHotelInfo(Integer hotelId);
 

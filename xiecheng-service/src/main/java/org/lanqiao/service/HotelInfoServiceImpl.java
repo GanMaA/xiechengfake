@@ -1,5 +1,7 @@
 package org.lanqiao.service;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.lanqiao.entity.HotelInfo;
 import org.lanqiao.entity.HotelRoom;
 import org.lanqiao.mapper.HotelInfoMapper;
@@ -18,9 +20,14 @@ public class HotelInfoServiceImpl implements HotelInfoService, Serializable {
     HotelRoomMapper hotelRoomMapper;
 
     @Override
-    public HotelInfo selectByPrimaryKey() {
-        HotelInfo hotelInfo = hotelInfoMapper.selectByPrimaryKey(1);
-        return hotelInfo;
+    public List<HotelInfo> selectHotelInfo( String areaName) {
+
+        List<HotelInfo> hotelInfoList = hotelInfoMapper.selectHotelInfo(areaName);
+        return hotelInfoList;
+
+
+
+//        return hotelInfoMapper.selectHotelInfo(areaName);
     }
 
     public HotelInfo selectByPrimaryKeyHotelInfo(Integer hotelId) {

@@ -22,6 +22,24 @@
     <result column="area_detail" property="areaDetail" jdbcType="VARCHAR" />
   </resultMap>
 
+
+
+  <select id="selectHotelInfo" resultMap="HotelInfoResultMap" parameterType="java.lang.String">
+    SELECT hotel_name,hotel_min_price,mark,hotel_pic FROM hotel_info  WHERE area_Id in (SELECT C.area_Id FROM china C WHERE area_name LIKE  CONCAT('%', #{areaName}, '%')) LIMIT 0,5
+  </select>
+
+
+
+
+
+
+
+
+
+  <sql id="Base_Column_List" >
+    hotel_id, hotel_name, hotel_level, hotel_min_price, mark, hotel_pic, hotel_group_id,
+    area_id
+  </sql>
   <select id="selectByPrimaryKey" resultMap="HotelInfoResultMap" parameterType="java.lang.Integer" >
     select 
     *
