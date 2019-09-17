@@ -9,11 +9,38 @@
     <result column="mark" property="mark" jdbcType="DECIMAL" />
     <result column="hotel_pic" property="hotelPic" jdbcType="VARCHAR" />
     <result column="hotel_group_id" property="hotelGroupId" jdbcType="INTEGER" />
+    <result column="area_id" property="areaId" jdbcType="INTEGER" />
+    <association property="china" resultMap="ChinaResultMap"></association>
   </resultMap>
 
+
+  <resultMap id="ChinaResultMap" type="org.lanqiao.entity.China" >
+    <id column="area_id" property="areaId" jdbcType="INTEGER" />
+    <result column="area_name" property="areaName" jdbcType="VARCHAR" />
+    <result column="higher_level" property="higherLevel" jdbcType="INTEGER" />
+  </resultMap>
+
+
+
+  <select id="selectHotelInfo" resultMap="HotelInfoResultMap" parameterType="java.lang.String">
+    SELECT hotel_name,hotel_min_price,mark,hotel_pic FROM hotel_info  WHERE area_Id in (SELECT C.area_Id FROM china C WHERE area_name LIKE  CONCAT('%', #{areaName}, '%')) LIMIT 0,5
+  </select>
+
+
+
+
+
+
+
+
+
+  <sql id="Base_Column_List" >
+    hotel_id, hotel_name, hotel_level, hotel_min_price, mark, hotel_pic, hotel_group_id, 
+    area_id
+  </sql>
   <select id="selectByPrimaryKey" resultMap="HotelInfoResultMap" parameterType="java.lang.Integer" >
     select 
-    *
+    <include refid="Base_Column_List" />
     from hotel_info
     where hotel_id = #{hotelId,jdbcType=INTEGER}
   </select>
@@ -24,10 +51,10 @@
   <insert id="insert" parameterType="org.lanqiao.entity.HotelInfo" >
     insert into hotel_info (hotel_id, hotel_name, hotel_level, 
       hotel_min_price, mark, hotel_pic, 
-      hotel_group_id)
+      hotel_group_id, area_id)
     values (#{hotelId,jdbcType=INTEGER}, #{hotelName,jdbcType=VARCHAR}, #{hotelLevel,jdbcType=INTEGER}, 
       #{hotelMinPrice,jdbcType=DECIMAL}, #{mark,jdbcType=DECIMAL}, #{hotelPic,jdbcType=VARCHAR}, 
-      #{hotelGroupId,jdbcType=INTEGER})
+      #{hotelGroupId,jdbcType=INTEGER}, #{areaId,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="org.lanqiao.entity.HotelInfo" >
     insert into hotel_info
@@ -53,6 +80,9 @@
       <if test="hotelGroupId != null" >
         hotel_group_id,
       </if>
+      <if test="areaId != null" >
+        area_id,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="hotelId != null" >
@@ -75,6 +105,9 @@
       </if>
       <if test="hotelGroupId != null" >
         #{hotelGroupId,jdbcType=INTEGER},
+      </if>
+      <if test="areaId != null" >
+        #{areaId,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -99,6 +132,9 @@
       <if test="hotelGroupId != null" >
         hotel_group_id = #{hotelGroupId,jdbcType=INTEGER},
       </if>
+      <if test="areaId != null" >
+        area_id = #{areaId,jdbcType=INTEGER},
+      </if>
     </set>
     where hotel_id = #{hotelId,jdbcType=INTEGER}
   </update>
@@ -109,7 +145,8 @@
       hotel_min_price = #{hotelMinPrice,jdbcType=DECIMAL},
       mark = #{mark,jdbcType=DECIMAL},
       hotel_pic = #{hotelPic,jdbcType=VARCHAR},
-      hotel_group_id = #{hotelGroupId,jdbcType=INTEGER}
+      hotel_group_id = #{hotelGroupId,jdbcType=INTEGER},
+      area_id = #{areaId,jdbcType=INTEGER}
     where hotel_id = #{hotelId,jdbcType=INTEGER}
   </update>
 </mapper>

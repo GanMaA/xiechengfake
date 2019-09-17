@@ -59,20 +59,20 @@
 <!--			enableSelectByExample="false" enableUpdateByExample="false">-->
 <!--			<property name="useActualColumnNames" value="false" />-->
 <!--		</table>-->
-        <table tableName="vovage" domainObjectName="Vovage"
+        <table tableName="hotel_info" domainObjectName="HotelInfo"
                enableCountByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" enableUpdateByExample="false">
             <property name="useActualColumnNames" value="false" />
         </table>
-<!--		<table tableName="orderitem" domainObjectName="OrderItem"-->
+<!--		<table tableName="hotel_area" domainObjectName="HotelArea"-->
 <!--			enableCountByExample="false" enableDeleteByExample="false"-->
 <!--			enableSelectByExample="false" enableUpdateByExample="false">-->
 <!--			<property name="useActualColumnNames" value="false" />-->
 <!--		</table>-->
-		<!--<table tableName="classes" domainObjectName="Classes"-->
-			<!--enableCountByExample="false" enableDeleteByExample="false"-->
-			<!--enableSelectByExample="false" enableUpdateByExample="false">-->
-			<!--<property name="useActualColumnNames" value="true" />-->
-		<!--</table>-->
+		<table tableName="china" domainObjectName="China"
+			enableCountByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" enableUpdateByExample="false">
+			<property name="useActualColumnNames" value="false" />
+		</table>
 	</context>
 </generatorConfiguration>

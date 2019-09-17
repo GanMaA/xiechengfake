@@ -13,19 +13,16 @@
     <packaging>jar</packaging>
 
     <dependencies>
-
-
-        <!-- pagehelper -->
-<!--        <dependency>-->
-<!--            <groupId>com.github.pagehelper</groupId>-->
-<!--            <artifactId>pagehelper</artifactId>-->
-<!--            <version>4.1.6</version>-->
-<!--        </dependency>-->
-        <!--springMVC-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>5.1.7.RELEASE</version>
+        </dependency>
+        <!-- page helper -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>4.1.6</version>
         </dependency>
     </dependencies>
 </project>

@@ -12,7 +12,7 @@
                         http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
 	<!-- 自动扫描 -->
-	<context:component-scan base-package="org.lanqiao.service" />
+<!--	<context:component-scan base-package="org.lanqiao.service" />-->
 	<context:component-scan base-package="org.lanqiao.mapper" />
 	<!-- 引入配置文件 -->
 	<bean id="propertyConfigurer"
@@ -44,18 +44,18 @@
 		<!-- 自动扫描mapping.xml文件 -->
 		<property name="mapperLocations" value="classpath:org/lanqiao/mapper/*.xml" />
 		<!-- 配置分页插件 -->
-		<property name="plugins">
-		<array>
-			<bean class="com.github.pagehelper.PageHelper">
-				<property name="properties">
-					<value>
-						dialect=mysql
-						reasonable=true
-					</value>
-				</property>
-			</bean>
-		</array>
-	</property>
+<!--		<property name="plugins">-->
+<!--		<array>-->
+<!--			<bean class="com.github.pagehelper.PageHelper">-->
+<!--				<property name="properties">-->
+<!--					<value>-->
+<!--						dialect=mysql-->
+<!--						reasonable=true-->
+<!--					</value>-->
+<!--				</property>-->
+<!--			</bean>-->
+<!--		</array>-->
+<!--	</property>-->
 	</bean>
 
 	<!-- DAO接口所在包名，Spring会自动查找其下的类 -->
@@ -65,17 +65,17 @@
 	</bean>
 
 	<!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
-	<bean id="transactionManager"
-		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource" />
-	</bean>
+<!--	<bean id="transactionManager"-->
+<!--		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
+<!--		<property name="dataSource" ref="dataSource" />-->
+<!--	</bean>-->
 
-	<!--dubbo配置提供者-->
-	<dubbo:application name="dubbo_provider"/>
+<!--	&lt;!&ndash;dubbo配置提供者&ndash;&gt;-->
+<!--	<dubbo:application name="dubbo_provider"/>-->
 
-	<dubbo:registry address="zookeeper://127.0.0.1:2181" check="false" subscribe="false" />
+<!--	<dubbo:registry address="zookeeper://127.0.0.1:2181" check="false" subscribe="false" />-->
 
-	<dubbo:service interface="org.lanqiao.service.UserService" ref="userService" />
+<!--	<dubbo:service interface="org.lanqiao.service.UserService" ref="userService" />-->
 
-	<bean id="userService" class="org.lanqiao.service.UserServiceImpl"/>
+<!--	<bean id="userService" class="org.lanqiao.service.UserServiceImpl"/>-->
 </beans>

@@ -1,9 +1,8 @@
 package org.lanqiao.entity;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class HotelInfo implements Serializable {
+public class HotelInfo {
     private Integer hotelId;
 
     private String hotelName;
@@ -17,6 +16,10 @@ public class HotelInfo implements Serializable {
     private String hotelPic;
 
     private Integer hotelGroupId;
+
+    private Integer areaId;
+
+    private China china;
 
     public Integer getHotelId() {
         return hotelId;
@@ -72,5 +75,27 @@ public class HotelInfo implements Serializable {
 
     public void setHotelGroupId(Integer hotelGroupId) {
         this.hotelGroupId = hotelGroupId;
+    }
+
+    public Integer getAreaId() {
+        return areaId;
+    }
+
+    public void setAreaId(Integer areaId) {
+        this.areaId = areaId;
+    }
+
+    @Override
+    public String toString() {
+        return "HotelInfo{" +
+                "hotelId=" + hotelId +
+                ", hotelName='" + hotelName + '\'' +
+                ", hotelLevel=" + hotelLevel +
+                ", hotelMinPrice=" + hotelMinPrice +
+                ", mark=" + mark +
+                ", hotelPic='" + hotelPic + '\'' +
+                ", hotelGroupId=" + hotelGroupId +
+                ", areaId=" + areaId +
+                '}';
     }
 }
