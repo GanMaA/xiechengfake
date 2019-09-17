@@ -28,11 +28,11 @@ li{list-style:none}
 .search_form input{width: 145px;padding-left: 32px;margin: 2px 10px 0 0;}
 #head .search_form .ico i{position: absolute;margin: 5px 0 0 5px;z-index:5;background: url("../images/flightticket/icon_search_select.png") no-repeat;display: inline-block;width: 20px;height: 20px;}
 #head .search_form .ico a{position: relative;margin: 8px 2px 0 -5px;z-index:5;display: inline-block;float: left;}
-.search_form .ico1 i{background-position: 0 0;}
-.search_form .ico2 a{background: url("../images/flightticket/un_searchresult_20160129.png");background-position: 0 -64px;display: inline-block;width: 33px;height: 15px;margin-left: -11px;vertical-align: middle;overflow: hidden;}
-.search_form .ico3 i{background-position: 0 -20px;}
-.search_form .ico4 i{background-position: 0 -40px;}
-.search_form .ico5 i{background-position: 0 -60px;}
+#head .search_form .ico1 i{background-position: 0 0;}
+#head .search_form .ico2 a{background: url("../images/flightticket/un_searchresult_20160129.png");background-position: 0 -64px;display: inline-block;width: 33px;height: 15px;margin-left: -11px;vertical-align: middle;overflow: hidden;}
+#head .search_form .ico3 i{background-position: 0 -20px;}
+#head .search_form .ico4 i{background-position: 0 -40px;}
+#head .search_form .ico5 i{background-position: 0 -60px;}
 .search_form .btn_search {
     float: left;
     width: 92px;
@@ -88,6 +88,37 @@ li{list-style:none}
     background-color: #f8f8f8;
     color: #999;
     line-height: 32px;
+}
+/*left-end*/
+.why-ctrip_top{background-color: #f1f1f1;height: 50px}
+.why-ctrip{
+    position: relative;
+    /*margin-top: -250px;*/
+}
+.why-ctrip h3{background-color: #f1f1f1;margin: 0;padding-bottom: 20px}
+.whyctrip-main {
+    background: #fff;
+    border-top: 1px solid #5d9ffb;
+}
+.why-ctrip a {
+    display: block;
+    padding: 5px 12px 1px;
+    color: #06c;
+    text-decoration: none;
+}
+.why-ctrip p{
+    color: #999;font-size: 12px;text-align: center;
+}
+.why-ctrip .ico{
+    background: url(../images/flightticket/common-icon.png)no-repeat;
+    position: relative;margin:0 20px 0 -20px;float: left;
+    width: 28px;height: 30px;
+}
+.why-ctrip .service-icon{
+    background-position: 2px -61px;
+}
+.why-ctrip .price-icon{
+    background-position: -36px -61px;
 }
 /*bd-right*/
 /*bd-right-top*/
@@ -169,19 +200,20 @@ li{list-style:none}
     overflow:hidden;zoom:1;
 }
 .search_boxbox{
-    height: 83px;
+    height: 90px;
     width: 215px;float: left;
     background: #f1f1f1;padding-top: 2px;
 }
 .search_box{
     position: absolute;
-    height: 74px;
+    height: 84px;
     width: 190px;
     background-color: #fff;
     padding: 10px 10px 0 0;
     float: left;
 }
 .box_text{font-size: 13px;color: #b4b4b4;padding: 5px 0 0 5px}
+.box_text_end{font-size: 15px;padding: 5px 0 0 5px;text-align: center}
 .search_box a{float: right}
 .search_box a:hover{color: #5d9ffb}
 
@@ -207,3 +239,77 @@ li{list-style:none}
     background-position: 0 0;
     background: url("../images/flightticket/un_sidebar.png") no-repeat;
 }
+
+/*主页城市选项*/
+.city_select{
+    display: none;
+    width: 405px;
+    border:1px solid #bbbbbb;
+    background-color: #fff;
+    z-index: 9999;
+    margin: 40px 0 0 115px;
+    position: absolute;
+}
+.city_select_title{
+    font-size: 12px;
+    color: gray;
+    position: relative;
+    padding: 5px 10px;
+    top: 0;
+    left: 0;
+}
+.city_select_title_close{
+    float: right;
+    margin-right: 30px;
+    font-size: 14px;
+}
+.city_select_content{
+    position: relative;
+    padding: 5px 10px;
+    top: 0;
+    left: 0;
+}
+.city_select_content_nav{
+    overflow: auto;
+    font-size: 12px;
+}
+.city_select_content_nav ul{
+    overflow: auto;
+    list-style: none;
+}
+.city_select_content_nav ul li{
+    width: 40px;
+    text-align: center;
+    display: inline;
+    float: left;
+    border-bottom: 2px solid #999999;
+}
+.city_select_content_nav ul .w_60{
+    width: 60px;
+}
+.city_select_content_nav ul .city_current{
+    color: blue;
+    border-bottom: 2px solid blue;
+    font-weight: bold;
+}
+.city_select_content_city{
+    margin-top: 5px;
+    overflow: auto;
+}
+.city_select_content_city ul{
+    width: 300px;
+    overflow: auto;
+    list-style: none;
+}
+.city_select_content_city ul li{
+    font-size: 12px;
+    width: 50px;
+    text-align: center;
+    display: inline;
+    float: left;
+}
+.city_select_content_city ul li:hover{
+    background-color: blueviolet;
+    color: #fff;
+}
+/*城市选择框结束*/

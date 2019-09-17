@@ -12,6 +12,7 @@ $(function () {
     $(".helpmessage").hide();
 
 
+
     //点击地址选择框中的地址，将该地址写入到目的地输入框中
     $(".cityName").children().click(function () {
         // alert($(this).html());
@@ -84,18 +85,16 @@ $(function () {
     //点击选择更多地址
     $(".pop_box_city1").children().click(function () {
         alert($(this).html());
-        $(".hotsold_city_list").children().eq(12).children().html($(this).html())
-        // $(".this").appendTo("<li><a>$(this).html()</a></li>");
+        window.location.href='/getHotelnfo?addressName='+$(this).html();
+        $(".hotsold_city_list1").children().eq(6).children().html($(this).html())
         $(".pop_box_city").hide()
-    })
-
-    //热门酒店图片的大图的显示和隐藏
-    // //悬停到目标上
-    $(".hotel_pic1").mouseover(function () {
-        if ($(".bg_big").is(":hidden")){
-            $(".bg_big").show();
-        } else {
-            $(".bg_big").hide();
-        }
     });
+//    点击热门酒店栏的地址将地址发生到后台
+    $(".hotsold_city_list1").children().children().click(function () {
+        if ($(this).html()!="更多<b></b>"&&$(this).html()!=" ") {
+            addressName = $(this).html();
+            alert(addressName);
+            window.location.href='/getHotelnfo?addressName='+$(this).html();
+        }
+    })
 });

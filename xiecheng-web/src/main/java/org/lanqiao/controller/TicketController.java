@@ -1,24 +1,14 @@
 package org.lanqiao.controller;
 
 import org.lanqiao.entity.Vovage;
-import org.lanqiao.mapper.VovageMapper;
 import org.lanqiao.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.propertyeditors.CustomDateEditor;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Controller
 //@RequestMapping("/tcl")
@@ -35,10 +25,24 @@ public class TicketController {
 
     @RequestMapping("/showTicket")
     public String showTicket(Vovage vovage, HttpServletRequest request,Model model){
-        Date date=new Date();
-        vovage.setTicketDate(date);
         List<Vovage> vovageList=ticketService.selectAll(vovage);
         model.addAttribute("vovageList",vovageList);
+        model.addAttribute("vovage",vovage);
+        int price=0;
+        int temp=0;
+        for (Vovage vovage1: vovageList) {
+            temp=vovage1.getPrice();
+            if(price==0){
+                price=temp;
+            }
+            if (price>temp)
+                price=temp;
+        }
+        model.addAttribute("price",price);
         return "flightticket";
+    }
+    @RequestMapping("/getMinPrice")
+    public int getMinPrice(Vovage vovage){
+        return 1;
     }
 }

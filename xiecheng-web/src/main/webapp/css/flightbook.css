@@ -1,0 +1,45 @@
+.form-input {
+    width: 80%;
+    padding: 20px 0 8px;
+    height: 18px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #234;
+    background: #fff;
+    border: none;
+    border-bottom: 1px solid #b4c4d6;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    float: left;
+}
+.my_book_bd{
+    overflow:hidden;zoom:1;height: auto;background-color: #fff;
+}
+.leftinput{
+    border-radius: 0 0 3px 3px; height: 299px;width: 50%;border-right: 1px dashed #c4cad5;float: left;
+}
+.book_div{
+    position: relative;
+    width: 75%;
+    padding: 5px 10px 10px 20px;
+    font-size: 14px;
+    float: left
+}
+.book_span{float: left;display: block;width: 15%;padding: 16px 10px 0 20px;}
+.rightwuyou{
+    float: right;height: 299px;width:48%;
+}
+.wuyou{
+    background: url("../images/flightticket/icons.png");background-position: 0 0;height: 55px;width: 180px;position: relative;
+    top: 50%;left: 20%;
+}
+.test ::-webkit-input-placeholder{color:#bbb }
+
+/*右方*/
+.box_top{
+    border-bottom: 1px dashed #c4cad5;
+}
+.box_bottom{
+    border-top: 1px dashed #c4cad5;
+}

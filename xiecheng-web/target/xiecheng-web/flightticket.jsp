@@ -19,25 +19,111 @@
     <div id="main">
         <div id="head">
             <div class="search_form">
+                <form method="post" autocomplete="off" action="/showTicket">
                 <select>
                     <option>单程</option>
                     <option>往返</option>
                     <option>多程</option>
                 </select>
-                <div class="ico ico1"><i></i><input placeholder="666"></div>
+                <div class="ico ico1"><i></i><input placeholder="${vovage.flyCity}" name="flyCity"></div>
                 <div class="ico ico2"><a></a></div>
-                <div class="ico ico3"><i></i><input placeholder="666"></div>
-                <div class="ico ico4"><i></i><input class="test-item" id="start_date" placeholder="2019-9-2"></div>
+                <div class="ico ico3"><i></i><input placeholder="${vovage.arrivedCity}" name="arrivedCity"></div>
+                <div class="ico ico4"><i></i><input class="test-item" id="start_date" placeholder="<fmt:formatDate value="${vovage.ticketDate}" pattern="yyyy-MM-dd"/>" name="ticketDate"></div>
                 <div class="ico ico5"><i></i><input class="test-item" placeholder="666" ></div>
-                <a class="btn_search">重新搜索</a>
+                <button class="btn_search" type="submit">重新搜索</button>
                 <a class="btn_search">没有高级搜索</a>
+                    <div class="city_select flight_leave " >
+                        <div class="city_select_title">支持中文/拼音/简拼输入<span class="city_select_title_close">X</span></div>
+                        <div class="city_select_content">
+                            <div class="city_select_content_nav">
+                                <ul>
+                                    <li class="city_current">热门</li>
+                                    <li>ABCD</li>
+                                    <li>EFGH</li>
+                                    <li>JKLM</li>
+                                    <li class="w_60">NOPQRS</li>
+                                    <li class="w_60">TUVWX</li>
+                                    <li>YZ</li>
+                                </ul>
+                            </div>
+                            <div class="city_select_content_city">
+                                <ul>
+                                    <li>北京</li>
+                                    <li>上海</li>
+                                    <li>天津</li>
+                                    <li>重庆</li>
+                                    <li>大连</li>
+                                    <li>青岛</li>
+                                    <li>西安</li>
+                                    <li>南京</li>
+                                    <li>苏州</li>
+                                    <li>杭州</li>
+                                    <li>厦门</li>
+                                    <li>成都</li>
+                                    <li>深圳</li>
+                                    <li>广州</li>
+                                    <li>三亚</li>
+                                    <li>台北</li>
+                                    <li>香港</li>
+                                    <li>济南</li>
+                                    <li>宁波</li>
+                                    <li>沈阳</li>
+                                    <li>武汉</li>
+                                    <li>郑州</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city_select flight_arrive " style="display: none">
+                        <div class="city_select_title">支持中文/拼音/简拼输入<span class="city_select_title_close">X</span></div>
+                        <div class="city_select_content">
+                            <div class="city_select_content_nav">
+                                <ul>
+                                    <li class="city_current">热门</li>
+                                    <li>ABCD</li>
+                                    <li>EFGH</li>
+                                    <li>JKLM</li>
+                                    <li class="w_60">NOPQRS</li>
+                                    <li class="w_60">TUVWX</li>
+                                    <li>YZ</li>
+                                </ul>
+                            </div>
+                            <div class="city_select_content_city">
+                                <ul>
+                                    <li>北京</li>
+                                    <li>上海</li>
+                                    <li>天津</li>
+                                    <li>重庆</li>
+                                    <li>大连</li>
+                                    <li>青岛</li>
+                                    <li>西安</li>
+                                    <li>南京</li>
+                                    <li>苏州</li>
+                                    <li>杭州</li>
+                                    <li>厦门</li>
+                                    <li>成都</li>
+                                    <li>深圳</li>
+                                    <li>广州</li>
+                                    <li>三亚</li>
+                                    <li>台北</li>
+                                    <li>香港</li>
+                                    <li>济南</li>
+                                    <li>宁波</li>
+                                    <li>沈阳</li>
+                                    <li>武汉</li>
+                                    <li>郑州</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="search_text">没有历史查询</div>
         </div>
         <div id="base-bd">
             <div id="left">
                 <div id="bd-left-hd">
-                    筛选<span>(共X条航班信息)</span><button id="delete">清除全部</button>
+                    筛选<span>(共<span id="screen_num"></span>条航班信息)</span><button id="delete">清除全部</button>
                 </div>
                 <div id="bd-left-bar">
                     <div class="bar">直飞/经停
@@ -71,6 +157,21 @@
                         </div>
                     </div>
                     <div class="bar">舱位</div>
+                    <div class="why-ctrip_top"></div>
+                    <div class="why-ctrip"><h3>为什么选携程？</h3>
+                        <div class="whyctrip-main">
+                            <a target="_blank" data-ubt="c_whyctrip2" href="">
+                                <dl class="choose-ctrip">
+                                    <dd class="choose-ctrip-icon"><i class="service-icon ico"></i></dd>
+                                    <dt class="choose-ctrip-txt"><h4>放心的服务</h4><p>10000名客服，7×24小时在线</p></dt>
+                                </dl>
+                                <dl class="choose-ctrip">
+                                    <dd class="choose-ctrip-icon"><i class="price-icon ico"></i></dd>
+                                    <dt class="choose-ctrip-txt"><h4>放心的价格</h4><p>价格有保证，出行有保障</p></dt>
+                                </dl>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -78,10 +179,13 @@
                 <div class="bd-right-top">
                     <div class="st"><div class="jiantou jiantou1"></div></div>
                     <div class="other"><span class="date">9-8&nbsp;周日</span><br><dfn>¥</dfn><span class="price">600</span></div>
-                    <div class="current"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
-                    <div class="other">b</div>
-                    <div class="other">b</div>
-                    <div class="other">b</div>
+                    <div class="current"><span class="date"><fmt:formatDate value="${vovage.ticketDate}" pattern="MM-dd"/></span><br><dfn>¥</dfn><span class="price">${price}</span></div>
+                    <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
+                    <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
+                    <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
+                    <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
+                    <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
+                    <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
                     <div class="st"><div class="jiantou jiantou2"></div></div>
                 </div>
                 <div class="bd-right-msgtop" id="tag">
@@ -95,6 +199,7 @@
                     </ul>
                     <a class="government-btn" href="javascript:;" data-ubt="c_armydisabled_click">伤残军警通道</a>
                 </div>
+                <div id="screen">
                 <c:forEach var="voage" items="${vovageList}">
                     <div class="bd-right-msg">
                         <div class="msg-1">
@@ -120,31 +225,7 @@
                         </div>
                     </div>
                 </c:forEach>
-
-                <div class="bd-right-msg">
-                    <div class="msg-1">
-                        航班
-                    </div>
-                    <div class="msg-2">
-                        <span>出发时间</span>
-                    </div>
-                    <div class="msg-3">
-
-                    </div>
-                    <div class="msg-4">
-                        <span>到达时间</span>
-                    </div>
-                    <div class="msg-5">
-                        <span>准点率</span>
-                    </div>
-                    <div class="msg-6">
-                        <dfn>¥</dfn><span>价格</span>起
-                    </div>
-                    <div class="msg-7">
-                        <button>订票</button>
-                    </div>
                 </div>
-                <div class="bd-right-msg"></div>
             </div>
         </div>
     </div>
@@ -153,14 +234,21 @@
     <div class="float">
         <div class="search_boxbox"><div class="search_box">
             <span class="box_text">正在查询:</span><a class="box_text">修改</a>
+            <div class="box_text_end">
+            <span>${vovage.flyCity}</span>→<span>${vovage.arrivedCity}</span><br>
+            <span><fmt:formatDate value="${vovage.ticketDate}" pattern="yy-MM-dd"/></span>
+            </div>
         </div></div>
         <div class="bd-right-top">
             <div class="st"><div class="jiantou jiantou1"></div></div>
             <div class="other"><span class="date">9-8&nbsp;周日</span><br><dfn>¥</dfn><span class="price">600</span></div>
-            <div class="current"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
-            <div class="other">b</div>
-            <div class="other">b</div>
-            <div class="other">b</div>
+            <div class="current"><span class="date"><fmt:formatDate value="${vovage.ticketDate}" pattern="MM-dd"/></span><br><dfn>¥</dfn><span class="price">${price}</span></div>
+            <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
+            <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
+            <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
+            <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
+            <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
+            <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
             <div class="st"><div class="jiantou jiantou2"></div></div>
         </div>
         <div class="bd-right-msgtop">
@@ -190,5 +278,6 @@
         <a href="http://www.ca-sme.com/index.credit?action=certDetail&amp;id=40288084605466f1016057ea4cb20021" class="honour1" target="_blank" rel="nofollow"><img src="images/hotelPiC/xinyong.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110428175405415" title="工商亮照标识" class="honour2" target="_blank" rel="nofollow"><img src="images/hotelPiC/gongshang.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="http://credit.szfw.org/CX20111018000615000623.html" title="诚信认证示范企业" class="honour3" target="_blank" rel="nofollow"><img src="images/hotelPiC/chengxin.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="http://www.zx110.org/" class="honour4" target="_blank" rel="nofollow" title="征信网"><img src="images/hotelPiC/shehuixinyong.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="http://www.shjbzx.cn/" class="honour5" target="_blank" rel="nofollow" title="上海市互联网违法与违规信息举报中心"><img src="images/hotelPiC/weifajubao.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="https://ss.knet.cn/verifyseal.dll?sn=e12061531010025926306977" class="honour6" target="_blank" rel="nofollow" title="可信网站"><img src="images/hotelPiC/shenfenyanzheng.png" style="height: 35px"></a>&nbsp;&nbsp;<a href="http://www.12377.cn/" class="honour8" title="违法和不良信息举报中心" target="_blank" rel="nofollow"><img src="images/hotelPiC/weifajubao.png" style="height: 35px"></a>
     </div>
 </div>
+<div class="to_topbox"><a class="to_top">a</a></div>
 </body>
 </html>

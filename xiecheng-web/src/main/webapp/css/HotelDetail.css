@@ -1,3 +1,6 @@
+ul{
+    overflow: auto;
+}
 .main_detail_wrapper{
     width: 1300px;height:4000px;
     margin: 10px auto;
@@ -35,7 +38,8 @@
     float: left;
 }
 .date_change_box2{
-    width: 920px;height: 920px;
+    overflow: auto;
+    width: 920px;
     float: left;
     border: 2px solid #95B8E7;
 }
@@ -115,8 +119,11 @@
 .sort_item:hover{
     border-color: #3399ff;
 }
+.sort_group{
+    overflow: auto;
+}
 .room_all{
-    width: 918px;height: 45px;
+    width: 918px;
     background-color: #F2F2F2;
     float: left;
     border: 1px solid #95B8E7;
@@ -164,6 +171,7 @@
     font-size: 12px;
     line-height: 1.5;
     font-family: Tahoma,Simsun,sans-serif;
+    border-top: 1px solid #95B8E7;
 }
 .room_detail ul{
     width: 918px;

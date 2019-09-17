@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.lanqiao.mapper.HotelAreaMapper" >
+  <resultMap id="HotelArea" type="org.lanqiao.entity.HotelArea" >
+    <id column="hotel_area_id" property="hotelAreaId" jdbcType="INTEGER" />
+    <result column="hotel_id" property="hotelId" jdbcType="INTEGER" />
+    <result column="area_id" property="areaId" jdbcType="INTEGER" />
+    <result column="longitude" property="longitude" jdbcType="DECIMAL" />
+    <result column="latitude" property="latitude" jdbcType="DECIMAL" />
+    <result column="area_detail" property="areaDetail" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    hotel_area_id, hotel_id, area_id, longitude, latitude, area_detail
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="HotelArea" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from hotel_area
+    where hotel_area_id = #{hotelAreaId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from hotel_area
+    where hotel_area_id = #{hotelAreaId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.lanqiao.entity.HotelArea" >
+    insert into hotel_area (hotel_area_id, hotel_id, area_id, 
+      longitude, latitude, area_detail
+      )
+    values (#{hotelAreaId,jdbcType=INTEGER}, #{hotelId,jdbcType=INTEGER}, #{areaId,jdbcType=INTEGER}, 
+      #{longitude,jdbcType=DECIMAL}, #{latitude,jdbcType=DECIMAL}, #{areaDetail,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.lanqiao.entity.HotelArea" >
+    insert into hotel_area
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="hotelAreaId != null" >
+        hotel_area_id,
+      </if>
+      <if test="hotelId != null" >
+        hotel_id,
+      </if>
+      <if test="areaId != null" >
+        area_id,
+      </if>
+      <if test="longitude != null" >
+        longitude,
+      </if>
+      <if test="latitude != null" >
+        latitude,
+      </if>
+      <if test="areaDetail != null" >
+        area_detail,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="hotelAreaId != null" >
+        #{hotelAreaId,jdbcType=INTEGER},
+      </if>
+      <if test="hotelId != null" >
+        #{hotelId,jdbcType=INTEGER},
+      </if>
+      <if test="areaId != null" >
+        #{areaId,jdbcType=INTEGER},
+      </if>
+      <if test="longitude != null" >
+        #{longitude,jdbcType=DECIMAL},
+      </if>
+      <if test="latitude != null" >
+        #{latitude,jdbcType=DECIMAL},
+      </if>
+      <if test="areaDetail != null" >
+        #{areaDetail,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.lanqiao.entity.HotelArea" >
+    update hotel_area
+    <set >
+      <if test="hotelId != null" >
+        hotel_id = #{hotelId,jdbcType=INTEGER},
+      </if>
+      <if test="areaId != null" >
+        area_id = #{areaId,jdbcType=INTEGER},
+      </if>
+      <if test="longitude != null" >
+        longitude = #{longitude,jdbcType=DECIMAL},
+      </if>
+      <if test="latitude != null" >
+        latitude = #{latitude,jdbcType=DECIMAL},
+      </if>
+      <if test="areaDetail != null" >
+        area_detail = #{areaDetail,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where hotel_area_id = #{hotelAreaId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.lanqiao.entity.HotelArea" >
+    update hotel_area
+    set hotel_id = #{hotelId,jdbcType=INTEGER},
+      area_id = #{areaId,jdbcType=INTEGER},
+      longitude = #{longitude,jdbcType=DECIMAL},
+      latitude = #{latitude,jdbcType=DECIMAL},
+      area_detail = #{areaDetail,jdbcType=VARCHAR}
+    where hotel_area_id = #{hotelAreaId,jdbcType=INTEGER}
+  </update>
+</mapper>
