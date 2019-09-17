@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <title>首页</title>
+    <title>首页1</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/xiecheng_index.css">
     <link rel="stylesheet" href="layui/css/layui.css" media="all">
