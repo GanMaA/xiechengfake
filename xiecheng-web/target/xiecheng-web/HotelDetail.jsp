@@ -62,7 +62,7 @@
                     <div class="hotel_address">
                         【
                         <a>火车城站杭州站</a><a>${hotelInfo.hotelArea.areaDetail} </a>
-                        】佑圣观路74号。
+                        】
                         <a>地图</a>
                     </div>
                     <i class="icons icons1">休闲度假</i>
