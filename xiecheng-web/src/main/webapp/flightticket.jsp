@@ -19,18 +19,20 @@
     <div id="main">
         <div id="head">
             <div class="search_form">
+                <form>
                 <select>
                     <option>单程</option>
                     <option>往返</option>
                     <option>多程</option>
                 </select>
-                <div class="ico ico1"><i></i><input placeholder="666"></div>
+                <div class="ico ico1"><i></i><input placeholder="${vovage.flyCity}"></div>
                 <div class="ico ico2"><a></a></div>
-                <div class="ico ico3"><i></i><input placeholder="666"></div>
-                <div class="ico ico4"><i></i><input class="test-item" id="start_date" placeholder="2019-9-2"></div>
+                <div class="ico ico3"><i></i><input placeholder="${vovage.arrivedCity}"></div>
+                <div class="ico ico4"><i></i><input class="test-item" id="start_date" placeholder="${vovage.ticketDate}"></div>
                 <div class="ico ico5"><i></i><input class="test-item" placeholder="666" ></div>
-                <a class="btn_search">重新搜索</a>
+                <button class="btn_search" type="submit">重新搜索</button>
                 <a class="btn_search">没有高级搜索</a>
+                </form>
             </div>
             <div class="search_text">没有历史查询</div>
         </div>

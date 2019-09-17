@@ -28,11 +28,11 @@ li{list-style:none}
 .search_form input{width: 145px;padding-left: 32px;margin: 2px 10px 0 0;}
 #head .search_form .ico i{position: absolute;margin: 5px 0 0 5px;z-index:5;background: url("../images/flightticket/icon_search_select.png") no-repeat;display: inline-block;width: 20px;height: 20px;}
 #head .search_form .ico a{position: relative;margin: 8px 2px 0 -5px;z-index:5;display: inline-block;float: left;}
-.search_form .ico1 i{background-position: 0 0;}
-.search_form .ico2 a{background: url("../images/flightticket/un_searchresult_20160129.png");background-position: 0 -64px;display: inline-block;width: 33px;height: 15px;margin-left: -11px;vertical-align: middle;overflow: hidden;}
-.search_form .ico3 i{background-position: 0 -20px;}
-.search_form .ico4 i{background-position: 0 -40px;}
-.search_form .ico5 i{background-position: 0 -60px;}
+#head .search_form .ico1 i{background-position: 0 0;}
+#head .search_form .ico2 a{background: url("../images/flightticket/un_searchresult_20160129.png");background-position: 0 -64px;display: inline-block;width: 33px;height: 15px;margin-left: -11px;vertical-align: middle;overflow: hidden;}
+#head .search_form .ico3 i{background-position: 0 -20px;}
+#head .search_form .ico4 i{background-position: 0 -40px;}
+#head .search_form .ico5 i{background-position: 0 -60px;}
 .search_form .btn_search {
     float: left;
     width: 92px;

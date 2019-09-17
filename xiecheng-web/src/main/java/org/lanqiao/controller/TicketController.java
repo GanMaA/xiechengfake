@@ -35,10 +35,15 @@ public class TicketController {
 
     @RequestMapping("/showTicket")
     public String showTicket(Vovage vovage, HttpServletRequest request,Model model){
-        Date date=new Date();
-        vovage.setTicketDate(date);
+        vovage.setArrivedCity("b");
+        vovage.setFlyCity("a");
         List<Vovage> vovageList=ticketService.selectAll(vovage);
         model.addAttribute("vovageList",vovageList);
+        model.addAttribute("vovage",vovage);
         return "flightticket";
+    }
+    @RequestMapping("/getMaxPrice")
+    public int getMaxPrice(Vovage vovage){
+        return 1;
     }
 }
