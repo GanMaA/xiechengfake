@@ -1,8 +1,9 @@
 package org.lanqiao.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class HotelInfo {
+public class HotelInfo implements Serializable {
     private Integer hotelId;
 
     private String hotelName;

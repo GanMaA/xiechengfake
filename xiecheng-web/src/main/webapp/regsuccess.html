@@ -3,6 +3,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="css/register.css">
     <title>携程旅行网-会员注册</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="layui/layui.js"></script>
+    <script src="js/regsuccess.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        var phone=sessionStorage.getItem("phone");
+        $(function () {
+            $("#successInfo").text("恭喜您，使用86-"+phone.substring(0,3)+"****"+phone.substring(7,11)+"注册成功！")
+        })
+    </script>
 </head>
 <body>
 <div class="reg_logo_hd">

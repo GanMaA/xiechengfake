@@ -84,7 +84,7 @@ li{list-style:none}
 }
 #bd-left-bar .bar .bar-filter-echo {
     padding: 5px 0 5px 15px;
-    margin-left: -15px;
+    margin:0 0 0 -15px;
     background-color: #f8f8f8;
     color: #999;
     line-height: 32px;
@@ -114,7 +114,9 @@ li{list-style:none}
 /*bd-right-msgtop*/
 .bd-right-msgtop{height: 28px;background-color: #FBFBFB;margin-bottom: 3px;}
 .bd-right-msgtop .sort-guideline{line-height: 28px;}
-.sort-guideline .default-sort{margin-left: 20px;width: 90px;}
+.sort-guideline .default-sort{
+    /*margin-left: 20px;*/
+    width: 90px;}
 .sort-guideline .default-sort2{margin-left: 80px;width: 50px;}
 .sort-guideline .sort{margin-left: 75px;width: 125px;}
 .sort-guideline li{float: left;font-size: 12px}
@@ -140,7 +142,7 @@ li{list-style:none}
 /*bd-right-msg*/
 .bd-right-msg{height: 98px;background-color: white;margin-bottom: 3px;border-bottom: 2px solid #eaeaea;}
 .bd-right-msg div{padding: 28px 5px 24px;float: left}
-.msg-1{width: 168px;}
+.msg-1{width: 168px;text-align: center}
 .msg-2{width: 95px;font-size: 20px;line-height: 20px;font-family: Tahoma,Arial,sans-serif;}
 .msg-3{width: 86px;height: 40px;background: url("../images/flightticket/flight_arrow.png") no-repeat 100%}
 .msg-4{width: 177px;font-size: 20px;line-height: 20px;font-family: Tahoma,Arial,sans-serif;}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.lanqiao.mapper.VerifyCodeMapper" >
+  <resultMap id="BaseResultMap" type="org.lanqiao.entity.VerifyCode" >
+    <id column="code_id" property="codeId" jdbcType="INTEGER" />
+    <result column="verify_code" property="verifyCode" jdbcType="VARCHAR" />
+    <result column="send_time" property="sendTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    code_id, verify_code, send_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from verify_code
+    where code_id = #{codeId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from verify_code
+    where code_id = #{codeId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.lanqiao.entity.VerifyCode" >
+    insert into verify_code (code_id, verify_code, send_time
+      )
+    values (#{codeId,jdbcType=INTEGER}, #{verifyCode,jdbcType=VARCHAR}, #{sendTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.lanqiao.entity.VerifyCode" >
+    insert into verify_code
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="codeId != null" >
+        code_id,
+      </if>
+      <if test="verifyCode != null" >
+        verify_code,
+      </if>
+      <if test="sendTime != null" >
+        send_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="codeId != null" >
+        #{codeId,jdbcType=INTEGER},
+      </if>
+      <if test="verifyCode != null" >
+        #{verifyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sendTime != null" >
+        #{sendTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.lanqiao.entity.VerifyCode" >
+    update verify_code
+    <set >
+      <if test="verifyCode != null" >
+        verify_code = #{verifyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sendTime != null" >
+        send_time = #{sendTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where code_id = #{codeId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.lanqiao.entity.VerifyCode" >
+    update verify_code
+    set verify_code = #{verifyCode,jdbcType=VARCHAR},
+      send_time = #{sendTime,jdbcType=TIMESTAMP}
+    where code_id = #{codeId,jdbcType=INTEGER}
+  </update>
+</mapper>

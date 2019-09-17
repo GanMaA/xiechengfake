@@ -59,20 +59,37 @@
 <!--			enableSelectByExample="false" enableUpdateByExample="false">-->
 <!--			<property name="useActualColumnNames" value="false" />-->
 <!--		</table>-->
-        <table tableName="hotel_info" domainObjectName="HotelInfo"
-               enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false">
-            <property name="useActualColumnNames" value="false" />
-        </table>
-<!--		<table tableName="hotel_area" domainObjectName="HotelArea"-->
+<!--        <table tableName="vovage" domainObjectName="Vovage"-->
+<!--               enableCountByExample="false" enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false" enableUpdateByExample="false">-->
+<!--            <property name="useActualColumnNames" value="false" />-->
+<!--        </table>-->
+<!--		<table tableName="orderitem" domainObjectName="OrderItem"-->
 <!--			enableCountByExample="false" enableDeleteByExample="false"-->
 <!--			enableSelectByExample="false" enableUpdateByExample="false">-->
 <!--			<property name="useActualColumnNames" value="false" />-->
 <!--		</table>-->
-		<table tableName="china" domainObjectName="China"
-			enableCountByExample="false" enableDeleteByExample="false"
-			enableSelectByExample="false" enableUpdateByExample="false">
-			<property name="useActualColumnNames" value="false" />
-		</table>
+		<!--<table tableName="classes" domainObjectName="Classes"-->
+			<!--enableCountByExample="false" enableDeleteByExample="false"-->
+			<!--enableSelectByExample="false" enableUpdateByExample="false">-->
+			<!--<property name="useActualColumnNames" value="true" />-->
+		<!--</table>-->
+		<!--酒店地区表-->
+<!--		<table tableName="hotel_area" domainObjectName="HotelArea"-->
+<!--		    enableCountByExample="false" enableDeleteByExample="false"-->
+<!--		    enableSelectByExample="false" enableUpdateByExample="false">-->
+<!--			<property name="useActualColumnNames" value="false" />-->
+<!--		</table>-->
+			<!--酒店床型-->
+<!--		<table tableName="hotel_room" domainObjectName="HotelRoom"-->
+<!--			   enableCountByExample="false" enableDeleteByExample="false"-->
+<!--			   enableSelectByExample="false" enableUpdateByExample="false">-->
+<!--			<property name="useActualColumnNames" value="false" />-->
+<!--		</table>-->
+<!--		<table tableName="bed_kind" domainObjectName="BedKind"-->
+<!--			   enableCountByExample="false" enableDeleteByExample="false"-->
+<!--			   enableSelectByExample="false" enableUpdateByExample="false">-->
+<!--			<property name="useActualColumnNames" value="false" />-->
+<!--		</table>-->
 	</context>
 </generatorConfiguration>

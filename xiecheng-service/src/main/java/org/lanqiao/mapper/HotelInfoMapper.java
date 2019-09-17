@@ -21,4 +21,7 @@ public interface HotelInfoMapper {
     //根据地址表中的地址名称和酒店信息表中的地址表id查询该城市的所有酒店
     List<HotelInfo> selectHotelInfo(String areaName);
 
+
+    HotelInfo selectByPrimaryKeyHotelInfo(Integer hotelId);
+
 }
