@@ -1,7 +1,3 @@
-
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,18 +16,18 @@
         <div id="head">
             <div class="search_form">
                 <form method="post" autocomplete="off" action="/showTicket">
-                <select>
-                    <option>单程</option>
-                    <option>往返</option>
-                    <option>多程</option>
-                </select>
-                <div class="ico ico1"><i></i><input placeholder="${vovage.flyCity}" name="flyCity"></div>
-                <div class="ico ico2"><a></a></div>
-                <div class="ico ico3"><i></i><input placeholder="${vovage.arrivedCity}" name="arrivedCity"></div>
-                <div class="ico ico4"><i></i><input class="test-item" id="start_date" placeholder="<fmt:formatDate value="${vovage.ticketDate}" pattern="yyyy-MM-dd"/>" name="ticketDate"></div>
-                <div class="ico ico5"><i></i><input class="test-item" placeholder="666" ></div>
-                <button class="btn_search" type="submit">重新搜索</button>
-                <a class="btn_search">没有高级搜索</a>
+                    <select>
+                        <option>单程</option>
+                        <option>往返</option>
+                        <option>多程</option>
+                    </select>
+                    <div class="ico ico1"><i></i><input placeholder="${vovage.flyCity}" name="flyCity"></div>
+                    <div class="ico ico2"><a></a></div>
+                    <div class="ico ico3"><i></i><input placeholder="${vovage.arrivedCity}" name="arrivedCity"></div>
+                    <div class="ico ico4"><i></i><input class="test-item" id="start_date" placeholder="<fmt:formatDate value="${vovage.ticketDate}" pattern="yy-MM-dd"/>" name="ticketDate"></div>
+                    <div class="ico ico5"><i></i><input class="test-item" placeholder="666" ></div>
+                    <button class="btn_search" type="submit">重新搜索</button>
+                    <a class="btn_search">没有高级搜索</a>
                     <div class="city_select flight_leave " >
                         <div class="city_select_title">支持中文/拼音/简拼输入<span class="city_select_title_close">X</span></div>
                         <div class="city_select_content">
@@ -173,13 +169,14 @@
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <div id="right">
                 <div class="bd-right-top">
                     <div class="st"><div class="jiantou jiantou1"></div></div>
                     <div class="other"><span class="date">9-8&nbsp;周日</span><br><dfn>¥</dfn><span class="price">600</span></div>
-                    <div class="current"><span class="date"><fmt:formatDate value="${vovage.ticketDate}" pattern="MM-dd"/></span><br><dfn>¥</dfn><span class="price">${price}</span></div>
+                    <div class="current"><span class="date"><fmt:formatDate value="${vovage.ticketDate}" pattern="MM-dd"/>"</span><br><dfn>¥</dfn><span class="price">${price}</span></div>
                     <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
                     <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
                     <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
@@ -201,7 +198,6 @@
                 </div>
                 <div id="screen">
                     <c:forEach var="voage" items="${vovageList}">
-                        <form method="post" autocomplete="off" action="/ticketOrder">
                         <div class="bd-right-msg">
                             <div class="msg-1">
                                 航班
@@ -225,7 +221,6 @@
                                 <button>订票</button>
                             </div>
                         </div>
-                        </form>
                     </c:forEach>
                 </div>
             </div>
@@ -237,14 +232,14 @@
         <div class="search_boxbox"><div class="search_box">
             <span class="box_text">正在查询:</span><a class="box_text">修改</a>
             <div class="box_text_end">
-            <span>${vovage.flyCity}</span>→<span>${vovage.arrivedCity}</span><br>
-            <span><fmt:formatDate value="${vovage.ticketDate}" pattern="yy-MM-dd"/></span>
+                <span>a</span>→<span>a</span><br>
+                <span>a</span>
             </div>
         </div></div>
         <div class="bd-right-top">
             <div class="st"><div class="jiantou jiantou1"></div></div>
             <div class="other"><span class="date">9-8&nbsp;周日</span><br><dfn>¥</dfn><span class="price">600</span></div>
-            <div class="current"><span class="date"><fmt:formatDate value="${vovage.ticketDate}" pattern="MM-dd"/></span><br><dfn>¥</dfn><span class="price">${price}</span></div>
+            <div class="current"><span class="date"><fmt:formatDate value="${vovage.ticketDate}" pattern="MM-dd"/>"</span><br><dfn>¥</dfn><span class="price">${price}</span></div>
             <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
             <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
             <div class="other"><span class="date">9-9&nbsp;周一</span><br><dfn>¥</dfn><span class="price">600</span></div>
