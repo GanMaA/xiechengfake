@@ -12,6 +12,26 @@
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/flightticket.js"></script>
     <script src="layui/layui.js"></script>
+    <script>
+        <%--$(function () {--%>
+        <%--    //订票--%>
+        <%--    $(".bookflight").on('click',function () {--%>
+        <%--        var msg=$(this).parent().parent();--%>
+        <%--        var vovageId=msg.find(".vovageId").text();--%>
+        <%--        var userId=1;--%>
+        <%--        $.ajax({--%>
+        <%--            url:"/bookTicket",--%>
+        <%--            type:"post",--%>
+        <%--            datatype:"json",--%>
+        <%--            data:{"userId":userId,"vovageId":vovageId},--%>
+        <%--            success:function(){--%>
+        <%--                alert("正在跳转");--%>
+        <%--                window.location.href = "${pageContext.request.contextPath}/flightbook.jsp";--%>
+        <%--            }--%>
+        <%--        })--%>
+        <%--    })--%>
+        <%--})--%>
+    </script>
 </head>
 <body>
 <iframe src="nav.html" class="navtop" frameborder="0" scrolling="no"></iframe>
@@ -200,31 +220,33 @@
                     <a class="government-btn" href="javascript:;" data-ubt="c_armydisabled_click">伤残军警通道</a>
                 </div>
                 <div id="screen">
-                <c:forEach var="voage" items="${vovageList}">
-                    <div class="bd-right-msg">
-                        <div class="msg-1">
-                            航班
-                        </div>
-                        <div class="msg-2">
-                            <span><fmt:formatDate value="${voage.flyTime}" pattern="HH:mm"/></span>
-                        </div>
-                        <div class="msg-3">
+                    <c:forEach var="voage" items="${vovageList}">
+                        <form method="post" autocomplete="off" action="/bookTicket">
+                        <div class="bd-right-msg">
+                            <div class="msg-1">
+                                航班<input class="vovageId" style="display: none" name="vovageId" value="${voage.vovageId}">
+                            </div>
+                            <div class="msg-2">
+                                <span><fmt:formatDate value="${voage.flyTime}" pattern="HH:mm"/></span>
+                            </div>
+                            <div class="msg-3">
 
+                            </div>
+                            <div class="msg-4">
+                                <span><fmt:formatDate value="${voage.arrivedTime}" pattern="HH:mm"/></span>
+                            </div>
+                            <div class="msg-5">
+                                <span>准点率</span>
+                            </div>
+                            <div class="msg-6">
+                                <dfn>¥</dfn><span>${voage.price}</span>起
+                            </div>
+                            <div class="msg-7">
+                                <button class="bookflight" type="submit">订票</button>
+                            </div>
                         </div>
-                        <div class="msg-4">
-                            <span><fmt:formatDate value="${voage.arrivedTime}" pattern="HH:mm"/></span>
-                        </div>
-                        <div class="msg-5">
-                            <span>准点率</span>
-                        </div>
-                        <div class="msg-6">
-                            <dfn>¥</dfn><span>${voage.price}</span>起
-                        </div>
-                        <div class="msg-7">
-                            <button>订票</button>
-                        </div>
-                    </div>
-                </c:forEach>
+                        </form>
+                    </c:forEach>
                 </div>
             </div>
         </div>

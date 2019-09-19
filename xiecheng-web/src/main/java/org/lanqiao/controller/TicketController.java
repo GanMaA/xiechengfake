@@ -1,11 +1,17 @@
 package org.lanqiao.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import org.lanqiao.entity.Ticket;
 import org.lanqiao.entity.Vovage;
 import org.lanqiao.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -41,8 +47,14 @@ public class TicketController {
         model.addAttribute("price",price);
         return "flightticket";
     }
-    @RequestMapping("/getMinPrice")
-    public int getMinPrice(Vovage vovage){
-        return 1;
+    @RequestMapping("/bookTicket")
+    public String bookTicket(Ticket ticket,Vovage vovage, HttpServletRequest request, Model model){
+        ticket.setUserId(1);
+        model.addAttribute("ticket",ticket);
+        vovage=ticketService.seletThis(vovage.getVovageId());
+//        vovage.setFlightId(1);
+        model.addAttribute("vovage",vovage);
+        return "flightbook";
     }
+
 }

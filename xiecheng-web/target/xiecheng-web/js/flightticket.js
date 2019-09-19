@@ -33,7 +33,8 @@ $(function () {
             h.checked = false;
         }
         $("#screen").children().show()
-        })
+        $("#screen_num").text($(".bd-right-msg:visible").length);
+    })
     //浮动选项
     $(".other").mouseover(function () {
         $(this).css("background-color","#5d9ffb")
@@ -183,4 +184,6 @@ $(function () {
         $("input[name='arrivedCity']").val($(this).html());
         $(".city_select").hide();
     })
+
+
 })

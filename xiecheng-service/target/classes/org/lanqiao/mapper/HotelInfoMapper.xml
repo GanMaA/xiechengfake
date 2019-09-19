@@ -9,15 +9,6 @@
     <result column="mark" property="mark" jdbcType="DECIMAL" />
     <result column="hotel_pic" property="hotelPic" jdbcType="VARCHAR" />
     <result column="hotel_group_id" property="hotelGroupId" jdbcType="INTEGER" />
-    <result column="area_id" property="areaId" jdbcType="INTEGER" />
-    <association property="china" resultMap="ChinaResultMap"></association>
-  </resultMap>
-
-
-  <resultMap id="ChinaResultMap" type="org.lanqiao.entity.China" >
-    <id column="area_id" property="areaId" jdbcType="INTEGER" />
-    <result column="area_name" property="areaName" jdbcType="VARCHAR" />
-    <result column="higher_level" property="higherLevel" jdbcType="INTEGER" />
     <association property="hotelArea" resultMap="HotelArea"></association>
   </resultMap>
 

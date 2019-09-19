@@ -8,4 +8,5 @@ import java.util.List;
 @Service
 public interface TicketService {
     public List<Vovage> selectAll(Vovage vovage);
+    public Vovage seletThis(int key);
 }

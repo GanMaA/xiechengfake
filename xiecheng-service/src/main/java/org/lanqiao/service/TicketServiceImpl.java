@@ -17,4 +17,10 @@ public class TicketServiceImpl implements TicketService{
         List<Vovage> vovageList=vovageMapper.getAll(vovage);
         return vovageList;
     }
+
+    @Override
+    public Vovage seletThis(int key) {
+        return vovageMapper.selectByPrimaryKey(key);
+    }
+
 }
