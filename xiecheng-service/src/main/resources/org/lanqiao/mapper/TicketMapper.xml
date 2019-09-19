@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.lanqiao.mapper.TicketMapper" >
+  <resultMap id="TicketResultMap" type="org.lanqiao.entity.Ticket" >
+    <id column="ticket_id" property="ticketId" jdbcType="INTEGER" />
+    <result column="vovage_id" property="vovageId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="flight_price" property="flightPrice" jdbcType="INTEGER" />
+    <result column="ticket_seat" property="ticketSeat" jdbcType="VARCHAR" />
+    <result column="tank_type" property="tankType" jdbcType="VARCHAR" />
+  </resultMap>
+  <select id="selectByPrimaryKey" resultMap="TicketResultMap" parameterType="java.lang.Integer" >
+    select *
+    from ticket
+    where ticket_id = #{ticketId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from ticket
+    where ticket_id = #{ticketId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.lanqiao.entity.Ticket" >
+    insert into ticket (ticket_id, vovage_id, user_id, 
+      flight_price, ticket_seat, tank_type
+      )
+    values (#{ticketId,jdbcType=INTEGER}, #{vovageId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, 
+      #{flightPrice,jdbcType=INTEGER}, #{ticketSeat,jdbcType=VARCHAR}, #{tankType,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.lanqiao.entity.Ticket" >
+    insert into ticket
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ticketId != null" >
+        ticket_id,
+      </if>
+      <if test="vovageId != null" >
+        vovage_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="flightPrice != null" >
+        flight_price,
+      </if>
+      <if test="ticketSeat != null" >
+        ticket_seat,
+      </if>
+      <if test="tankType != null" >
+        tank_type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ticketId != null" >
+        #{ticketId,jdbcType=INTEGER},
+      </if>
+      <if test="vovageId != null" >
+        #{vovageId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="flightPrice != null" >
+        #{flightPrice,jdbcType=INTEGER},
+      </if>
+      <if test="ticketSeat != null" >
+        #{ticketSeat,jdbcType=VARCHAR},
+      </if>
+      <if test="tankType != null" >
+        #{tankType,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.lanqiao.entity.Ticket" >
+    update ticket
+    <set >
+      <if test="vovageId != null" >
+        vovage_id = #{vovageId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="flightPrice != null" >
+        flight_price = #{flightPrice,jdbcType=INTEGER},
+      </if>
+      <if test="ticketSeat != null" >
+        ticket_seat = #{ticketSeat,jdbcType=VARCHAR},
+      </if>
+      <if test="tankType != null" >
+        tank_type = #{tankType,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ticket_id = #{ticketId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.lanqiao.entity.Ticket" >
+    update ticket
+    set vovage_id = #{vovageId,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=INTEGER},
+      flight_price = #{flightPrice,jdbcType=INTEGER},
+      ticket_seat = #{ticketSeat,jdbcType=VARCHAR},
+      tank_type = #{tankType,jdbcType=VARCHAR}
+    where ticket_id = #{ticketId,jdbcType=INTEGER}
+  </update>
+</mapper>

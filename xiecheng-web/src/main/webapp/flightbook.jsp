@@ -1,3 +1,6 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +52,10 @@
             </div>
             <footer>
                 <div class="book_next">
-                    <button class="btn_main">下一步，支付</button>
+                    <form method="post" autocomplete="off" action="/payTicket">
+                        <input name="ticketId" style="display:none" value="${ticket.ticketId}">
+                        <button class="btn_main" type="submit">下一步，支付</button>
+                    </form>
                 </div>
             </footer>
         </div>
@@ -57,22 +63,23 @@
     </div>
 <!--    右边-->
     <div id="order_body_aside">
-        <div class="Info_box box_top">a</div>
-<!--        <img style="width: 380px; height: 190px"></img>-->
+        <div class="Info_box box_top"><span class="box_text">当前航程:</span>
+            <div class="box_text_end">
+                <span><fmt:formatDate value="${vovage.ticketDate}" pattern="MM-dd"/></span><span>${vovage.flyCity}</span>→<span>${vovage.arrivedCity}</span><br>
+                <span style="float: left"><fmt:formatDate value="${vovage.flyTime}" pattern="HH:mm"/></span>
+                <span style="float: right"><fmt:formatDate value="${vovage.arrivedTime}" pattern="HH:mm"/></span>
+            </div></div>
         <div class="Info_box">
-            <a style="font-size: 20px; color: #0066cc; text-decoration: none; margin-bottom: 5px">厦门曾厝垵8a青年旅舍</a>
+            <a style="font-size: 20px; color: #0066cc; text-decoration: none; margin-bottom: 5px">奇奇旅游</a>
             <div class="more_info">
-                <p class="info_addr">厦门 思明区 环岛路曾厝垵262号（曾厝垵）</p>
-                <p class="info_roomname" style="margin-bottom: 15px">标准间</p>
-                <table class="info_t" cellpadding="0" cellspacing="0">
-                    <tr><th>床型</th><td>两张单人床</td></tr>
-                    <tr><th>面积</th><td>12平方米</td></tr>
-                    <tr><th>加床</th><td>不可加床</td></tr>
-                    <tr><th>宽带</th><td>全部房间支持免费无线宽带上网。</td></tr>
-                </table>
+                <p class="info_addr">你可以信赖的旅行助手</p>
+                <p class="info_roomname" style="margin-bottom: 15px">不添加任何额外收费</p>
+<%--                <table class="info_t" cellpadding="0" cellspacing="0">--%>
+<%--                    <tr><th>认证</th><td>11小组</td></tr>--%>
+<%--                </table>--%>
             </div>
         </div>
-        <div class="Info_box box_bottom">a</div>
+        <div class="Info_box box_bottom"><div class="total-price"><span id="J_totalPrice"><dfn>¥</dfn>${vovage.price}</span></div></div>
     </div>
 
 </div>

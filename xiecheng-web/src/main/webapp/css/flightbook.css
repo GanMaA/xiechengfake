@@ -43,3 +43,23 @@
 .box_bottom{
     border-top: 1px dashed #c4cad5;
 }
+.search_box{
+    position: absolute;
+    height: 84px;
+    width: 190px;
+    background-color: #fff;
+    padding: 10px 10px 0 0;
+    float: left;
+}
+.box_text{font-size: 13px;color: #b4b4b4;padding: 5px 0 0 5px}
+.box_text_end{font-size: 15px;text-align: center;padding: 5px 0;color: #666;}
+.search_box a{float: right}
+.search_box a:hover{color: #5d9ffb}
+.total-price{
+    margin: 0 -30px;
+    padding: 13px 30px 0;
+    color: #ff7d13;
+    font-size: 35px;
+    font-weight: 700;
+    float: right;
+    }

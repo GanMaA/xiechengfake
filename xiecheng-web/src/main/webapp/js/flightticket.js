@@ -184,4 +184,6 @@ $(function () {
         $("input[name='arrivedCity']").val($(this).html());
         $(".city_select").hide();
     })
+
+
 })

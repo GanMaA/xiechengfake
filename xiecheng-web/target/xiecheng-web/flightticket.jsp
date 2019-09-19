@@ -12,6 +12,26 @@
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/flightticket.js"></script>
     <script src="layui/layui.js"></script>
+    <script>
+        <%--$(function () {--%>
+        <%--    //订票--%>
+        <%--    $(".bookflight").on('click',function () {--%>
+        <%--        var msg=$(this).parent().parent();--%>
+        <%--        var vovageId=msg.find(".vovageId").text();--%>
+        <%--        var userId=1;--%>
+        <%--        $.ajax({--%>
+        <%--            url:"/bookTicket",--%>
+        <%--            type:"post",--%>
+        <%--            datatype:"json",--%>
+        <%--            data:{"userId":userId,"vovageId":vovageId},--%>
+        <%--            success:function(){--%>
+        <%--                alert("正在跳转");--%>
+        <%--                window.location.href = "${pageContext.request.contextPath}/flightbook.jsp";--%>
+        <%--            }--%>
+        <%--        })--%>
+        <%--    })--%>
+        <%--})--%>
+    </script>
 </head>
 <body>
 <iframe src="nav.html" class="navtop" frameborder="0" scrolling="no"></iframe>
@@ -201,10 +221,10 @@
                 </div>
                 <div id="screen">
                     <c:forEach var="voage" items="${vovageList}">
-                        <form method="post" autocomplete="off" action="/ticketOrder">
+                        <form method="post" autocomplete="off" action="/bookTicket">
                         <div class="bd-right-msg">
                             <div class="msg-1">
-                                航班
+                                航班<input class="vovageId" style="display: none" name="vovageId" value="${voage.vovageId}">
                             </div>
                             <div class="msg-2">
                                 <span><fmt:formatDate value="${voage.flyTime}" pattern="HH:mm"/></span>
@@ -222,7 +242,7 @@
                                 <dfn>¥</dfn><span>${voage.price}</span>起
                             </div>
                             <div class="msg-7">
-                                <button>订票</button>
+                                <button class="bookflight" type="submit">订票</button>
                             </div>
                         </div>
                         </form>
