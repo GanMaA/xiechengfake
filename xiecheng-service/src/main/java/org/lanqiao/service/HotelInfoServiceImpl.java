@@ -30,6 +30,11 @@ public class HotelInfoServiceImpl implements HotelInfoService, Serializable {
 //        return hotelInfoMapper.selectHotelInfo(areaName);
     }
 
+    @Override
+    public HotelInfo selectByPrimaryKey() {
+        return null;
+    }
+
     public HotelInfo selectByPrimaryKeyHotelInfo(Integer hotelId) {
         return hotelInfoMapper.selectByPrimaryKeyHotelInfo(hotelId);
     }

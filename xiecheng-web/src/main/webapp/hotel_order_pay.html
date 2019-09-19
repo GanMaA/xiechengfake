@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <title>携程旅行网</title>
     <link href="css/head_order_pay.css" rel="stylesheet">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            $(".other").on("click",function () {
+                $(".curr").removeClass("curr");
+
+                $(this).addClass("curr");
+            })
+        })
+    </script>
 </head>
-<script src="js/jquery-3.4.1.js"></script>
+
+
 <body>
 <!--head-start-->
 <div id="head">
@@ -39,10 +50,10 @@
                 }
             </script>
             <ul>
-                <li class="curr" onclick="showDiv('item0');">微信支付</li>
-                <li onclick="showDiv('item1');">储蓄卡</li>
-                <li onclick="showDiv('item2');">信用卡</li>
-                <li onclick="showDiv('item3');">支付宝</li>
+                <li class="curr other" onclick="showDiv('item0');">微信支付</li>
+                <li class="other" onclick="showDiv('item1');">储蓄卡</li>
+                <li class="other" onclick="showDiv('item2');">信用卡</li>
+                <li class="other" onclick="showDiv('item3');">支付宝</li>
             </ul>
         </div>
         <div id="tab_con">
