@@ -30,7 +30,7 @@
       #{longitude,jdbcType=DECIMAL}, #{latitude,jdbcType=DECIMAL}, #{areaDetail,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="org.lanqiao.entity.HotelArea" >
+  <insert id="insertSelective" parameterType="org.lanqiao.entity.HotelArea" useGeneratedKeys="true" keyProperty="hotelAreaId">
     insert into hotel_area
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="hotelAreaId != null" >

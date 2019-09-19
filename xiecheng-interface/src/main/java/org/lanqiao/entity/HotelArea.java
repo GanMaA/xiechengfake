@@ -15,6 +15,16 @@ public class HotelArea {
 
     private String areaDetail;
 
+    private China china;
+
+    public China getChina() {
+        return china;
+    }
+
+    public void setChina(China china) {
+        this.china = china;
+    }
+
     public Integer getHotelAreaId() {
         return hotelAreaId;
     }

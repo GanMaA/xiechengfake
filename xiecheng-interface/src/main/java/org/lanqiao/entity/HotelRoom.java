@@ -5,6 +5,8 @@ import java.math.BigDecimal;
 public class HotelRoom {
     private Integer hotelRoomId;
 
+    private Integer bedId;
+
     private BedKind bedKind;
 
     private String roomName;
@@ -21,6 +23,14 @@ public class HotelRoom {
 
     public void setHotelRoomId(Integer hotelRoomId) {
         this.hotelRoomId = hotelRoomId;
+    }
+
+    public Integer getBedId() {
+        return bedId;
+    }
+
+    public void setBedId(Integer bedId) {
+        this.bedId = bedId;
     }
 
     public BedKind getBedKind() {

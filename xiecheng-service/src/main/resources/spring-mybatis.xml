@@ -44,18 +44,18 @@
 		<!-- 自动扫描mapping.xml文件 -->
 		<property name="mapperLocations" value="classpath:org/lanqiao/mapper/*.xml" />
 		<!-- 配置分页插件 -->
-<!--		<property name="plugins">-->
-<!--		<array>-->
-<!--			<bean class="com.github.pagehelper.PageHelper">-->
-<!--				<property name="properties">-->
-<!--					<value>-->
-<!--						dialect=mysql-->
-<!--						reasonable=true-->
-<!--					</value>-->
-<!--				</property>-->
-<!--			</bean>-->
-<!--		</array>-->
-<!--	</property>-->
+		<property name="plugins">
+		<array>
+			<bean class="com.github.pagehelper.PageHelper">
+				<property name="properties">
+					<value>
+						dialect=mysql
+						reasonable=true
+					</value>
+				</property>
+			</bean>
+		</array>
+	</property>
 	</bean>
 
 	<!-- DAO接口所在包名，Spring会自动查找其下的类 -->
@@ -65,10 +65,11 @@
 	</bean>
 
 	<!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
-<!--	<bean id="transactionManager"-->
-<!--		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
-<!--		<property name="dataSource" ref="dataSource" />-->
-<!--	</bean>-->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
 
 <!--	&lt;!&ndash;dubbo配置提供者&ndash;&gt;-->
 <!--	<dubbo:application name="dubbo_provider"/>-->

@@ -10,6 +10,8 @@
     <result column="hotel_pic" property="hotelPic" jdbcType="VARCHAR" />
     <result column="hotel_group_id" property="hotelGroupId" jdbcType="INTEGER" />
     <association property="hotelArea" resultMap="HotelArea"></association>
+    <association property="hotelIntroduce" resultMap="HotelIntroduceMap"></association>
+    <association property="hotelGroup" resultMap="HotelGroupMap"></association>
   </resultMap>
 
   <!--酒店地区-->
@@ -20,21 +22,34 @@
     <result column="longitude" property="longitude" jdbcType="DECIMAL" />
     <result column="latitude" property="latitude" jdbcType="DECIMAL" />
     <result column="area_detail" property="areaDetail" jdbcType="VARCHAR" />
+    <association property="china" resultMap="ChinaMap"></association>
   </resultMap>
-
+  <!--地区表-->
+  <resultMap id="ChinaMap" type="org.lanqiao.entity.China" >
+    <id column="area_id" property="areaId" jdbcType="INTEGER" />
+    <result column="area_name" property="areaName" jdbcType="VARCHAR" />
+    <result column="higher_level" property="higherLevel" jdbcType="INTEGER" />
+  </resultMap>
+  <!--  酒店介绍表-->
+  <resultMap id="HotelIntroduceMap" type="org.lanqiao.entity.HotelIntroduce" >
+    <id column="hotel_intro_id" property="hotelIntroId" jdbcType="INTEGER" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="license" property="license" jdbcType="VARCHAR" />
+    <result column="introduce" property="introduce" jdbcType="VARCHAR" />
+    <result column="open_year" property="openYear" jdbcType="VARCHAR" />
+    <result column="hotel_id" property="hotelId" jdbcType="INTEGER" />
+  </resultMap>
+  <!--  酒店所属集团-->
+  <resultMap id="HotelGroupMap" type="org.lanqiao.entity.HotelGroup" >
+    <id column="hotel_group_id" property="hotelGroupId" jdbcType="INTEGER" />
+    <result column="group_name" property="groupName" jdbcType="VARCHAR" />
+    <result column="group_intro" property="groupIntro" jdbcType="VARCHAR" />
+  </resultMap>
 
 
   <select id="selectHotelInfo" resultMap="HotelInfoResultMap" parameterType="java.lang.String">
     SELECT hotel_name,hotel_min_price,mark,hotel_pic FROM hotel_info  WHERE area_Id in (SELECT C.area_Id FROM china C WHERE area_name LIKE  CONCAT('%', #{areaName}, '%')) LIMIT 0,5
   </select>
-
-
-
-
-
-
-
-
 
   <sql id="Base_Column_List" >
     hotel_id, hotel_name, hotel_level, hotel_min_price, mark, hotel_pic, hotel_group_id,
@@ -45,6 +60,13 @@
     *
     from hotel_info
     where hotel_id = #{hotelId,jdbcType=INTEGER}
+  </select>
+  <!--  获取所有酒店信息-分页-->
+  <select id="selectAll" resultMap="HotelInfoResultMap">
+    select
+    *
+    from hotel_info hi,hotel_area ha,china c
+    where hi.hotel_id = ha.hotel_id and ha.area_id = c.area_id
   </select>
 <!--  获取酒店信息-->
   <select id="selectByPrimaryKeyHotelInfo" resultMap="HotelInfoResultMap" parameterType="java.lang.Integer" >
@@ -65,7 +87,7 @@
       #{hotelMinPrice,jdbcType=DECIMAL}, #{mark,jdbcType=DECIMAL}, #{hotelPic,jdbcType=VARCHAR}, 
       #{hotelGroupId,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="org.lanqiao.entity.HotelInfo" >
+  <insert id="insertSelective" parameterType="org.lanqiao.entity.HotelInfo" useGeneratedKeys="true" keyProperty="hotelId">
     insert into hotel_info
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="hotelId != null" >

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.lanqiao.mapper.HotelGroupMapper" >
+  <resultMap id="HotelGroupMap" type="org.lanqiao.entity.HotelGroup" >
+    <id column="hotel_group_id" property="hotelGroupId" jdbcType="INTEGER" />
+    <result column="group_name" property="groupName" jdbcType="VARCHAR" />
+    <result column="group_intro" property="groupIntro" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    hotel_group_id, group_name, group_intro
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="HotelGroupMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from hotel_group
+    where hotel_group_id = #{hotelGroupId,jdbcType=INTEGER}
+  </select>
+<!--  通过组名查询-->
+  <select id="selectByGroupName" resultMap="HotelGroupMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from hotel_group
+    where group_name = #{groupName}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from hotel_group
+    where hotel_group_id = #{hotelGroupId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.lanqiao.entity.HotelGroup" >
+    insert into hotel_group (hotel_group_id, group_name, group_intro
+      )
+    values (#{hotelGroupId,jdbcType=INTEGER}, #{groupName,jdbcType=VARCHAR}, #{groupIntro,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.lanqiao.entity.HotelGroup" useGeneratedKeys="true" keyProperty="hotelGroupId">
+    insert into hotel_group
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="hotelGroupId != null" >
+        hotel_group_id,
+      </if>
+      <if test="groupName != null" >
+        group_name,
+      </if>
+      <if test="groupIntro != null" >
+        group_intro,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="hotelGroupId != null" >
+        #{hotelGroupId,jdbcType=INTEGER},
+      </if>
+      <if test="groupName != null" >
+        #{groupName,jdbcType=VARCHAR},
+      </if>
+      <if test="groupIntro != null" >
+        #{groupIntro,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.lanqiao.entity.HotelGroup" >
+    update hotel_group
+    <set >
+      <if test="groupName != null" >
+        group_name = #{groupName,jdbcType=VARCHAR},
+      </if>
+      <if test="groupIntro != null" >
+        group_intro = #{groupIntro,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where hotel_group_id = #{hotelGroupId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.lanqiao.entity.HotelGroup" >
+    update hotel_group
+    set group_name = #{groupName,jdbcType=VARCHAR},
+      group_intro = #{groupIntro,jdbcType=VARCHAR}
+    where hotel_group_id = #{hotelGroupId,jdbcType=INTEGER}
+  </update>
+</mapper>

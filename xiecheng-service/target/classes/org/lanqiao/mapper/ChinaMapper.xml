@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.lanqiao.mapper.ChinaMapper" >
-  <resultMap id="ChinaResultMap" type="org.lanqiao.entity.China" >
+  <resultMap id="ChinaMap" type="org.lanqiao.entity.China" >
     <id column="area_id" property="areaId" jdbcType="INTEGER" />
     <result column="area_name" property="areaName" jdbcType="VARCHAR" />
     <result column="higher_level" property="higherLevel" jdbcType="INTEGER" />
@@ -20,23 +20,31 @@
   </resultMap>
 
 
-  <select id="selectHotelInfo" resultMap="ChinaResultMap" parameterType="java.lang.String">
+  <select id="selectHotelInfo" resultMap="ChinaMap" parameterType="java.lang.String">
     SELECT hotel_name,hotel_min_price,mark,hotel_pic FROM hotel_info WHERE area_Id=(SELECT C.area_Id FROM china C WHERE area_name LIKE  CONCAT('%', #{areaName}, '%'))
   </select>
-
-
-
-
-
-
   <sql id="Base_Column_List" >
     area_id, area_name, higher_level
   </sql>
-  <select id="selectByPrimaryKey" resultMap="ChinaResultMap" parameterType="java.lang.Integer" >
+  <select id="selectByPrimaryKey" resultMap="ChinaMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
     from china
     where area_id = #{areaId,jdbcType=INTEGER}
+  </select>
+  <!--  通过名字获取-->
+  <select id="selectByAreaName" resultMap="ChinaMap" parameterType="java.lang.String" >
+    select
+    *
+    from china
+    where area_name = #{areaName}
+  </select>
+
+  <select id="getProvince" resultMap="ChinaMap">
+    select
+    *
+    from china
+    where area_id like '__0000'
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from china

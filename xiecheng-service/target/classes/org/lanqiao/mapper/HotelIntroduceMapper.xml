@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.lanqiao.mapper.HotelIntroduceMapper" >
+  <resultMap id="HotelIntroduceMap" type="org.lanqiao.entity.HotelIntroduce" >
+    <id column="hotel_intro_id" property="hotelIntroId" jdbcType="INTEGER" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="license" property="license" jdbcType="VARCHAR" />
+    <result column="introduce" property="introduce" jdbcType="VARCHAR" />
+    <result column="open_year" property="openYear" jdbcType="VARCHAR" />
+    <result column="hotel_id" property="hotelId" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    hotel_intro_id, phone, license, introduce, open_year, hotel_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="HotelIntroduceMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from hotel_introduce
+    where hotel_intro_id = #{hotelIntroId,jdbcType=INTEGER}
+  </select>
+  <select id="selectByHotelId" resultType="java.lang.Integer" parameterType="java.lang.Integer">
+    select count(*) from hotel_introduce where hotel_id = #{hotelId}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from hotel_introduce
+    where hotel_intro_id = #{hotelIntroId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.lanqiao.entity.HotelIntroduce" >
+    insert into hotel_introduce (hotel_intro_id, phone, license, 
+      introduce, open_year, hotel_id
+      )
+    values (#{hotelIntroId,jdbcType=INTEGER}, #{phone,jdbcType=VARCHAR}, #{license,jdbcType=VARCHAR}, 
+      #{introduce,jdbcType=VARCHAR}, #{openYear,jdbcType=VARCHAR}, #{hotelId,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.lanqiao.entity.HotelIntroduce" useGeneratedKeys="true" keyProperty="hotelIntroId">
+    insert into hotel_introduce
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="hotelIntroId != null" >
+        hotel_intro_id,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="license != null" >
+        license,
+      </if>
+      <if test="introduce != null" >
+        introduce,
+      </if>
+      <if test="openYear != null" >
+        open_year,
+      </if>
+      <if test="hotelId != null" >
+        hotel_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="hotelIntroId != null" >
+        #{hotelIntroId,jdbcType=INTEGER},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="license != null" >
+        #{license,jdbcType=VARCHAR},
+      </if>
+      <if test="introduce != null" >
+        #{introduce,jdbcType=VARCHAR},
+      </if>
+      <if test="openYear != null" >
+        #{openYear,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelId != null" >
+        #{hotelId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.lanqiao.entity.HotelIntroduce" >
+    update hotel_introduce
+    <set >
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="license != null" >
+        license = #{license,jdbcType=VARCHAR},
+      </if>
+      <if test="introduce != null" >
+        introduce = #{introduce,jdbcType=VARCHAR},
+      </if>
+      <if test="openYear != null" >
+        open_year = #{openYear,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelId != null" >
+        hotel_id = #{hotelId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where hotel_intro_id = #{hotelIntroId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.lanqiao.entity.HotelIntroduce" >
+    update hotel_introduce
+    set phone = #{phone,jdbcType=VARCHAR},
+      license = #{license,jdbcType=VARCHAR},
+      introduce = #{introduce,jdbcType=VARCHAR},
+      open_year = #{openYear,jdbcType=VARCHAR},
+      hotel_id = #{hotelId,jdbcType=INTEGER}
+    where hotel_intro_id = #{hotelIntroId,jdbcType=INTEGER}
+  </update>
+<!--根据hotel_id更新-->
+  <update id="updateByHotelIdSelective" parameterType="org.lanqiao.entity.HotelIntroduce" >
+    update hotel_introduce
+    <set >
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="license != null" >
+        license = #{license,jdbcType=VARCHAR},
+      </if>
+      <if test="introduce != null" >
+        introduce = #{introduce,jdbcType=VARCHAR},
+      </if>
+      <if test="openYear != null" >
+        open_year = #{openYear,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelId != null" >
+        hotel_id = #{hotelId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where hotel_id = #{hotelId,jdbcType=INTEGER}
+  </update>
+</mapper>

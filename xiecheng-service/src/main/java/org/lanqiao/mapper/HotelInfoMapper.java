@@ -24,4 +24,6 @@ public interface HotelInfoMapper {
 
     HotelInfo selectByPrimaryKeyHotelInfo(Integer hotelId);
 
+    List<HotelInfo> selectAll();
+
 }

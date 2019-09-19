@@ -11,7 +11,7 @@
         <!-- 标签名 -->
         <name>page</name>
         <!-- 对应的标签处理类 -->
-        <tag-class>org.lanqiao.util.PageTag</tag-class>
+        <tag-class>org.lanqiao.util.PagerTag</tag-class>
         <!-- 标签主体类型 -->
         <body-content>empty</body-content>
         <!-- 标签属性描述 -->

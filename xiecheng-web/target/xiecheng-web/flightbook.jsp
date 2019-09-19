@@ -63,7 +63,7 @@
     </div>
 <!--    右边-->
     <div id="order_body_aside">
-        <div class="Info_box box_top"><span class="box_text">正在查询:</span>
+        <div class="Info_box box_top"><span class="box_text">当前航程:</span>
             <div class="box_text_end">
                 <span><fmt:formatDate value="${vovage.ticketDate}" pattern="MM-dd"/></span><span>${vovage.flyCity}</span>→<span>${vovage.arrivedCity}</span><br>
                 <span style="float: left"><fmt:formatDate value="${vovage.flyTime}" pattern="HH:mm"/></span>

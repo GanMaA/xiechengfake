@@ -2,6 +2,7 @@ package org.lanqiao.mapper;
 
 import org.lanqiao.entity.HotelRoom;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public interface HotelRoomMapper {
@@ -18,4 +19,9 @@ public interface HotelRoomMapper {
     int updateByPrimaryKey(HotelRoom record);
 
     List<HotelRoom> selectByHotelId(Integer hotelId,Integer bedId);
+
+    List<HotelRoom> getAllHotelRoom(Integer hotelId);
+
+    BigDecimal getMinRoomPrice(Integer hotelId);
+
 }
