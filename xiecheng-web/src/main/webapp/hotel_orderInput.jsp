@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -42,7 +41,7 @@
             <div class="mod_book_tit">预订信息<a style="float: right; position: relative; top: 2px; margin-left: 15px; font-family: SimSun; color: #999; font-weight: normal; font-size: 12px" target="_blank">预订帮助</a></div>
             <div class="mod_book_bd">
                 <div style="padding: 12px 0; background-color: #fff; border-radius: 0 0 3px 3px; height: 299px">
-                    <form method="post" action="/inputInfo"><div class="mod_book_item" style="height: 48px"><span class="mod_book_item_tit">房型信息</span><div class="mod_book_item_cont"><span name = "roomName" placeholder="${hotelRoom.roomName}"></span><p><img src="images/nav/BZ.png" style="width: 16px; height: 16px">适用人群(须持对应证件入住)：持中国身份证的居民</p></div></div></form>
+                    <form method="post" action="/inputInfo"><div class="mod_book_item" style="height: 48px"><span class="mod_book_item_tit">房型信息</span><div class="mod_book_item_cont"><span name = "roomName">${hotelRoom.roomName}</span><p><img src="images/nav/BZ.png" style="width: 16px; height: 16px">适用人群(须持对应证件入住)：持中国身份证的居民</p></div></div></form>
                 </div>
                     <div class="mod_book_item r_data"><span class="mod_book_item_tit">入离日期</span>
                         <div class="mod_book_item_cont">
@@ -55,7 +54,7 @@
                     <div class="mod_book_item r_price"><span class="mod_book_item_tit">房费情况</span>
                         <table style="border: 1px solid #dae7ef; width: 147px; height: 84px; text-align: center">
                             <tr><th>09-14</th><th>09-15</th></tr>
-                            <tr><td>￥68元<br>无餐食</td><td><br>无餐食</td></tr>
+                            <tr><td name = "roomPrice">￥${hotelRoom.roomPrice}元<br>无餐食</td><td><br>无餐食</td></tr>
                         </table>
                     </div>
                 </div>
@@ -126,10 +125,10 @@
         <div id="order_body_aside">
             <img style="width: 380px; height: 190px"></img>
             <div class="Info_box">
-                <a style="font-size: 20px; color: #0066cc; text-decoration: none; margin-bottom: 5px">厦门曾厝垵8a青年旅舍</a>
+                <a style="font-size: 20px; color: #0066cc; text-decoration: none; margin-bottom: 5px" >${hotelInfo.hotelName}</a>
                 <div class="more_info">
                     <p class="info_addr">厦门 思明区 环岛路曾厝垵262号（曾厝垵）</p>
-                    <p class="info_roomname" style="margin-bottom: 15px">标准间</p>
+                    <p class="info_roomname" style="margin-bottom: 15px" name = "roomName">${hotelRoom.roomName}</p>
                     <table class="info_t" cellpadding="0" cellspacing="0">
                         <tr><th>床型</th><td>两张单人床</td></tr>
                         <tr><th>面积</th><td>12平方米</td></tr>

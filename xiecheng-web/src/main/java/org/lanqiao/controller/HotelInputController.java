@@ -2,7 +2,6 @@ package org.lanqiao.controller;
 
 import org.lanqiao.entity.HotelInfo;
 import org.lanqiao.entity.HotelRoom;
-import org.lanqiao.entity.Vovage;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
