@@ -112,4 +112,19 @@ public class HotelInfoController {
         return hotelInfoService.delHotelRoom(hotelRoomId);
     }
 
+    @ResponseBody
+    @RequestMapping("/insertHotelPic")
+    public HotelPic insertHotelPic(HotelPic hotelPic,MultipartFile hotelSecPic,HttpServletRequest request) throws IOException {
+        String uri = FIleUpload.doUpload(request,hotelSecPic);
+        hotelPic.setHotelSecondarPic(uri);
+        hotelInfoService.insertHotelPic(hotelPic);
+        return hotelPic;
+    }
+
+    @ResponseBody
+    @RequestMapping("/getHotelPic")
+    public List<HotelPic> getHotelPic(int hotelId){
+        return hotelInfoService.getHotelPic(hotelId);
+    }
+
 }

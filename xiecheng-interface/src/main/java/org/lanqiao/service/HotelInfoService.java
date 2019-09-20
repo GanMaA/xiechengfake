@@ -33,4 +33,8 @@ public interface HotelInfoService {
     public boolean insertHotelRoom(HotelRoom hotelRoom);
 
     public boolean delHotelRoom(int hotelRoomId);
+
+    public boolean insertHotelPic(HotelPic hotelPic);
+
+    public List<HotelPic> getHotelPic(int hotelId);
 }

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.lanqiao.mapper.HotelPicMapper" >
+  <resultMap id="HotelPicMap" type="org.lanqiao.entity.HotelPic" >
+    <id column="hotel_pic_id" property="hotelPicId" jdbcType="INTEGER" />
+    <result column="hotel_id" property="hotelId" jdbcType="INTEGER" />
+    <result column="hotel_secondar_pic" property="hotelSecondarPic" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    hotel_pic_id, hotel_id, hotel_secondar_pic
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="HotelPicMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from hotel_pic
+    where hotel_pic_id = #{hotelPicId,jdbcType=INTEGER}
+  </select>
+
+<!--  根据酒店ID获取图片-->
+  <select id="getAllPicByHotelId" resultMap="HotelPicMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from hotel_pic
+    where hotel_id = #{hotelId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from hotel_pic
+    where hotel_pic_id = #{hotelPicId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.lanqiao.entity.HotelPic" >
+    insert into hotel_pic (hotel_pic_id, hotel_id, hotel_secondar_pic
+      )
+    values (#{hotelPicId,jdbcType=INTEGER}, #{hotelId,jdbcType=INTEGER}, #{hotelSecondarPic,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.lanqiao.entity.HotelPic" useGeneratedKeys="true" keyProperty="hotelPicId">
+    insert into hotel_pic
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="hotelPicId != null" >
+        hotel_pic_id,
+      </if>
+      <if test="hotelId != null" >
+        hotel_id,
+      </if>
+      <if test="hotelSecondarPic != null" >
+        hotel_secondar_pic,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="hotelPicId != null" >
+        #{hotelPicId,jdbcType=INTEGER},
+      </if>
+      <if test="hotelId != null" >
+        #{hotelId,jdbcType=INTEGER},
+      </if>
+      <if test="hotelSecondarPic != null" >
+        #{hotelSecondarPic,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.lanqiao.entity.HotelPic" >
+    update hotel_pic
+    <set >
+      <if test="hotelId != null" >
+        hotel_id = #{hotelId,jdbcType=INTEGER},
+      </if>
+      <if test="hotelSecondarPic != null" >
+        hotel_secondar_pic = #{hotelSecondarPic,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where hotel_pic_id = #{hotelPicId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.lanqiao.entity.HotelPic" >
+    update hotel_pic
+    set hotel_id = #{hotelId,jdbcType=INTEGER},
+      hotel_secondar_pic = #{hotelSecondarPic,jdbcType=VARCHAR}
+    where hotel_pic_id = #{hotelPicId,jdbcType=INTEGER}
+  </update>
+</mapper>

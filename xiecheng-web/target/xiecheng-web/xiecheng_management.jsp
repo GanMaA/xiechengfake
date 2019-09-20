@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="top">
-    <div class="text-primary  top_headInfo" ><h2>京东商城后台管理系统</h2></div>
+    <div class="text-primary  top_headInfo" ><h2>奇奇旅行后台管理系统</h2></div>
 </div>
 <div class="content">
     <div><input type="hidden" value="${msg}" id="msg"></div>
@@ -38,12 +38,10 @@
                     <li><a href="#HotelPic" data-toggle="tab">酒店图片</a></li>
                 </ul>
             </li>
-            <li class="active"><a href="#">商品管理</a></li>
+            <li class="active"><a href="#">机票管理</a></li>
             <ul class="nav nav-stacked " id="proAdm">
-                <li><a href="#proAdm1" data-toggle="tab">商品添加</a></li>
-                <li><a href="#proAdm2" data-toggle="tab">商品删除</a></li>
-                <li><a href="#proAdm3" data-toggle="tab">商品修改</a></li>
-                <li><a href="#proAdm4" data-toggle="tab">商品查询</a></li>
+                <li><a href="#proAdm1" data-toggle="tab">机票查询</a></li>
+                <li><a href="#proAdm2" data-toggle="tab">机票添加</a></li>
             </ul>
             <li class="active"><a href="#">订单管理</a></li>
             <ul class="nav nav-stacked " id="orderAdm">
@@ -57,7 +55,7 @@
         <div class="content_right_top">
             <ul class="breadcrumb">
                 <li><a href="#">首页</a></li>
-                <li><a href="#">商品种类管理</a></li>
+                <li><a href="#">酒店管理</a></li>
             </ul>
         </div>
         <!--右侧展示-->
@@ -303,7 +301,28 @@
                         </form>
                     </div>
                 </div>
-                <div class="tab-pane" id="HotelPic">我是商品评价</div>
+                <div class="tab-pane" id="HotelPic">
+                    <div class="search">
+                        <form>
+                            <input type="search" style="margin: 5px" placeholder="酒店编号"> <input type="button" value="搜索" id="hotelPicSearch">
+                        </form>
+                    </div>
+                    <%--添加酒店图片--%>
+                    <form id="hotelSecPicAdd" method="post" enctype="multipart/form-data">
+                    <div>
+                        <span>添加图片:
+                            <input type="hidden" v-model="hotelId" name="hotelId">
+                            <input type="file" name="hotelSecPic" style="display: inline-block">
+                            <input type="button" value="添加图片" id="hotelSecPicAddBut">
+                        </span>
+                    </div>
+                    </form>
+                    <div class="hotelPicShow">
+                        <div class="hotelSecPic" v-for="hotelPic in hotelSecPicList">
+                            <img v-bind:src="hotelPic.hotelSecondarPic">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

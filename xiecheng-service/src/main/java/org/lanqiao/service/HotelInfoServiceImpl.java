@@ -26,6 +26,8 @@ public class HotelInfoServiceImpl implements HotelInfoService, Serializable {
     ChinaMapper chinaMapper;
     @Autowired
     HotelIntroduceMapper hotelIntroduceMapper;
+    @Autowired
+    HotelPicMapper hotelPicMapper;
     @Override
     public List<HotelInfo> selectHotelInfo( String areaName) {
 
@@ -121,6 +123,16 @@ public class HotelInfoServiceImpl implements HotelInfoService, Serializable {
     @Override
     public boolean delHotelRoom(int hotelRoomId) {
         return hotelRoomMapper.deleteByPrimaryKey(hotelRoomId)>0;
+    }
+
+    @Override
+    public boolean insertHotelPic(HotelPic hotelPic) {
+        return hotelPicMapper.insertSelective(hotelPic)>0;
+    }
+
+    @Override
+    public List<HotelPic> getHotelPic(int hotelId) {
+        return hotelPicMapper.getAllPicByHotelId(hotelId);
     }
 
 }

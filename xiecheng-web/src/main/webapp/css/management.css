@@ -88,3 +88,13 @@
     width: 500px;
     margin: 0 auto;
 }
+/*酒店图片*/
+.hotelSecPic{
+    float: left;
+    margin-left: 5px;
+}
+
+.hotelSecPic img{
+    width: 100px;
+    height: 100px;
+}

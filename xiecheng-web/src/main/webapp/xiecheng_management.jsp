@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>携程后台管理</title>
+    <title>奇奇旅行后台管理</title>
     <link rel="stylesheet" href="css/management.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="js/jquery.min.js"></script>
@@ -301,7 +301,28 @@
                         </form>
                     </div>
                 </div>
-                <div class="tab-pane" id="HotelPic">酒店图片</div>
+                <div class="tab-pane" id="HotelPic">
+                    <div class="search">
+                        <form>
+                            <input type="search" style="margin: 5px" placeholder="酒店编号"> <input type="button" value="搜索" id="hotelPicSearch">
+                        </form>
+                    </div>
+                    <%--添加酒店图片--%>
+                    <form id="hotelSecPicAdd" method="post" enctype="multipart/form-data">
+                    <div>
+                        <span>添加图片:
+                            <input type="hidden" v-model="hotelId" name="hotelId">
+                            <input type="file" name="hotelSecPic" style="display: inline-block">
+                            <input type="button" value="添加图片" id="hotelSecPicAddBut">
+                        </span>
+                    </div>
+                    </form>
+                    <div class="hotelPicShow">
+                        <div class="hotelSecPic" v-for="hotelPic in hotelSecPicList">
+                            <img v-bind:src="hotelPic.hotelSecondarPic">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -331,3 +331,47 @@ $(function () {
     });
 
 });
+
+//酒店图片
+$(function () {
+    var hotelSecPic = new Vue({
+        el:"#HotelPic",
+        data:{
+            hotelId:"",
+            hotelSecPic:{
+                hotelPicId:"",
+                hotelId:"",
+                hotelSecondarPic:""
+            },
+            hotelSecPicList:[]
+        }
+    })
+
+    $("#hotelPicSearch").click(function () {
+        hotelSecPic.hotelId=$(this).prev().val();
+        $.ajax({
+            url:"getHotelPic",
+            type:"post",
+            data:{hotelId:hotelSecPic.hotelId},
+            dataType:"json",
+            success:function (data) {
+                hotelSecPic.hotelSecPicList=data;
+            }
+        })
+    })
+//    添加图片
+    $("#hotelSecPicAddBut").click(function () {
+        var hotelPicAddForm = new FormData($("#hotelSecPicAdd")[0]);
+        $.ajax({
+            type:"post",
+            url:"insertHotelPic",
+            data:hotelPicAddForm,
+            dataType:"json",
+            contentType: false,// 告诉jQuery不要去设置Content-Type请求头
+            processData: false,// 告诉jQuery不要去处理发送的数据
+            success:function(data) {
+                hotelSecPic.hotelSecPicList.push(data);
+            }
+        })
+    })
+});
