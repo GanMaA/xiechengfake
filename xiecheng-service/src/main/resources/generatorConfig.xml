@@ -92,15 +92,20 @@
 <!--			<property name="useActualColumnNames" value="false" />-->
 <!--		</table>-->
 <!--		机票-->
-				<table tableName="ticket" domainObjectName="Ticket"
-					   enableCountByExample="false" enableDeleteByExample="false"
-					   enableSelectByExample="false" enableUpdateByExample="false">
-					<property name="useActualColumnNames" value="false" />
-				</table>
-				<table tableName="ticket_order" domainObjectName="TicketOrder"
-					   enableCountByExample="false" enableDeleteByExample="false"
-					   enableSelectByExample="false" enableUpdateByExample="false">
-					<property name="useActualColumnNames" value="false" />
-				</table>
+<!--				<table tableName="ticket" domainObjectName="Ticket"-->
+<!--					   enableCountByExample="false" enableDeleteByExample="false"-->
+<!--					   enableSelectByExample="false" enableUpdateByExample="false">-->
+<!--					<property name="useActualColumnNames" value="false" />-->
+<!--				</table>-->
+<!--				<table tableName="ticket_order" domainObjectName="TicketOrder"-->
+<!--					   enableCountByExample="false" enableDeleteByExample="false"-->
+<!--					   enableSelectByExample="false" enableUpdateByExample="false">-->
+<!--					<property name="useActualColumnNames" value="false" />-->
+<!--				</table>-->
+		<table tableName="hotel_pic" domainObjectName="HotelPic"
+			   enableCountByExample="false" enableDeleteByExample="false"
+			   enableSelectByExample="false" enableUpdateByExample="false">
+			<property name="useActualColumnNames" value="false" />
+		</table>
 	</context>
 </generatorConfiguration>

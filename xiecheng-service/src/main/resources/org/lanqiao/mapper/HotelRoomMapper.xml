@@ -25,6 +25,16 @@
     from hotel_room hr,bed_kind bk
     where hotel_id = #{param1} and hr.bed_id = #{param2} and hr.bed_id = bk.bed_id
   </select>
+  <!--  根据酒店ID获取所有房型-->
+  <select id="getAllHotelRoom" resultMap="HotelRoom" parameterType="java.lang.Integer">
+    select *
+    from hotel_room
+    where hotel_id = #{hotelId}
+  </select>
+  <!--  获取最小房价-->
+  <select id="getMinRoomPrice" resultType="java.math.BigDecimal" parameterType="java.lang.Integer">
+    select min(room_price) from hotel_room where hotel_id = #{hotelId}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from hotel_room
     where hotel_room_id = #{hotelRoomId,jdbcType=INTEGER}
@@ -37,7 +47,7 @@
       #{roomPrice,jdbcType=DECIMAL}, #{roomPic,jdbcType=VARCHAR}, #{hotelId,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="org.lanqiao.entity.HotelRoom" >
+  <insert id="insertSelective" parameterType="org.lanqiao.entity.HotelRoom" useGeneratedKeys="true" keyProperty="hotelRoomId">
     insert into hotel_room
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="hotelRoomId != null" >

@@ -22,6 +22,12 @@ public class HotelInfo implements Serializable {
 
     private China china;
 
+    private HotelArea hotelArea;
+
+    private HotelIntroduce hotelIntroduce;
+
+    private HotelGroup hotelGroup;
+
     public Integer getHotelId() {
         return hotelId;
     }
@@ -84,6 +90,38 @@ public class HotelInfo implements Serializable {
 
     public void setAreaId(Integer areaId) {
         this.areaId = areaId;
+    }
+
+    public China getChina() {
+        return china;
+    }
+
+    public void setChina(China china) {
+        this.china = china;
+    }
+
+    public HotelArea getHotelArea() {
+        return hotelArea;
+    }
+
+    public void setHotelArea(HotelArea hotelArea) {
+        this.hotelArea = hotelArea;
+    }
+
+    public HotelIntroduce getHotelIntroduce() {
+        return hotelIntroduce;
+    }
+
+    public void setHotelIntroduce(HotelIntroduce hotelIntroduce) {
+        this.hotelIntroduce = hotelIntroduce;
+    }
+
+    public HotelGroup getHotelGroup() {
+        return hotelGroup;
+    }
+
+    public void setHotelGroup(HotelGroup hotelGroup) {
+        this.hotelGroup = hotelGroup;
     }
 
     @Override
