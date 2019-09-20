@@ -12,26 +12,6 @@
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/flightticket.js"></script>
     <script src="layui/layui.js"></script>
-    <script>
-        <%--$(function () {--%>
-        <%--    //订票--%>
-        <%--    $(".bookflight").on('click',function () {--%>
-        <%--        var msg=$(this).parent().parent();--%>
-        <%--        var vovageId=msg.find(".vovageId").text();--%>
-        <%--        var userId=1;--%>
-        <%--        $.ajax({--%>
-        <%--            url:"/bookTicket",--%>
-        <%--            type:"post",--%>
-        <%--            datatype:"json",--%>
-        <%--            data:{"userId":userId,"vovageId":vovageId},--%>
-        <%--            success:function(){--%>
-        <%--                alert("正在跳转");--%>
-        <%--                window.location.href = "${pageContext.request.contextPath}/flightbook.jsp";--%>
-        <%--            }--%>
-        <%--        })--%>
-        <%--    })--%>
-        <%--})--%>
-    </script>
 </head>
 <body>
 <iframe src="nav.html" class="navtop" frameborder="0" scrolling="no"></iframe>

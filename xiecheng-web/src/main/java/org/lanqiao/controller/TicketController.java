@@ -52,9 +52,20 @@ public class TicketController {
         ticket.setUserId(1);
         model.addAttribute("ticket",ticket);
         vovage=ticketService.seletThis(vovage.getVovageId());
-//        vovage.setFlightId(1);
         model.addAttribute("vovage",vovage);
         return "flightbook";
     }
-
+    @RequestMapping("/payTicket")
+    public String payTicket(Ticket ticket,Vovage vovage, HttpServletRequest request, Model model) {
+        vovage=ticketService.seletThis(vovage.getVovageId());
+        model.addAttribute("vovage",vovage);
+        ticket.setFlightPrice(vovage.getPrice());
+        model.addAttribute("ticket",ticket);
+        return "ticketPay";
+    }
+    @RequestMapping("/insertTicket")
+    public String insertTicket(Ticket ticket, Vovage vovage,HttpServletRequest request, Model model){
+        ticketService.insertTicket(ticket);
+        return "xiecheng_index";
+    }
 }

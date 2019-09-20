@@ -35,7 +35,7 @@
             <p style="color: #2EB000"><img src="images/nav/Light.png" style="margin-right: 10px"><span style="font-size: 16px; vertical-align: middle; font-family: 'Microsoft YaHei',SimSun,sans-serif; font-weight: bold; position: relative; top: -12px;">反正你血赚</span></p>
         </div>
         <!--mod_book-->
-        <form>
+        <form method="post" autocomplete="off" action="/payTicket">
         <div class="mod_book">
             <div class="mod_book_tit">乘客<a style="float: right; position: relative; top: 2px; margin-left: 15px; font-family: SimSun; color: #999; font-weight: normal; font-size: 12px" target="_blank">帮助</a></div>
             <div class="my_book_bd">
@@ -52,10 +52,9 @@
             </div>
             <footer>
                 <div class="book_next">
-                    <form method="post" autocomplete="off" action="/payTicket">
-                        <input name="ticketId" style="display:none" value="${ticket.ticketId}">
+                        <input name="userId" style="display:none" value="${ticket.userId}">
+                        <input name="vovageId" style="display:none" value="${ticket.vovageId}">
                         <button class="btn_main" type="submit">下一步，支付</button>
-                    </form>
                 </div>
             </footer>
         </div>

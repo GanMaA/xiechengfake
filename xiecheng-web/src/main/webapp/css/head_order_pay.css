@@ -22,7 +22,6 @@
     padding-left: 35px;
     color: #3f92f7;
 }
-
 /*body部分*/
 #main {
     width: 980px;
@@ -35,7 +34,7 @@
     height: 221px;
     background-color: #f4f7fe;
     border-radius: 4px;
-    box-shadow: 1px 2px 20px rgba(106, 158, 209, 0.34);
+    box-shadow: 1px 2px 20px rgba(106,158,209,0.34);
 }
 
 #main_pay {
@@ -101,7 +100,7 @@
     height: 457px;
     position: relative;
     bottom: -10px;
-    box-shadow: 1px 2px 20px rgba(106, 158, 209, 0.34);
+    box-shadow: 1px 2px 20px rgba(106,158,209,0.34);
     background-color: #FFF;
     margin-bottom: 20px;
 }
@@ -119,48 +118,21 @@
 }
 
 #tab_tit1 li {
-    display: inline-block;
-    margin-right: 20px;
-    font-size: 16px;
-    line-height: 50px;
-    color: #ACBDD1;
-    cursor: pointer;
-    width: 95px;
-    *float: left;
-    position: relative;
-    height: 50px;
-    vertical-align: bottom;
-    border-bottom: 4px solid transparent;
-    z-index: 1;
-    text-align: center;
-}
-
-#tab_tit1 li.curr {
-    color: #1a314d;
-    font-weight: bold;
-    border-bottom: #406493 solid 4px;
-}
-
-#tab_tit1 li:hover {
-    color: #1a314d;
-    font-weight: bold;
-    border-bottom: #406493 solid 4px;
-}
-
-#tab_con {
-    width: 900px;
-    height: 251px;
-    padding: 0 40px 40px;
-}
-
-.btn_area {
-    width: 980px;
-    height: 48px;
-    padding-top: 25px;
-    padding-bottom: 40px;
-}
-
-
+     display: inline-block;
+     margin-right: 20px;
+     font-size: 16px;
+     line-height: 50px;
+     color: #ACBDD1;
+     cursor: pointer;
+     width: 95px;
+     *float: left;
+     position: relative;
+     height: 50px;
+     vertical-align: bottom;
+     border-bottom: 4px solid transparent;
+     z-index: 1;
+     text-align: center;
+ }
 /*全局部分*/
 * {
     margin: 0;
@@ -170,8 +142,4 @@
 body {
     font-size: 12px;
     background-color: #DFE8F2;
-}
-
-.hidden {
-    display: none;
 }

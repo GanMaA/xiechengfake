@@ -32,7 +32,7 @@ $(function () {
             var h = check[i];
             h.checked = false;
         }
-        $("#screen").children().show()
+        $("#screen").find("div").show()
         $("#screen_num").text($(".bd-right-msg:visible").length);
     })
     //浮动选项
